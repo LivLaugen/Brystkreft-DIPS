@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "5a9e381129b98f0edda13ed502e846a4",
+      "MD5-CAM-1.0.1" : "11195d8f56ace81197bdaeeb828cf3c0",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "333.0.0",
+      "sem_ver" : "334.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -64518,12 +64518,11 @@
                     "value" : "Vevscytologi normal"
                   }, {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "56696000",
-                    "value" : "Tumorceller, benigne"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
                     "code" : "39577004",
-                    "value" : "Tumorceller, usikker beninge/maligne"
+                    "value" : "Tumorceller, usikker beninge/maligne",
+                    "translations" : {
+                      "nb" : "Tumorceller, usikkert benigne/maligne"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "88400008",
@@ -94063,12 +94062,11 @@
                     "value" : "Vevscytologi normal"
                   }, {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "56696000",
-                    "value" : "Tumorceller, benigne"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
                     "code" : "39577004",
-                    "value" : "Tumorceller, usikker beninge/maligne"
+                    "value" : "Tumorceller, usikker beninge/maligne",
+                    "translations" : {
+                      "nb" : "Tumorceller, usikkert benigne/maligne"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "88400008",
