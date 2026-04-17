@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "3bc516d5f14748228304488283222eef",
+      "MD5-CAM-1.0.1" : "b23a3dff9453dccec3d7de03b8ac894b",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "331.0.0",
+      "sem_ver" : "332.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -45301,10 +45301,7 @@
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "700616009",
-                    "value" : "Implanted-marker patient positioning system (physical object)",
-                    "translations" : {
-                      "nb" : "Markør"
-                    }
+                    "value" : "Implanted-marker patient positioning system"
                   } ]
                 } ]
               } ],
@@ -45315,9 +45312,52 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0003.1",
-          "attributes" : [ ],
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "no.onk.breast.markers"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "no.onk.breast.markers" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "no.onk.breast.markers",
+                    "code" : "Savi Scout",
+                    "value" : "Savi Scout"
+                  }, {
+                    "terminologyId" : "no.onk.breast.markers",
+                    "code" : "Seed (radioaktivt frø)",
+                    "value" : "Seed (radioaktivt frø)"
+                  }, {
+                    "terminologyId" : "no.onk.breast.markers",
+                    "code" : "Hydromark",
+                    "value" : "Hydromark"
+                  }, {
+                    "terminologyId" : "no.onk.breast.markers",
+                    "code" : "Metall markør",
+                    "value" : "Metall markør"
+                  }, {
+                    "terminologyId" : "no.onk.breast.markers",
+                    "code" : "Annen/ny (spesifiser)",
+                    "value" : "Annen/ny (spesifiser)"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -45500,7 +45540,7 @@
             "code" : "at0001.1",
             "text" : "Markør",
             "description" : "Kryss av dersom det er lagt inn en markør. ",
-            "comment" : "Designkommentar:\nBare en avkryssingsboks for om det er lagt inn en markør. \nBruker koden 700616009 - implanted-marker patient positioning system (physical object), som kan lagres ned hvis man har krysset ut om det er markør tilstede.\n\n\n"
+            "comment" : "Designkommentar:\nDenne skal ikke vises i skjermbildet. Denne skal kun settes hvis en av verdiene i Type \nBruker koden 700616009 - implanted-marker patient positioning system (physical object), som kan lagres ned hvis man har krysset ut ett av velgene i \"Type markør\" feltet.\n\n\n"
           },
           "at0008.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -45514,6 +45554,13 @@
             "code" : "at0002.1",
             "text" : "Beskrivelse markør",
             "description" : "Fritekstbeskrivelse av markøren ved behov."
+          },
+          "at0003.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Type markør",
+            "description" : "Kategori eller type medisinsk utstyr.",
+            "comment" : "Brukes ikke om kategori som er dokumentert i \"Navn på medisinsk utstyr\".\r\n\r\nEksempel: Hvis utstyret er navngitt som \"urinkateter\", kan typen registreres som \"inneliggende kateter\" eller \"engangskateter\". Koding med en terminologi er ønskelig om mulig, og dette kan inkludere GTIN/EAN-nummer."
           }
         },
         "de" : {
@@ -46899,7 +46946,7 @@
                   "terminologyId" : {
                     "value" : "local"
                   },
-                  "constraint" : [ "ac0.18" ],
+                  "constraint" : [ "ac0.286" ],
                   "selectedTerminologies" : [ ]
                 } ]
               } ],
@@ -46911,7 +46958,43 @@
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "nodeId" : "at0042.1",
-          "attributes" : [ ],
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "SNOMED-CT"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "30807003",
+                    "value" : "Benign"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "64957009",
+                    "value" : "Usikker"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "415684004",
+                    "value" : "Suspekt"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -46952,11 +47035,8 @@
                   "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "443607001",
-                    "value" : "palpabel kul",
-                    "translations" : {
-                      "nb" : "Palpabel kul"
-                    }
+                    "code" : "103357000",
+                    "value" : "Funnet er palpabelt"
                   } ]
                 } ]
               } ],
@@ -47009,10 +47089,10 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : {
-          "ac0.18" : {
+          "ac0.286" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.18",
+            "code" : "ac0.286",
             "description" : ""
           }
         },
@@ -47059,35 +47139,36 @@
           "at0007.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0007.1",
-            "text" : "Palpabel kul",
+            "text" : "Palpabelt funn",
             "description" : "Kryss av dersom det foreligger en palpabel kul.",
-            "comment" : "Designkommentar:\nLegge til palbabel kul, jeg har funnet en kode for dette 443607001- palpabel kul \nlegge inn en sjekkboks for dette, at man kan trykke på på den hvis det er en palpabel kul.  "
+            "comment" : "Designkommentar:\nLegge inn en sjekkboks for om funnet er palpabelt.\n\nDenne hører egentlig ikke til radiologi, og skal ikke gjenbrukes. Dette er kun en huskelapp/beskrivelse til kliniker"
           },
           "at0041.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0041",
             "text" : "Forkalkning",
             "description" : "Tilstedeværelse av forkalkning i lesjonen.",
-            "comment" : "Designkommentar:\nKrysse av om kalk er tilstede eller fraværende- burke verdisettet i arketypen. "
+            "comment" : "Designkommentar:\nSkal ikke vises i skjermbildet, men skal settes om kalk er tilstede - her skal denne settes automatisk hvis man velger en av verdiene i elementet \"Forkalkning\" (beningn, suspekt, usikker)."
           },
           "at0042.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0042.1",
-            "text" : "Beskrivelse forkalkning",
-            "description" : "Beskrivelse av mønsteret av forkalkning som er observert."
+            "text" : "Forkalkning tolkning",
+            "description" : "Beskrivelse av mønsteret av forkalkning som er observert.",
+            "comment" : "Designkommentar:\nDet er denne som skal vises i skjermbildet."
           },
-          "ac0.18" : {
+          "ac0.286" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.18",
+            "code" : "ac0.286",
             "description" : ""
           }
         },
         "de" : {
-          "ac0.18" : {
+          "ac0.286" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.18",
+            "code" : "ac0.286",
             "description" : ""
           }
         }
@@ -47184,6 +47265,1346 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.18",
           "members" : [ "at0017", "at0018" ]
+        },
+        "ac0.19" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.19",
+          "members" : [ "at0017", "at0018" ]
+        },
+        "ac0.20" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.20",
+          "members" : [ "at0017" ]
+        },
+        "ac0.21" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.21",
+          "members" : [ "at0017" ]
+        },
+        "ac0.22" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.22",
+          "members" : [ "at0017" ]
+        },
+        "ac0.23" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.23",
+          "members" : [ "at0017" ]
+        },
+        "ac0.24" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.24",
+          "members" : [ "at0017" ]
+        },
+        "ac0.25" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.25",
+          "members" : [ "at0017" ]
+        },
+        "ac0.26" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.26",
+          "members" : [ "at0017" ]
+        },
+        "ac0.27" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.27",
+          "members" : [ "at0017" ]
+        },
+        "ac0.28" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.28",
+          "members" : [ "at0017" ]
+        },
+        "ac0.29" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.29",
+          "members" : [ "at0017" ]
+        },
+        "ac0.30" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.30",
+          "members" : [ "at0017" ]
+        },
+        "ac0.31" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.31",
+          "members" : [ "at0017" ]
+        },
+        "ac0.32" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.32",
+          "members" : [ "at0017" ]
+        },
+        "ac0.33" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.33",
+          "members" : [ "at0017" ]
+        },
+        "ac0.34" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.34",
+          "members" : [ "at0017" ]
+        },
+        "ac0.35" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.35",
+          "members" : [ "at0017" ]
+        },
+        "ac0.36" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.36",
+          "members" : [ "at0017" ]
+        },
+        "ac0.37" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.37",
+          "members" : [ "at0017" ]
+        },
+        "ac0.38" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.38",
+          "members" : [ "at0017" ]
+        },
+        "ac0.39" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.39",
+          "members" : [ "at0017" ]
+        },
+        "ac0.40" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.40",
+          "members" : [ "at0017" ]
+        },
+        "ac0.41" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.41",
+          "members" : [ "at0017" ]
+        },
+        "ac0.42" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.42",
+          "members" : [ "at0017" ]
+        },
+        "ac0.43" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.43",
+          "members" : [ "at0017" ]
+        },
+        "ac0.44" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.44",
+          "members" : [ "at0017" ]
+        },
+        "ac0.45" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.45",
+          "members" : [ "at0017" ]
+        },
+        "ac0.46" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.46",
+          "members" : [ "at0017" ]
+        },
+        "ac0.47" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.47",
+          "members" : [ "at0017" ]
+        },
+        "ac0.48" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.48",
+          "members" : [ "at0017" ]
+        },
+        "ac0.49" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.49",
+          "members" : [ "at0017" ]
+        },
+        "ac0.50" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.50",
+          "members" : [ "at0017" ]
+        },
+        "ac0.51" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.51",
+          "members" : [ "at0017" ]
+        },
+        "ac0.52" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.52",
+          "members" : [ "at0017" ]
+        },
+        "ac0.53" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.53",
+          "members" : [ "at0017" ]
+        },
+        "ac0.54" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.54",
+          "members" : [ "at0017" ]
+        },
+        "ac0.55" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.55",
+          "members" : [ "at0017" ]
+        },
+        "ac0.56" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.56",
+          "members" : [ "at0017" ]
+        },
+        "ac0.57" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.57",
+          "members" : [ "at0017" ]
+        },
+        "ac0.58" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.58",
+          "members" : [ "at0017" ]
+        },
+        "ac0.59" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.59",
+          "members" : [ "at0017" ]
+        },
+        "ac0.60" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.60",
+          "members" : [ "at0017" ]
+        },
+        "ac0.61" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.61",
+          "members" : [ "at0017" ]
+        },
+        "ac0.62" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.62",
+          "members" : [ "at0017" ]
+        },
+        "ac0.63" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.63",
+          "members" : [ "at0017" ]
+        },
+        "ac0.64" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.64",
+          "members" : [ "at0017" ]
+        },
+        "ac0.65" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.65",
+          "members" : [ "at0017" ]
+        },
+        "ac0.66" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.66",
+          "members" : [ "at0017" ]
+        },
+        "ac0.67" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.67",
+          "members" : [ "at0017" ]
+        },
+        "ac0.68" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.68",
+          "members" : [ "at0017" ]
+        },
+        "ac0.69" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.69",
+          "members" : [ "at0017" ]
+        },
+        "ac0.70" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.70",
+          "members" : [ "at0017" ]
+        },
+        "ac0.71" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.71",
+          "members" : [ "at0017" ]
+        },
+        "ac0.72" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.72",
+          "members" : [ "at0017" ]
+        },
+        "ac0.73" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.73",
+          "members" : [ "at0017" ]
+        },
+        "ac0.74" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.74",
+          "members" : [ "at0017" ]
+        },
+        "ac0.75" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.75",
+          "members" : [ "at0017" ]
+        },
+        "ac0.76" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.76",
+          "members" : [ "at0017" ]
+        },
+        "ac0.77" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.77",
+          "members" : [ "at0017" ]
+        },
+        "ac0.78" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.78",
+          "members" : [ "at0017" ]
+        },
+        "ac0.79" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.79",
+          "members" : [ "at0017" ]
+        },
+        "ac0.80" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.80",
+          "members" : [ "at0017" ]
+        },
+        "ac0.81" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.81",
+          "members" : [ "at0017" ]
+        },
+        "ac0.82" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.82",
+          "members" : [ "at0017" ]
+        },
+        "ac0.83" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.83",
+          "members" : [ "at0017" ]
+        },
+        "ac0.84" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.84",
+          "members" : [ "at0017" ]
+        },
+        "ac0.85" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.85",
+          "members" : [ "at0017" ]
+        },
+        "ac0.86" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.86",
+          "members" : [ "at0017" ]
+        },
+        "ac0.87" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.87",
+          "members" : [ "at0017" ]
+        },
+        "ac0.88" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.88",
+          "members" : [ "at0017" ]
+        },
+        "ac0.89" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.89",
+          "members" : [ "at0017" ]
+        },
+        "ac0.90" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.90",
+          "members" : [ "at0017" ]
+        },
+        "ac0.91" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.91",
+          "members" : [ "at0017" ]
+        },
+        "ac0.92" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.92",
+          "members" : [ "at0017" ]
+        },
+        "ac0.93" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.93",
+          "members" : [ "at0017" ]
+        },
+        "ac0.94" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.94",
+          "members" : [ "at0017" ]
+        },
+        "ac0.95" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.95",
+          "members" : [ "at0017" ]
+        },
+        "ac0.96" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.96",
+          "members" : [ "at0017" ]
+        },
+        "ac0.97" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.97",
+          "members" : [ "at0017" ]
+        },
+        "ac0.98" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.98",
+          "members" : [ "at0017" ]
+        },
+        "ac0.99" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.99",
+          "members" : [ "at0017" ]
+        },
+        "ac0.100" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.100",
+          "members" : [ "at0017" ]
+        },
+        "ac0.101" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.101",
+          "members" : [ "at0017" ]
+        },
+        "ac0.102" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.102",
+          "members" : [ "at0017" ]
+        },
+        "ac0.103" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.103",
+          "members" : [ "at0017" ]
+        },
+        "ac0.104" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.104",
+          "members" : [ "at0017" ]
+        },
+        "ac0.105" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.105",
+          "members" : [ "at0017" ]
+        },
+        "ac0.106" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.106",
+          "members" : [ "at0017" ]
+        },
+        "ac0.107" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.107",
+          "members" : [ "at0017" ]
+        },
+        "ac0.108" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.108",
+          "members" : [ "at0017" ]
+        },
+        "ac0.109" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.109",
+          "members" : [ "at0017" ]
+        },
+        "ac0.110" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.110",
+          "members" : [ "at0017" ]
+        },
+        "ac0.111" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.111",
+          "members" : [ "at0017" ]
+        },
+        "ac0.112" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.112",
+          "members" : [ "at0017" ]
+        },
+        "ac0.113" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.113",
+          "members" : [ "at0017" ]
+        },
+        "ac0.114" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.114",
+          "members" : [ "at0017" ]
+        },
+        "ac0.115" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.115",
+          "members" : [ "at0017" ]
+        },
+        "ac0.116" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.116",
+          "members" : [ "at0017" ]
+        },
+        "ac0.117" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.117",
+          "members" : [ "at0017" ]
+        },
+        "ac0.118" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.118",
+          "members" : [ "at0017" ]
+        },
+        "ac0.119" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.119",
+          "members" : [ "at0017" ]
+        },
+        "ac0.120" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.120",
+          "members" : [ "at0017" ]
+        },
+        "ac0.121" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.121",
+          "members" : [ "at0017" ]
+        },
+        "ac0.122" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.122",
+          "members" : [ "at0017" ]
+        },
+        "ac0.123" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.123",
+          "members" : [ "at0017" ]
+        },
+        "ac0.124" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.124",
+          "members" : [ "at0017" ]
+        },
+        "ac0.125" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.125",
+          "members" : [ "at0017" ]
+        },
+        "ac0.126" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.126",
+          "members" : [ "at0017" ]
+        },
+        "ac0.127" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.127",
+          "members" : [ "at0017" ]
+        },
+        "ac0.128" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.128",
+          "members" : [ "at0017" ]
+        },
+        "ac0.129" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.129",
+          "members" : [ "at0017" ]
+        },
+        "ac0.130" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.130",
+          "members" : [ "at0017" ]
+        },
+        "ac0.131" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.131",
+          "members" : [ "at0017" ]
+        },
+        "ac0.132" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.132",
+          "members" : [ "at0017" ]
+        },
+        "ac0.133" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.133",
+          "members" : [ "at0017" ]
+        },
+        "ac0.134" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.134",
+          "members" : [ "at0017" ]
+        },
+        "ac0.135" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.135",
+          "members" : [ "at0017" ]
+        },
+        "ac0.136" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.136",
+          "members" : [ "at0017" ]
+        },
+        "ac0.137" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.137",
+          "members" : [ "at0017" ]
+        },
+        "ac0.138" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.138",
+          "members" : [ "at0017" ]
+        },
+        "ac0.139" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.139",
+          "members" : [ "at0017" ]
+        },
+        "ac0.140" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.140",
+          "members" : [ "at0017" ]
+        },
+        "ac0.141" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.141",
+          "members" : [ "at0017" ]
+        },
+        "ac0.142" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.142",
+          "members" : [ "at0017" ]
+        },
+        "ac0.143" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.143",
+          "members" : [ "at0017" ]
+        },
+        "ac0.144" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.144",
+          "members" : [ "at0017" ]
+        },
+        "ac0.145" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.145",
+          "members" : [ "at0017" ]
+        },
+        "ac0.146" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.146",
+          "members" : [ "at0017" ]
+        },
+        "ac0.147" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.147",
+          "members" : [ "at0017" ]
+        },
+        "ac0.148" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.148",
+          "members" : [ "at0017" ]
+        },
+        "ac0.149" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.149",
+          "members" : [ "at0017" ]
+        },
+        "ac0.150" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.150",
+          "members" : [ "at0017" ]
+        },
+        "ac0.151" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.151",
+          "members" : [ "at0017" ]
+        },
+        "ac0.152" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.152",
+          "members" : [ "at0017" ]
+        },
+        "ac0.153" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.153",
+          "members" : [ "at0017" ]
+        },
+        "ac0.154" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.154",
+          "members" : [ "at0017" ]
+        },
+        "ac0.155" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.155",
+          "members" : [ "at0017" ]
+        },
+        "ac0.156" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.156",
+          "members" : [ "at0017" ]
+        },
+        "ac0.157" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.157",
+          "members" : [ "at0017" ]
+        },
+        "ac0.158" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.158",
+          "members" : [ "at0017" ]
+        },
+        "ac0.159" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.159",
+          "members" : [ "at0017" ]
+        },
+        "ac0.160" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.160",
+          "members" : [ "at0017" ]
+        },
+        "ac0.161" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.161",
+          "members" : [ "at0017" ]
+        },
+        "ac0.162" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.162",
+          "members" : [ "at0017" ]
+        },
+        "ac0.163" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.163",
+          "members" : [ "at0017" ]
+        },
+        "ac0.164" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.164",
+          "members" : [ "at0017" ]
+        },
+        "ac0.165" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.165",
+          "members" : [ "at0017" ]
+        },
+        "ac0.166" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.166",
+          "members" : [ "at0017" ]
+        },
+        "ac0.167" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.167",
+          "members" : [ "at0017" ]
+        },
+        "ac0.168" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.168",
+          "members" : [ "at0017" ]
+        },
+        "ac0.169" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.169",
+          "members" : [ "at0017" ]
+        },
+        "ac0.170" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.170",
+          "members" : [ "at0017" ]
+        },
+        "ac0.171" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.171",
+          "members" : [ "at0017" ]
+        },
+        "ac0.172" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.172",
+          "members" : [ "at0017" ]
+        },
+        "ac0.173" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.173",
+          "members" : [ "at0017" ]
+        },
+        "ac0.174" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.174",
+          "members" : [ "at0017" ]
+        },
+        "ac0.175" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.175",
+          "members" : [ "at0017" ]
+        },
+        "ac0.176" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.176",
+          "members" : [ "at0017" ]
+        },
+        "ac0.177" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.177",
+          "members" : [ "at0017" ]
+        },
+        "ac0.178" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.178",
+          "members" : [ "at0017" ]
+        },
+        "ac0.179" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.179",
+          "members" : [ "at0017" ]
+        },
+        "ac0.180" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.180",
+          "members" : [ "at0017" ]
+        },
+        "ac0.181" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.181",
+          "members" : [ "at0017" ]
+        },
+        "ac0.182" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.182",
+          "members" : [ "at0017" ]
+        },
+        "ac0.183" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.183",
+          "members" : [ "at0017" ]
+        },
+        "ac0.184" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.184",
+          "members" : [ "at0017" ]
+        },
+        "ac0.185" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.185",
+          "members" : [ "at0017" ]
+        },
+        "ac0.186" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.186",
+          "members" : [ "at0017" ]
+        },
+        "ac0.187" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.187",
+          "members" : [ "at0017" ]
+        },
+        "ac0.188" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.188",
+          "members" : [ "at0017" ]
+        },
+        "ac0.189" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.189",
+          "members" : [ "at0017" ]
+        },
+        "ac0.190" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.190",
+          "members" : [ "at0017" ]
+        },
+        "ac0.191" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.191",
+          "members" : [ "at0017" ]
+        },
+        "ac0.192" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.192",
+          "members" : [ "at0017" ]
+        },
+        "ac0.193" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.193",
+          "members" : [ "at0017" ]
+        },
+        "ac0.194" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.194",
+          "members" : [ "at0017" ]
+        },
+        "ac0.195" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.195",
+          "members" : [ "at0017" ]
+        },
+        "ac0.196" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.196",
+          "members" : [ "at0017" ]
+        },
+        "ac0.197" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.197",
+          "members" : [ "at0017" ]
+        },
+        "ac0.198" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.198",
+          "members" : [ "at0017" ]
+        },
+        "ac0.199" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.199",
+          "members" : [ "at0017" ]
+        },
+        "ac0.200" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.200",
+          "members" : [ "at0017" ]
+        },
+        "ac0.201" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.201",
+          "members" : [ "at0017" ]
+        },
+        "ac0.202" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.202",
+          "members" : [ "at0017" ]
+        },
+        "ac0.203" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.203",
+          "members" : [ "at0017" ]
+        },
+        "ac0.204" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.204",
+          "members" : [ "at0017" ]
+        },
+        "ac0.205" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.205",
+          "members" : [ "at0017" ]
+        },
+        "ac0.206" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.206",
+          "members" : [ "at0017" ]
+        },
+        "ac0.207" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.207",
+          "members" : [ "at0017" ]
+        },
+        "ac0.208" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.208",
+          "members" : [ "at0017" ]
+        },
+        "ac0.209" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.209",
+          "members" : [ "at0017" ]
+        },
+        "ac0.210" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.210",
+          "members" : [ "at0017" ]
+        },
+        "ac0.211" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.211",
+          "members" : [ "at0017" ]
+        },
+        "ac0.212" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.212",
+          "members" : [ "at0017" ]
+        },
+        "ac0.213" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.213",
+          "members" : [ "at0017" ]
+        },
+        "ac0.214" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.214",
+          "members" : [ "at0017" ]
+        },
+        "ac0.215" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.215",
+          "members" : [ "at0017" ]
+        },
+        "ac0.216" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.216",
+          "members" : [ "at0017" ]
+        },
+        "ac0.217" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.217",
+          "members" : [ "at0017" ]
+        },
+        "ac0.218" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.218",
+          "members" : [ "at0017" ]
+        },
+        "ac0.219" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.219",
+          "members" : [ "at0017" ]
+        },
+        "ac0.220" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.220",
+          "members" : [ "at0017" ]
+        },
+        "ac0.221" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.221",
+          "members" : [ "at0017" ]
+        },
+        "ac0.222" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.222",
+          "members" : [ "at0017" ]
+        },
+        "ac0.223" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.223",
+          "members" : [ "at0017" ]
+        },
+        "ac0.224" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.224",
+          "members" : [ "at0017" ]
+        },
+        "ac0.225" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.225",
+          "members" : [ "at0017" ]
+        },
+        "ac0.226" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.226",
+          "members" : [ "at0017" ]
+        },
+        "ac0.227" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.227",
+          "members" : [ "at0017" ]
+        },
+        "ac0.228" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.228",
+          "members" : [ "at0017" ]
+        },
+        "ac0.229" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.229",
+          "members" : [ "at0017" ]
+        },
+        "ac0.230" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.230",
+          "members" : [ "at0017" ]
+        },
+        "ac0.231" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.231",
+          "members" : [ "at0017" ]
+        },
+        "ac0.232" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.232",
+          "members" : [ "at0017" ]
+        },
+        "ac0.233" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.233",
+          "members" : [ "at0017" ]
+        },
+        "ac0.234" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.234",
+          "members" : [ "at0017" ]
+        },
+        "ac0.235" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.235",
+          "members" : [ "at0017" ]
+        },
+        "ac0.236" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.236",
+          "members" : [ "at0017" ]
+        },
+        "ac0.237" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.237",
+          "members" : [ "at0017" ]
+        },
+        "ac0.238" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.238",
+          "members" : [ "at0017" ]
+        },
+        "ac0.239" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.239",
+          "members" : [ "at0017" ]
+        },
+        "ac0.240" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.240",
+          "members" : [ "at0017" ]
+        },
+        "ac0.241" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.241",
+          "members" : [ "at0017" ]
+        },
+        "ac0.242" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.242",
+          "members" : [ "at0017" ]
+        },
+        "ac0.243" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.243",
+          "members" : [ "at0017" ]
+        },
+        "ac0.244" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.244",
+          "members" : [ "at0017" ]
+        },
+        "ac0.245" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.245",
+          "members" : [ "at0017" ]
+        },
+        "ac0.246" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.246",
+          "members" : [ "at0017" ]
+        },
+        "ac0.247" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.247",
+          "members" : [ "at0017" ]
+        },
+        "ac0.248" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.248",
+          "members" : [ "at0017" ]
+        },
+        "ac0.249" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.249",
+          "members" : [ "at0017" ]
+        },
+        "ac0.250" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.250",
+          "members" : [ "at0017" ]
+        },
+        "ac0.251" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.251",
+          "members" : [ "at0017" ]
+        },
+        "ac0.252" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.252",
+          "members" : [ "at0017" ]
+        },
+        "ac0.253" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.253",
+          "members" : [ "at0017" ]
+        },
+        "ac0.254" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.254",
+          "members" : [ "at0017" ]
+        },
+        "ac0.255" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.255",
+          "members" : [ "at0017" ]
+        },
+        "ac0.256" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.256",
+          "members" : [ "at0017" ]
+        },
+        "ac0.257" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.257",
+          "members" : [ "at0017" ]
+        },
+        "ac0.258" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.258",
+          "members" : [ "at0017" ]
+        },
+        "ac0.259" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.259",
+          "members" : [ "at0017" ]
+        },
+        "ac0.260" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.260",
+          "members" : [ "at0017" ]
+        },
+        "ac0.261" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.261",
+          "members" : [ "at0017" ]
+        },
+        "ac0.262" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.262",
+          "members" : [ "at0017" ]
+        },
+        "ac0.263" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.263",
+          "members" : [ "at0017" ]
+        },
+        "ac0.264" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.264",
+          "members" : [ "at0017" ]
+        },
+        "ac0.265" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.265",
+          "members" : [ "at0017" ]
+        },
+        "ac0.266" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.266",
+          "members" : [ "at0017" ]
+        },
+        "ac0.267" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.267",
+          "members" : [ "at0017" ]
+        },
+        "ac0.268" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.268",
+          "members" : [ "at0017" ]
+        },
+        "ac0.269" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.269",
+          "members" : [ "at0017" ]
+        },
+        "ac0.270" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.270",
+          "members" : [ "at0017" ]
+        },
+        "ac0.271" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.271",
+          "members" : [ "at0017" ]
+        },
+        "ac0.272" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.272",
+          "members" : [ "at0017" ]
+        },
+        "ac0.273" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.273",
+          "members" : [ "at0017" ]
+        },
+        "ac0.274" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.274",
+          "members" : [ "at0017" ]
+        },
+        "ac0.275" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.275",
+          "members" : [ "at0017" ]
+        },
+        "ac0.276" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.276",
+          "members" : [ "at0017" ]
+        },
+        "ac0.277" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.277",
+          "members" : [ "at0017" ]
+        },
+        "ac0.278" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.278",
+          "members" : [ "at0017" ]
+        },
+        "ac0.279" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.279",
+          "members" : [ "at0017" ]
+        },
+        "ac0.280" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.280",
+          "members" : [ "at0017" ]
+        },
+        "ac0.281" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.281",
+          "members" : [ "at0017" ]
+        },
+        "ac0.282" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.282",
+          "members" : [ "at0017" ]
+        },
+        "ac0.283" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.283",
+          "members" : [ "at0017" ]
+        },
+        "ac0.284" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.284",
+          "members" : [ "at0017" ]
+        },
+        "ac0.285" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.285",
+          "members" : [ "at0017" ]
+        },
+        "ac0.286" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.286",
+          "members" : [ "at0017" ]
         }
       }
     },
@@ -47501,6 +48922,12 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0023.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
                       "occurrences" : "0..0",
                       "nodeId" : "at0056.1",
                       "attributes" : [ ],
@@ -47545,13 +48972,6 @@
                       "rmTypeName" : "ELEMENT",
                       "occurrences" : "0..0",
                       "nodeId" : "at0059.1",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
-                      "nodeId" : "at0023.1",
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
                     }, {
@@ -47911,6 +49331,13 @@
             "text" : "Bildediagnostisk svar",
             "description" : "Resultatene på lesjon/funn som er gjort ved hjelp av bildediagnostisk metode.",
             "comment" : "Designkommentar:\nResultatene på lesjon/funn som er gjort ved hjelp av bildediagnostisk metode."
+          },
+          "at0023.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0023.1",
+            "text" : "Kommentar forkalkning",
+            "description" : "Ytterligere kommentarer om undersøkelsen som ikke passer i andre felter.",
+            "comment" : "For eksempel et notat om at kopi av bilde eller svarrapport er gitt til pasienten. Tilsvarer DiagnosticReport.note i FHIR."
           }
         },
         "de" : { },
@@ -51070,7 +52497,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "19874EFD3E88619E6EFC065D0B0170F4"
+        "PARENT:MD5-CAM-1.0.1" : "5E85E26C754037F9839ADADAB5F76EF2"
       },
       "details" : {
         "de" : {
@@ -52544,7 +53971,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "19874EFD3E88619E6EFC065D0B0170F4"
+        "PARENT:MD5-CAM-1.0.1" : "5E85E26C754037F9839ADADAB5F76EF2"
       },
       "details" : {
         "de" : {
@@ -54097,7 +55524,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "19874EFD3E88619E6EFC065D0B0170F4"
+        "PARENT:MD5-CAM-1.0.1" : "5E85E26C754037F9839ADADAB5F76EF2"
       },
       "details" : {
         "de" : {
@@ -55711,7 +57138,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "19874EFD3E88619E6EFC065D0B0170F4"
+        "PARENT:MD5-CAM-1.0.1" : "5E85E26C754037F9839ADADAB5F76EF2"
       },
       "details" : {
         "de" : {
@@ -57308,7 +58735,7 @@
         "original_publisher" : "openEHR Foundation",
         "custodian_namespace" : "org.openehr",
         "MD5-CAM-1.0.1" : "01328dc1cddaca622e2fa24f6572ffd1",
-        "PARENT:MD5-CAM-1.0.1" : "19874EFD3E88619E6EFC065D0B0170F4"
+        "PARENT:MD5-CAM-1.0.1" : "5E85E26C754037F9839ADADAB5F76EF2"
       },
       "details" : {
         "de" : {
@@ -58530,7 +59957,7 @@
         "original_publisher" : "openEHR Foundation",
         "custodian_namespace" : "org.openehr",
         "MD5-CAM-1.0.1" : "6759725e9620159450f83bf21db1f78e",
-        "PARENT:MD5-CAM-1.0.1" : "19874EFD3E88619E6EFC065D0B0170F4"
+        "PARENT:MD5-CAM-1.0.1" : "5E85E26C754037F9839ADADAB5F76EF2"
       },
       "details" : {
         "de" : {
@@ -59732,7 +61159,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "19874EFD3E88619E6EFC065D0B0170F4"
+        "PARENT:MD5-CAM-1.0.1" : "5E85E26C754037F9839ADADAB5F76EF2"
       },
       "details" : {
         "de" : {
@@ -61167,7 +62594,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "19874EFD3E88619E6EFC065D0B0170F4"
+        "PARENT:MD5-CAM-1.0.1" : "5E85E26C754037F9839ADADAB5F76EF2"
       },
       "details" : {
         "de" : {
@@ -62547,7 +63974,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "19874EFD3E88619E6EFC065D0B0170F4"
+        "PARENT:MD5-CAM-1.0.1" : "5E85E26C754037F9839ADADAB5F76EF2"
       },
       "details" : {
         "de" : {
@@ -81500,7 +82927,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "19874EFD3E88619E6EFC065D0B0170F4"
+        "PARENT:MD5-CAM-1.0.1" : "5E85E26C754037F9839ADADAB5F76EF2"
       },
       "details" : {
         "de" : {
@@ -82973,7 +84400,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "19874EFD3E88619E6EFC065D0B0170F4"
+        "PARENT:MD5-CAM-1.0.1" : "5E85E26C754037F9839ADADAB5F76EF2"
       },
       "details" : {
         "de" : {
@@ -84526,7 +85953,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "19874EFD3E88619E6EFC065D0B0170F4"
+        "PARENT:MD5-CAM-1.0.1" : "5E85E26C754037F9839ADADAB5F76EF2"
       },
       "details" : {
         "de" : {
@@ -86140,7 +87567,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "19874EFD3E88619E6EFC065D0B0170F4"
+        "PARENT:MD5-CAM-1.0.1" : "5E85E26C754037F9839ADADAB5F76EF2"
       },
       "details" : {
         "de" : {
@@ -87737,7 +89164,7 @@
         "original_publisher" : "openEHR Foundation",
         "custodian_namespace" : "org.openehr",
         "MD5-CAM-1.0.1" : "01328dc1cddaca622e2fa24f6572ffd1",
-        "PARENT:MD5-CAM-1.0.1" : "19874EFD3E88619E6EFC065D0B0170F4"
+        "PARENT:MD5-CAM-1.0.1" : "5E85E26C754037F9839ADADAB5F76EF2"
       },
       "details" : {
         "de" : {
@@ -88959,7 +90386,7 @@
         "original_publisher" : "openEHR Foundation",
         "custodian_namespace" : "org.openehr",
         "MD5-CAM-1.0.1" : "6759725e9620159450f83bf21db1f78e",
-        "PARENT:MD5-CAM-1.0.1" : "19874EFD3E88619E6EFC065D0B0170F4"
+        "PARENT:MD5-CAM-1.0.1" : "5E85E26C754037F9839ADADAB5F76EF2"
       },
       "details" : {
         "de" : {
@@ -90161,7 +91588,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "19874EFD3E88619E6EFC065D0B0170F4"
+        "PARENT:MD5-CAM-1.0.1" : "5E85E26C754037F9839ADADAB5F76EF2"
       },
       "details" : {
         "de" : {
@@ -91596,7 +93023,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "19874EFD3E88619E6EFC065D0B0170F4"
+        "PARENT:MD5-CAM-1.0.1" : "5E85E26C754037F9839ADADAB5F76EF2"
       },
       "details" : {
         "de" : {
@@ -92976,7 +94403,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "19874EFD3E88619E6EFC065D0B0170F4"
+        "PARENT:MD5-CAM-1.0.1" : "5E85E26C754037F9839ADADAB5F76EF2"
       },
       "details" : {
         "de" : {
@@ -110727,7 +112154,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "4A4792B1A3E5D5A7098512523784E291"
+        "PARENT:MD5-CAM-1.0.1" : "419545A4ABAC8966511DFB6F7F5993EA"
       },
       "details" : {
         "de" : {
@@ -110833,6 +112260,21 @@
           "keywords" : [ ],
           "use" : "*Use to record the observed findings during the physical examination of a body system or anatomical structure.\r\n\r\nThis archetype has been specifically designed to be used in the 'Examination detail' SLOT within the OBSERVATION.exam or the \"Procedure detail\" SLOT within the ACTION.procedure archetype, but can also be used within other ENTRY or CLUSTER archetypes, where clinically appropriate. Specialisations of this archetype will be used to record examination findings for identified body systems, anatomical structures or more precise body sites. Each specialisation will preserve the underlying structure of this general archetype as its base and be extended by the addition of elements specific to the body site. If there is no appropriate specialisation available, use this archetype and identify the system or structure being examined using the 'System or structure examined' data element and the location on the body using the 'Body site' data element or the 'Structured body site' SLOT.\r\n\r\nInterpretation of the findings, for example 'No abnormality detected' or 'Moderate inflammation present', can be recorded using the 'Clinical interpretation' data element.\r\n\r\nUse to provide a framework in which CLUSTER archetypes can be nested in the 'Examination findings' SLOT to record additional structured physical examination findings.\r\n\r\nThe CLUSTER.exclusion_exam archetype can be nested within the 'Examination not done' SLOT to optionally record explicit details about the examination not being performed.\r\n\r\nUse to incorporate the narrative descriptions of clinical findings within existing or legacy clinical systems into an archetyped format, using the 'Clinical Description' data element. (en)",
           "misuse" : "*Not to be used for recording the clinical history - use specific OBSERVATION and CLUSTER archetypes. For example OBSERVATION.story and CLUSTER.symptom_sign.\r\n\r\nNot to be used for recording the results of an imaging examination - use the CLUSTER.imaging_exam family of archetypes for this purpose.(en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ca" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ca"
+          },
+          "purpose" : "Registrar les troballes observades durant l'examen físic del cos o estructura anatòmica.",
+          "keywords" : [ ],
+          "use" : "S'utilitza per registrar les troballes observades durant l'examen físic del cos o estructura anatòmica.\r\n\r\nAquest arquetip ha estat dissenyat específicament per a ser utilitzat en el SLOT 'Examination detail' dins de l'OBSERVATION.exam o del SLOT \"Procedure detail\" dins de l'arquetip ACTION.procedure, però també es pot utilitzar dins d'altres arquetips ENTRY o CLUSTER, quan sigui clínicament apropiat. Les especialitzacions d'aquest arquetip s'utilitzaran per registrar els resultats de l'examen per a sistemes corporals identificats, estructures anatòmiques o llocs corporals més precisos. Cada especialització preservarà com a base l'estructura subjacent d'aquest arquetip general i s'ampliarà mitjançant l'addició d'elements específics al cos. Si no hi ha una especialització adequada disponible, utilitzeu aquest arquetip i identifiqueu el sistema o estructura que s'està examinant utilitzant l'element de dades \"Sistema o estructura examinada\" i la ubicació en el cos utilitzant l'element de dades \"lloc del cos\" o la RANURA \"lloc del cos estructurat\".\r\n\r\nLa interpretació de les troballes, per exemple 'No s'ha detectat cap anormalitat' o 'inflamació present moderada', es pot registrar utilitzant l'element de dades 'interpretació clínica'.\r\n\r\nS'utilitza per proporcionar un marc en el qual els arquetips de CLUSTER poden ser afegits en el SLOT \"Troballes de l'examen\" per registrar resultats d'un examen físic estructurats addicionals.\r\n\r\nL'arquetip CLUSTER.exclusion_exam es pot afegir dins del SLOT 'Examen no realitzat' per tal de registrar opcionalment detalls explícits sobre l'examen que no s'està realitzant.\r\n\r\nIncorporar les descripcions narratives de les troballes clíniques dins dels sistemes clínics existents o llegats en un format arquetipat, utilitzant l'element de dades de \"Descripció clínica\".",
+          "misuse" : "No s'ha d'utilitzar per registrar la història clínica - utilitzar els arquetipis OBSERVATION i CLUSTER. Exemple: OBSERVATION.story i CLUSTER.symptom_sign.\r\n\r\nNo s'ha d'utilitzar per registrar els resultats d'un examen d'imatge - utilitzar la família d'arquetips CLUSTER.imaging_exam per a aquest propòsit.",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -111020,7 +112462,8 @@
         "de" : { },
         "sv" : { },
         "el" : { },
-        "es" : { }
+        "es" : { },
+        "ca" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -111122,6 +112565,22 @@
         "email" : "juliodesosa@catsalut.cat"
       },
       "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ca"
+      },
+      "author" : {
+        "name" : "Laura Moral López",
+        "organisation" : "Sistema de Salut de Catalunya",
+        "email" : "lauramoral@catsalut.cat"
+      },
+      "otherDetails" : {
+        "other_contributors" : "Tradcrea"
+      }
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
@@ -111134,7 +112593,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "4A4792B1A3E5D5A7098512523784E291"
+        "PARENT:MD5-CAM-1.0.1" : "419545A4ABAC8966511DFB6F7F5993EA"
       },
       "details" : {
         "de" : {
@@ -111240,6 +112699,21 @@
           "keywords" : [ ],
           "use" : "*Use to record the observed findings during the physical examination of a body system or anatomical structure.\r\n\r\nThis archetype has been specifically designed to be used in the 'Examination detail' SLOT within the OBSERVATION.exam or the \"Procedure detail\" SLOT within the ACTION.procedure archetype, but can also be used within other ENTRY or CLUSTER archetypes, where clinically appropriate. Specialisations of this archetype will be used to record examination findings for identified body systems, anatomical structures or more precise body sites. Each specialisation will preserve the underlying structure of this general archetype as its base and be extended by the addition of elements specific to the body site. If there is no appropriate specialisation available, use this archetype and identify the system or structure being examined using the 'System or structure examined' data element and the location on the body using the 'Body site' data element or the 'Structured body site' SLOT.\r\n\r\nInterpretation of the findings, for example 'No abnormality detected' or 'Moderate inflammation present', can be recorded using the 'Clinical interpretation' data element.\r\n\r\nUse to provide a framework in which CLUSTER archetypes can be nested in the 'Examination findings' SLOT to record additional structured physical examination findings.\r\n\r\nThe CLUSTER.exclusion_exam archetype can be nested within the 'Examination not done' SLOT to optionally record explicit details about the examination not being performed.\r\n\r\nUse to incorporate the narrative descriptions of clinical findings within existing or legacy clinical systems into an archetyped format, using the 'Clinical Description' data element. (en)",
           "misuse" : "*Not to be used for recording the clinical history - use specific OBSERVATION and CLUSTER archetypes. For example OBSERVATION.story and CLUSTER.symptom_sign.\r\n\r\nNot to be used for recording the results of an imaging examination - use the CLUSTER.imaging_exam family of archetypes for this purpose.(en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ca" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ca"
+          },
+          "purpose" : "Registrar les troballes observades durant l'examen físic del cos o estructura anatòmica.",
+          "keywords" : [ ],
+          "use" : "S'utilitza per registrar les troballes observades durant l'examen físic del cos o estructura anatòmica.\r\n\r\nAquest arquetip ha estat dissenyat específicament per a ser utilitzat en el SLOT 'Examination detail' dins de l'OBSERVATION.exam o del SLOT \"Procedure detail\" dins de l'arquetip ACTION.procedure, però també es pot utilitzar dins d'altres arquetips ENTRY o CLUSTER, quan sigui clínicament apropiat. Les especialitzacions d'aquest arquetip s'utilitzaran per registrar els resultats de l'examen per a sistemes corporals identificats, estructures anatòmiques o llocs corporals més precisos. Cada especialització preservarà com a base l'estructura subjacent d'aquest arquetip general i s'ampliarà mitjançant l'addició d'elements específics al cos. Si no hi ha una especialització adequada disponible, utilitzeu aquest arquetip i identifiqueu el sistema o estructura que s'està examinant utilitzant l'element de dades \"Sistema o estructura examinada\" i la ubicació en el cos utilitzant l'element de dades \"lloc del cos\" o la RANURA \"lloc del cos estructurat\".\r\n\r\nLa interpretació de les troballes, per exemple 'No s'ha detectat cap anormalitat' o 'inflamació present moderada', es pot registrar utilitzant l'element de dades 'interpretació clínica'.\r\n\r\nS'utilitza per proporcionar un marc en el qual els arquetips de CLUSTER poden ser afegits en el SLOT \"Troballes de l'examen\" per registrar resultats d'un examen físic estructurats addicionals.\r\n\r\nL'arquetip CLUSTER.exclusion_exam es pot afegir dins del SLOT 'Examen no realitzat' per tal de registrar opcionalment detalls explícits sobre l'examen que no s'està realitzant.\r\n\r\nIncorporar les descripcions narratives de les troballes clíniques dins dels sistemes clínics existents o llegats en un format arquetipat, utilitzant l'element de dades de \"Descripció clínica\".",
+          "misuse" : "No s'ha d'utilitzar per registrar la història clínica - utilitzar els arquetipis OBSERVATION i CLUSTER. Exemple: OBSERVATION.story i CLUSTER.symptom_sign.\r\n\r\nNo s'ha d'utilitzar per registrar els resultats d'un examen d'imatge - utilitzar la família d'arquetips CLUSTER.imaging_exam per a aquest propòsit.",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -111473,7 +112947,8 @@
             "text" : "*Physical examination findings (en) (2)",
             "description" : "*Findings observed during the physical examination of a body system or anatomical structure.(en)"
           }
-        }
+        },
+        "ca" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -111575,6 +113050,22 @@
         "email" : "juliodesosa@catsalut.cat"
       },
       "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ca"
+      },
+      "author" : {
+        "name" : "Laura Moral López",
+        "organisation" : "Sistema de Salut de Catalunya",
+        "email" : "lauramoral@catsalut.cat"
+      },
+      "otherDetails" : {
+        "other_contributors" : "Tradcrea"
+      }
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
@@ -111904,7 +113395,14 @@
             "description" : "Findings observed during the physical examination of a subject of care."
           }
         },
-        "nb" : { },
+        "nb" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Funn ved fysisk undersøkelse",
+            "description" : "Funn ved fysisk undersøkelse av en helsetjenestemottaker.\n*Feltet er etterspurt av registere*"
+          }
+        },
         "es" : {
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -114017,7 +115515,54 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "a144edd17b6b7c7aec4fc0f7f51928d6"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "*To record a clinician’s assertion of the presence or absence of pregnancy at a specific point in time, typically to support clinical decision-making. (en)",
+          "keywords" : [ "*pregnancy (en)", "*pregnant (en)", "*exclusion (en)", "*confirmation (en)" ],
+          "use" : "*Use to record a clinician’s point-in-time assertion of confirmed presence or confirmed absence of pregnancy.\n\nThe assertion applies only at the time it is made and may be supported by a clinical ‘Justification’ documenting the evidence on which it is based, such as relevant test results or past diagnoses and surgical procedures.\n\nConfirmation that pregnancy is present or absent is critical to safe clinical decision-making because it may alter diagnostic and management approaches. For example:\n- evaluation of abdominal pain may differ between pregnant and non-pregnant individuals\n- standard treatment protocols may require modification during pregnancy to avoid harm to the fetus\n- some treatment options may be contraindicated during pregnancy but available once pregnancy has been excluded. (en)",
+          "misuse" : "*Not to be used to record summary information about a current or past pregnancy. Use the EVALUATION.pregnancy_summary archetype for this purpose.\n\nNot to be used to record a suspicion of, or level of uncertainty about, a diagnosis of pregnancy, such as 'possible', 'probable', 'suspected', or 'confirmed'. Use the EVALUATION.problem_diagnosis for this purpose.\n\nNot to be used to record the individual’s current pregnancy-related care state so that relevant pregnancy considerations can be taken into account in clinical decision-making. Use the EVALUATION.pregnancy_care_state for this purpose.\n\nNot to be used to record details about procedures performed related to a pregnancy, such as terminations or instrumental deliveries. Use the ACTION.procedure for this purpose.\n\nNot to be used in the context of questionnaire-style representations, such as self-reported data with questions like 'Are you currently pregnant?' The need for a specific archetype for this purpose is acknowledged but had not yet been developed at the time of publication of this archetype.\n\nNot to be used to record absence of known pregnancy history. The need for a specific archetype for this purpose is acknowledged but had not yet been developed at the time of publication of this archetype. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere et utsagn fra en kliniker om tilstedeværelse eller fravær av graviditet på et gitt tidspunkt, vanligvis for å støtte kliniske beslutninger.",
+          "keywords" : [ "graviditet", "gravid", "ekskludering", "utelukkelse", "bekreftelse", "svangerskap" ],
+          "use" : "Brukes for å registrere et utsagn fra en kliniker om bekreftet tilstedeværelse eller fravær av graviditet på et gitt tidspunkt.\n\nUtsagnet gjelder kun på tidspunktet det avgis, og kan støttes av en klinisk ‘Begrunnelse’ som dokumenterer grunnlaget for utsagnet, som for eksempel relevante prøveresultater eller tidligere diagnoser og kirurgiske prosedyrer.\n\nBekreftelse av om graviditet foreligger eller ikke er avgjørende for trygg klinisk beslutningstaking, ettersom det kan påvirke både diagnostiske vurderinger og valg av behandling. For eksempel:\n\n- utredning av magesmerter kan være forskjellig hos gravide og ikke-gravide personer;\n- standard behandlingsprotokoller kan måtte justeres under graviditet for å  unngå skade på fosteret; og\n- noen behandlingsalternativer kan være kontraindisert under graviditet, men aktuelle dersom graviditet er utelukket.",
+          "misuse" : "Skal ikke brukes til å registrere sammendrag om en nåværende eller tidligere graviditet. Bruk arketypen EVALUATION.pregnancy_summary (Graviditetssammenfatning) til dette formålet.\n\nSkal ikke brukes for å registrere mistanke om eller grad av usikkerhet om individet er gravid, som for eksempel \"mulig\", \"sannsynlig\", \"mistenkt\" eller \"bekreftet\". Bruk EVALUATION.problem_diagnosis (Problem/diagnose) til dette.\n\nSkal ikke brukes for å registrere individets pågående svangerskapsomsorgsrelaterte opplysninger til bruk for vurderinger og beslutninger knyttet til dette. Bruk EVALUATION.pregnancy_care_state for dette.\n\nSkal ikke brukes til å registrere detaljer om prosedyrer utført under en graviditet, for eksempel avbrudd eller fødsel. Bruk arketypen ACTION.procedure (Prosedyre) for dette formålet.\n\nSkal ikke brukes i sammenheng med spørreskjema for eksempel selvrapporterte data med spørsmål som \"Er du gravid?\". Behovet for en spesifikk arketype for dette formålet er anerkjent, men den var ennå ikke utviklet på tidspunktet da denne arketypen ble publisert.\n\nSkal ikke brukes til å registrere at man mangler svangerskapshistorikk. Behovet for en spesifikk arketype for dette formålet er anerkjent, men den var ennå ikke utviklet på tidspunktet da denne arketypen ble publisert.@All",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record a clinician’s assertion of the presence or absence of pregnancy at a specific point in time, typically to support clinical decision-making.",
+          "keywords" : [ "pregnancy", "pregnant", "exclusion", "confirmation" ],
+          "use" : "Use to record a clinician’s point-in-time assertion of confirmed presence or confirmed absence of pregnancy.\n\nThe assertion applies only at the time it is made and may be supported by a clinical ‘Justification’ documenting the evidence on which it is based, such as relevant test results or past diagnoses and surgical procedures.\n\nConfirmation that pregnancy is present or absent is critical to safe clinical decision-making because it may alter diagnostic and management approaches. For example:\n- evaluation of abdominal pain may differ between pregnant and non-pregnant individuals\n- standard treatment protocols may require modification during pregnancy to avoid harm to the fetus\n- some treatment options may be contraindicated during pregnancy but available once pregnancy has been excluded.",
+          "misuse" : "Not to be used to record summary information about a current or past pregnancy. Use the EVALUATION.pregnancy_summary archetype for this purpose.\n\nNot to be used to record a suspicion of, or level of uncertainty about, a diagnosis of pregnancy, such as 'possible', 'probable', 'suspected', or 'confirmed'. Use the EVALUATION.problem_diagnosis for this purpose.\n\nNot to be used to record the individual’s current pregnancy-related care state so that relevant pregnancy considerations can be taken into account in clinical decision-making. Use the EVALUATION.pregnancy_care_state for this purpose.\n\nNot to be used to record details about procedures performed related to a pregnancy, such as terminations or instrumental deliveries. Use the ACTION.procedure for this purpose.\n\nNot to be used in the context of questionnaire-style representations, such as self-reported data with questions like 'Are you currently pregnant?' The need for a specific archetype for this purpose is acknowledged but had not yet been developed at the time of publication of this archetype.\n\nNot to be used to record absence of known pregnancy history. The need for a specific archetype for this purpose is acknowledged but had not yet been developed at the time of publication of this archetype.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.pregnancy_assertion_sjk_no.v1",
     "differential" : true,
@@ -114068,12 +115613,13 @@
                             "rmAttributeName" : "defining_code",
                             "children" : [ {
                               "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "CODE_PHRASE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
                               "occurrences" : "1..1",
                               "terminologyId" : {
                                 "value" : "local"
                               },
-                              "constraint" : [ "at0005", "at0007" ]
+                              "constraint" : [ "ac0.1" ],
+                              "selectedTerminologies" : [ ]
                             } ]
                           } ],
                           "attributeTuples" : [ ]
@@ -114111,27 +115657,47 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : { },
-        "de" : { },
-        "nb" : {
-          "at0000.1" : {
+        "en" : {
+          "ac0.1" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "pregnancy_assertion_sjk_no",
-            "description" : "En erklæring fra en kliniker som bekrefter om individet er gravid eller ikke på et bestemt tidspunkt, og som kun anses som gyldig på det tidspunktet den er avgitt."
-          },
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        },
+        "de" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        },
+        "nb" : {
           "at0004.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0004.1",
             "text" : "Kjent gravid på diagnosetidspunktet",
             "description" : "Et utsagn eller erklæring om individets graviditetsstatus på et bestemt tidspunkt.",
             "comment" : "Dette utsagnet anses som korrekt kun på det tidspunktet det avgis, og er vanligvis ment å støtte trygg klinisk beslutningstaking. Antatte verdier og uttrykk for usikkerhet er bevisst utelatt."
+          },
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
           }
         }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
-      "valueSets" : { }
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0005" ]
+        }
+      }
     },
     "adlVersion" : "1.4",
     "buildUid" : "dcdd9b71-d610-4d1a-b203-6aee37397029",
