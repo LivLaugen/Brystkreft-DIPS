@@ -117,7 +117,7 @@ Not to be used to record absence of known pregnancy history. The need for a spec
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"4FBB7D380A21F781CC5D4AAB3401144C">
+		["MD5-CAM-1.0.1"] = <"81647a957d16890225f637059de4ed92">
 		["build_uid"] = <"dcdd9b71-d610-4d1a-b203-6aee37397029">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"0.0.1-alpha">
