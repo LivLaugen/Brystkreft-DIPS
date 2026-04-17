@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "11195d8f56ace81197bdaeeb828cf3c0",
+      "MD5-CAM-1.0.1" : "587f193fb6afc8886afa7e2a34ecd2ef",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "334.0.0",
+      "sem_ver" : "334.1.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -19438,6 +19438,7 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
               "nodeId" : "at0009.1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
@@ -23791,7 +23792,7 @@
             "code" : "at0003.1",
             "text" : "Tumorutbredelsesmønster",
             "description" : "Multifokalitet - dvs. to eller flere svulster i samme bryst. ",
-            "comment" : "Designkommentar:\nSkal være avkryssing. \nLagres hvis denne er krysset denne ut at det er multifokal tumor. \n\n\nBruker koden - 399506006  Multifocal tumor (finding), \nMultifokalitet er vanskelig for det er litt forskjellige definisjoner / bruk i de forskjellige kreftformene, men vi har besluttet å bruke denne koden for bryst. \n\n\n"
+            "comment" : "Designkommentar:\nSkal være avkryssing. \nLogikk - krysses automatisk hvis det er satt mer enn en lesjon for bryst (ikke aksille eller annet)\n\nBruker koden - 399506006  Multifocal tumor (finding), \nMultifokalitet er vanskelig for det er litt forskjellige definisjoner / bruk i de forskjellige kreftformene, men vi har besluttet å bruke denne koden for bryst. \n\n\n"
           },
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -29255,7 +29256,7 @@
             "code" : "at0003.1",
             "text" : "Tumorutbredelsesmønster",
             "description" : "Multifokalitet - dvs. to eller flere svulster i samme bryst. ",
-            "comment" : "Designkommentar:\nSkal være avkryssing. \nLagres hvis denne er krysset denne ut at det er multifokal tumor. \n\nBruker koden - 399506006  Multifocal tumor (finding), \nMultifokalitet er vanskelig for det er litt forskjellige definisjoner / bruk i de forskjellige kreftformene, men vi har besluttet å bruke denne koden for bryst. "
+            "comment" : "Designkommentar:\nSkal være avkryssing. \nLogikk - krysses automatisk hvis det er satt mer enn en lesjon for bryst (ikke aksille eller annet)\n\nBruker koden - 399506006  Multifocal tumor (finding), \nMultifokalitet er vanskelig for det er litt forskjellige definisjoner / bruk i de forskjellige kreftformene, men vi har besluttet å bruke denne koden for bryst. "
           },
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
