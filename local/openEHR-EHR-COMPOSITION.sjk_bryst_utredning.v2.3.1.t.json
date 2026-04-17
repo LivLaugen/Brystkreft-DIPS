@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "587f193fb6afc8886afa7e2a34ecd2ef",
+      "MD5-CAM-1.0.1" : "803a50d1babeee85d5d7b390f9c34f62",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "334.1.0",
+      "sem_ver" : "334.1.1",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -24479,7 +24479,7 @@
             "code" : "at0000.1",
             "text" : "cTNM-klassifikasjon klinisk",
             "description" : "Et rammeverk for klinisk klassifikasjon og gradering av maligne tumorer før behandling, i henhold til TNM-systemet.",
-            "comment" : "Betegnes som TNM eller cTNM."
+            "comment" : "Designkommentar:\nHer skal det komme en link til helsedirektoratets sider om TNM bryst. \nhttps://www.helsedirektoratet.no/retningslinjer/brystkreft--handlingsprogram/diagnostisering-og-utredning/tnm-klassifikasjon"
           },
           "at0003.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -29999,7 +29999,7 @@
             "code" : "at0000.1",
             "text" : "cTNM-klassifikasjon klinisk",
             "description" : "Et rammeverk for klinisk klassifikasjon og gradering av maligne tumorer før behandling, i henhold til TNM-systemet.",
-            "comment" : "Betegnes som TNM eller cTNM."
+            "comment" : "Designkommentar:\nHer skal det komme en link til helsedirektoratets sider om TNM bryst. \nhttps://www.helsedirektoratet.no/retningslinjer/brystkreft--handlingsprogram/diagnostisering-og-utredning/tnm-klassifikasjon"
           },
           "at0003.1" : {
             "@type" : "ARCHETYPE_TERM",
