@@ -28,7 +28,7 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "db778f873c8fea29790f5be86b18ee2e",
+      "MD5-CAM-1.0.1" : "e4cccb03cd405e5b3ff78fa109507245",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
       "sem_ver" : "334.1.2",
@@ -77068,7 +77068,7 @@
                   "terminologyId" : {
                     "value" : "local"
                   },
-                  "constraint" : [ "ac0.174" ],
+                  "constraint" : [ "ac0.175" ],
                   "selectedTerminologies" : [ ]
                 } ]
               } ],
@@ -77211,10 +77211,10 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : {
-          "ac0.174" : {
+          "ac0.175" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.174",
+            "code" : "ac0.175",
             "description" : ""
           }
         },
@@ -77281,18 +77281,18 @@
             "description" : "Beskrivelse av mønsteret av forkalkning som er observert.",
             "comment" : "Mønsteret kan kodes om ønskelig."
           },
-          "ac0.174" : {
+          "ac0.175" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.174",
+            "code" : "ac0.175",
             "description" : ""
           }
         },
         "de" : {
-          "ac0.174" : {
+          "ac0.175" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.174",
+            "code" : "ac0.175",
             "description" : ""
           }
         }
@@ -78164,6 +78164,11 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.174",
           "members" : [ "at0017", "at0018" ]
+        },
+        "ac0.175" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.175",
+          "members" : [ "at0017" ]
         }
       }
     },
