@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "d17173daab58dd5885b78d4705083b04",
+      "MD5-CAM-1.0.1" : "0f4e214d34e311fbc932e4e259fa4300",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "334.1.2",
+      "sem_ver" : "335.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -56165,26 +56165,26 @@
                   "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "0..1",
                   "terminologyId" : {
-                    "value" : "no.onk.bryst_pat"
+                    "value" : "no.onk.bryst.pat"
                   },
                   "constraint" : [ ],
-                  "selectedTerminologies" : [ "no.onk.bryst_pat" ],
+                  "selectedTerminologies" : [ "no.onk.bryst.pat" ],
                   "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "no.onk.bryst_pat",
+                    "terminologyId" : "no.onk.bryst.pat",
                     "code" : "1",
                     "value" : "< 10% (Negativ)",
                     "translations" : {
                       "nb" : "< 10% (Neg)"
                     }
                   }, {
-                    "terminologyId" : "no.onk.bryst_pat",
+                    "terminologyId" : "no.onk.bryst.pat",
                     "code" : "2",
                     "value" : ">10 < 50% (Positiv)",
                     "translations" : {
                       "nb" : ">10 < 50% (Pos)"
                     }
                   }, {
-                    "terminologyId" : "no.onk.bryst_pat",
+                    "terminologyId" : "no.onk.bryst.pat",
                     "code" : "3",
                     "value" : ">50% (Positiv)",
                     "translations" : {
@@ -57751,26 +57751,26 @@
                   "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "0..1",
                   "terminologyId" : {
-                    "value" : "no.onk.bryst_pat"
+                    "value" : "no.onk.bryst.pat"
                   },
                   "constraint" : [ ],
-                  "selectedTerminologies" : [ "no.onk.bryst_pat" ],
+                  "selectedTerminologies" : [ "no.onk.bryst.pat" ],
                   "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "no.onk.bryst_pat",
+                    "terminologyId" : "no.onk.bryst.pat",
                     "code" : "1",
                     "value" : "< 10% (Negativ)",
                     "translations" : {
                       "nb" : "< 10% (Neg)"
                     }
                   }, {
-                    "terminologyId" : "no.onk.bryst_pat",
+                    "terminologyId" : "no.onk.bryst.pat",
                     "code" : "2",
                     "value" : ">10 < 50% (Positiv)",
                     "translations" : {
                       "nb" : ">10 < 50% (Pos)"
                     }
                   }, {
-                    "terminologyId" : "no.onk.bryst_pat",
+                    "terminologyId" : "no.onk.bryst.pat",
                     "code" : "3",
                     "value" : ">50% (Positiv)",
                     "translations" : {
@@ -59236,24 +59236,15 @@
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "NORPAT",
                     "code" : "F29601",
-                    "value" : "HER2 negativ (0)",
-                    "translations" : {
-                      "nb" : "HER2 neg (0)"
-                    }
+                    "value" : "HER2 neg (0)"
                   }, {
                     "terminologyId" : "NORPAT",
                     "code" : "F29602",
-                    "value" : "HER2 usikker/borderline (1+2+)",
-                    "translations" : {
-                      "nb" : "HER2 borderline (1+2+)"
-                    }
+                    "value" : "HER2 borderline (1+2+)"
                   }, {
                     "terminologyId" : "NORPAT",
                     "code" : "F29603",
-                    "value" : "HER2 positiv (3+)",
-                    "translations" : {
-                      "nb" : "HER2 pos (3+)"
-                    }
+                    "value" : "HER2 pos (3+)"
                   } ]
                 } ]
               } ],
@@ -60459,17 +60450,11 @@
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "NORPAT",
                     "code" : "F29605",
-                    "value" : "HER2 positiv ved ISH",
-                    "translations" : {
-                      "nb" : "HER2 pos ved ISH"
-                    }
+                    "value" : "HER2 pos ved ISH"
                   }, {
                     "terminologyId" : "NORPAT",
                     "code" : "F29604",
-                    "value" : "HER2 negativ ved ISH",
-                    "translations" : {
-                      "nb" : "HER2 neg ved ISH"
-                    }
+                    "value" : "HER2 neg ved ISH"
                   } ]
                 } ]
               } ],
@@ -65471,26 +65456,26 @@
                   "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "0..1",
                   "terminologyId" : {
-                    "value" : "no.onk.bryst_pat"
+                    "value" : "no.onk.bryst.pat"
                   },
                   "constraint" : [ ],
-                  "selectedTerminologies" : [ "no.onk.bryst_pat" ],
+                  "selectedTerminologies" : [ "no.onk.bryst.pat" ],
                   "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "no.onk.bryst_pat",
+                    "terminologyId" : "no.onk.bryst.pat",
                     "code" : "G1",
                     "value" : "Sannsynlig grad 1",
                     "translations" : {
                       "nb" : "Sannsynlig G1"
                     }
                   }, {
-                    "terminologyId" : "no.onk.bryst_pat",
+                    "terminologyId" : "no.onk.bryst.pat",
                     "code" : "G2",
                     "value" : "Sannsynlig grad 2",
                     "translations" : {
                       "nb" : "Sannsynlig G2"
                     }
                   }, {
-                    "terminologyId" : "no.onk.bryst_pat",
+                    "terminologyId" : "no.onk.bryst.pat",
                     "code" : "G3",
                     "value" : "Sannsynlig grad 3",
                     "translations" : {
@@ -85714,26 +85699,26 @@
                   "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "0..1",
                   "terminologyId" : {
-                    "value" : "no.onk.bryst_pat"
+                    "value" : "no.onk.bryst.pat"
                   },
                   "constraint" : [ ],
-                  "selectedTerminologies" : [ "no.onk.bryst_pat" ],
+                  "selectedTerminologies" : [ "no.onk.bryst.pat" ],
                   "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "no.onk.bryst_pat",
+                    "terminologyId" : "no.onk.bryst.pat",
                     "code" : "1",
                     "value" : "< 10% (Negativ)",
                     "translations" : {
                       "nb" : "< 10% (Neg)"
                     }
                   }, {
-                    "terminologyId" : "no.onk.bryst_pat",
+                    "terminologyId" : "no.onk.bryst.pat",
                     "code" : "2",
                     "value" : ">10 < 50% (Positiv)",
                     "translations" : {
                       "nb" : ">10 < 50% (Pos)"
                     }
                   }, {
-                    "terminologyId" : "no.onk.bryst_pat",
+                    "terminologyId" : "no.onk.bryst.pat",
                     "code" : "3",
                     "value" : ">50% (Positiv)",
                     "translations" : {
@@ -87300,26 +87285,26 @@
                   "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "0..1",
                   "terminologyId" : {
-                    "value" : "no.onk.bryst_pat"
+                    "value" : "no.onk.bryst.pat"
                   },
                   "constraint" : [ ],
-                  "selectedTerminologies" : [ "no.onk.bryst_pat" ],
+                  "selectedTerminologies" : [ "no.onk.bryst.pat" ],
                   "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "no.onk.bryst_pat",
+                    "terminologyId" : "no.onk.bryst.pat",
                     "code" : "1",
                     "value" : "< 10% (Negativ)",
                     "translations" : {
                       "nb" : "< 10% (Neg)"
                     }
                   }, {
-                    "terminologyId" : "no.onk.bryst_pat",
+                    "terminologyId" : "no.onk.bryst.pat",
                     "code" : "2",
                     "value" : ">10 < 50% (Positiv)",
                     "translations" : {
                       "nb" : ">10 < 50% (Pos)"
                     }
                   }, {
-                    "terminologyId" : "no.onk.bryst_pat",
+                    "terminologyId" : "no.onk.bryst.pat",
                     "code" : "3",
                     "value" : ">50% (Positiv)",
                     "translations" : {
@@ -88785,24 +88770,15 @@
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "NORPAT",
                     "code" : "F29601",
-                    "value" : "HER2 negativ (0)",
-                    "translations" : {
-                      "nb" : "HER2 neg (0)"
-                    }
+                    "value" : "HER2 neg (0)"
                   }, {
                     "terminologyId" : "NORPAT",
                     "code" : "F29602",
-                    "value" : "HER2 usikker/borderline (1+2+)",
-                    "translations" : {
-                      "nb" : "HER2 borderline (1+2+)"
-                    }
+                    "value" : "HER2 borderline (1+2+)"
                   }, {
                     "terminologyId" : "NORPAT",
                     "code" : "F29603",
-                    "value" : "HER2 positiv (3+)",
-                    "translations" : {
-                      "nb" : "HER2 pos (3+)"
-                    }
+                    "value" : "HER2 pos (3+)"
                   } ]
                 } ]
               } ],
@@ -90008,17 +89984,11 @@
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "NORPAT",
                     "code" : "F29605",
-                    "value" : "HER2 positiv ved ISH",
-                    "translations" : {
-                      "nb" : "HER2 pos ved ISH"
-                    }
+                    "value" : "HER2 pos ved ISH"
                   }, {
                     "terminologyId" : "NORPAT",
                     "code" : "F29604",
-                    "value" : "HER2 negativ ved ISH",
-                    "translations" : {
-                      "nb" : "HER2 neg ved ISH"
-                    }
+                    "value" : "HER2 neg ved ISH"
                   } ]
                 } ]
               } ],
@@ -95020,26 +94990,26 @@
                   "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "0..1",
                   "terminologyId" : {
-                    "value" : "no.onk.bryst_pat"
+                    "value" : "no.onk.bryst.pat"
                   },
                   "constraint" : [ ],
-                  "selectedTerminologies" : [ "no.onk.bryst_pat" ],
+                  "selectedTerminologies" : [ "no.onk.bryst.pat" ],
                   "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "no.onk.bryst_pat",
+                    "terminologyId" : "no.onk.bryst.pat",
                     "code" : "G1",
                     "value" : "Sannsynlig grad 1",
                     "translations" : {
                       "nb" : "Sannsynlig G1"
                     }
                   }, {
-                    "terminologyId" : "no.onk.bryst_pat",
+                    "terminologyId" : "no.onk.bryst.pat",
                     "code" : "G2",
                     "value" : "Sannsynlig grad 2",
                     "translations" : {
                       "nb" : "Sannsynlig G2"
                     }
                   }, {
-                    "terminologyId" : "no.onk.bryst_pat",
+                    "terminologyId" : "no.onk.bryst.pat",
                     "code" : "G3",
                     "value" : "Sannsynlig grad 3",
                     "translations" : {
