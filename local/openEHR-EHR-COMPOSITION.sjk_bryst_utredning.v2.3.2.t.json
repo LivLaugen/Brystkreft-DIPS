@@ -28,7 +28,7 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "e4cccb03cd405e5b3ff78fa109507245",
+      "MD5-CAM-1.0.1" : "16ba932631938f6ca78bb4d3c9d5d344",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
       "sem_ver" : "334.1.2",
@@ -56172,24 +56172,15 @@
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "no.onk.bryst_pat",
                     "code" : "1",
-                    "value" : "< 10% (Negativ)",
-                    "translations" : {
-                      "nb" : "< 10% (Neg)"
-                    }
+                    "value" : "< 10% (Neg)"
                   }, {
                     "terminologyId" : "no.onk.bryst_pat",
                     "code" : "2",
-                    "value" : ">10 < 50% (Positiv)",
-                    "translations" : {
-                      "nb" : ">10 < 50% (Pos)"
-                    }
+                    "value" : ">10 < 50% (Pos)"
                   }, {
                     "terminologyId" : "no.onk.bryst_pat",
                     "code" : "3",
-                    "value" : ">50% (Positiv)",
-                    "translations" : {
-                      "nb" : ">50% (Pos)"
-                    }
+                    "value" : ">50% (Pos)"
                   } ]
                 } ]
               } ],
