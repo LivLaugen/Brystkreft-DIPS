@@ -28,7 +28,7 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "2a1cdbe88f099cb0a1447d6a35391bd9",
+      "MD5-CAM-1.0.1" : "8acef36aefe166931981ba65a5914f9f",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
       "sem_ver" : "334.1.2",
@@ -57775,13 +57775,6 @@
                     "value" : ">50% (Positiv)",
                     "translations" : {
                       "nb" : ">50% (Pos)"
-                    }
-                  }, {
-                    "terminologyId" : "no.onk.bryst_pat",
-                    "code" : "4",
-                    "value" : "test",
-                    "translations" : {
-                      "nb" : "Påskeharen"
                     }
                   } ]
                 } ]
