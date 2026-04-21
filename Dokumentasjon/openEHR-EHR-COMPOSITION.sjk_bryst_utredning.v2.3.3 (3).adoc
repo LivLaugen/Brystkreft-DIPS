@@ -1,3 +1,7 @@
+:toc:
+:toclevels: 4:
+
+
 = sjk_bryst_utredning
 
 
@@ -12,7 +16,7 @@ Archetype:: openEHR-EHR-COMPOSITION.encounter.v1
 
 
 
-:toc:
+
 
 
 
@@ -113,7 +117,7 @@ Grunnen til at pasienten blir utredet.
 Det er bruk lokalt kodeverk da det ikke finnes gode SNOMED-CT for dette.
 |====
 == Bildediagnostikk
-== Kartlegging bildediagnostikk
+=== Kartlegging bildediagnostikk
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -369,7 +373,7 @@ Liste over spesifikk kroppssted for hvor man har tatt bildeundersøkelsen.
 I SJK har vi brukt denne i stedet for den overordnede da vi trenger å ha denne repiterende. 
 |====
 == Sykdomstegn
-== Kartleggingsspørsmål om symptomer/sykdomstegn
+=== Kartleggingsspørsmål om symptomer/sykdomstegn
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -401,7 +405,7 @@ Sykdomstegn ved undersøkelse
 |undefined| 1..1| DV_DATE_TIME | Time
 |
 |====
-== Funn ved fysisk undersøkelse
+=== Funn ved fysisk undersøkelse
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -479,8 +483,8 @@ a|
 |
 |====
 == Lesjon/funn i bryst og aksille høyre
-== Templat-overskrift
-== Bildediagnostisk svar
+=== Templat-overskrift
+==== Bildediagnostisk svar
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -731,7 +735,7 @@ a|
 
 For eksempel et notat om at kopi av bilde eller svarrapport er gitt til pasienten. Tilsvarer DiagnosticReport.note i FHIR.
 |====
-== Laboratorieresultat
+==== Laboratorieresultat
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -1188,8 +1192,8 @@ Nottingham-graderingssystemet for primær ondartet svulst i bryst
 1287020007 - Nottingham grade system for primary malignant neoplasm of breast (qualifier value)
 |====
 == Lesjon/funn i bryst og aksille venstre
-== Templat-overskrift
-== Bildediagnostisk svar
+=== Templat-overskrift
+==== Bildediagnostisk svar
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -1421,7 +1425,7 @@ a|
 
 For eksempel et notat om at kopi av bilde eller svarrapport er gitt til pasienten. Tilsvarer DiagnosticReport.note i FHIR.
 |====
-== Laboratorieresultat
+==== Laboratorieresultat
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -1826,7 +1830,7 @@ Brukt 1287020007  Nottingham grade system for primary malignant neoplasm of brea
 Det endelige svaret kommer i patologisvaret etter fjerning av tumoren.
 |====
 == Gentest
-== Kartlegging genetisk biomarkør
+=== Kartlegging genetisk biomarkør
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -1861,7 +1865,7 @@ Designkommentar:
 Her kan legene skrive inn svaret på gentesten hvis det er gjort noe. 
 |====
 == Problem/diagnose utredning
-== Problem/diagnose overordnet
+=== Problem/diagnose overordnet
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -2009,7 +2013,7 @@ Denne settes hvis det er krysset av primærtumor.
 |at0070| 0..1| DV_DATE_TIME | Sist oppdatert
 |
 |====
-== Problem/diagnose (inkl TNM) Høyre
+=== Problem/diagnose (inkl TNM) Høyre
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -2173,7 +2177,7 @@ Ved utredning :
 |at0070| 0..1| DV_DATE_TIME | Sist oppdatert
 |
 |====
-== Problem/diagnose (inkl TNM) Venstre
+=== Problem/diagnose (inkl TNM) Venstre
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -2332,7 +2336,7 @@ Ved utredning :
 |at0070| 0..1| DV_DATE_TIME | Sist oppdatert
 |
 |====
-== Regional (N) lymfeknutemetastase
+=== Regional (N) lymfeknutemetastase
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -2426,7 +2430,7 @@ a|
 |at0070| 0..1| DV_DATE_TIME | Sist oppdatert
 |
 |====
-== Fjernmetastaser (M)
+=== Fjernmetastaser (M)
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
