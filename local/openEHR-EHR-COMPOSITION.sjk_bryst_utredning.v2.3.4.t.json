@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "bf23482ce92a08a25395d9ea563347a8",
+      "MD5-CAM-1.0.1" : "ddbd58ed157edf9f5ff2a8cb5c75cdb8",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "351.0.0",
+      "sem_ver" : "352.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -76984,7 +76984,7 @@
                   "terminologyId" : {
                     "value" : "local"
                   },
-                  "constraint" : [ "ac0.175" ],
+                  "constraint" : [ "ac0.180" ],
                   "selectedTerminologies" : [ ]
                 } ]
               } ],
@@ -77044,35 +77044,7 @@
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "nodeId" : "at0007.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "defining_code",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "TERMINOLOGY_CODE",
-                  "occurrences" : "0..1",
-                  "terminologyId" : {
-                    "value" : "SNOMED-CT"
-                  },
-                  "constraint" : [ ],
-                  "selectedTerminologies" : [ "SNOMED-CT" ],
-                  "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "103357000",
-                    "value" : "Funnet er palpabelt"
-                  } ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_ARCHETYPE_ROOT",
@@ -77128,10 +77100,10 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : {
-          "ac0.175" : {
+          "ac0.180" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.175",
+            "code" : "ac0.180",
             "description" : ""
           }
         },
@@ -77189,7 +77161,7 @@
             "code" : "at0041.1",
             "text" : "Forkalkning tilstede",
             "description" : "Tilstedeværelse av forkalkning i lesjonen.",
-            "comment" : "Designkommentar:\nSkal ikke vises i skjermbildet, men skal settes om kalk er tilstede - her skal denne settes automatisk hvis man velger en av verdiene i elementet \"Forkalkning\" (beningn, suspekt, usikker)."
+            "comment" : "Designkommentar:\nSkal ikke vises i skjermbildet, men skal settes om kalk er tilstede - her skal denne settes automatisk hvis man velger en av verdiene i elementet \"Forkalkning\"  er suspekt"
           },
           "at0042.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -77198,18 +77170,18 @@
             "description" : "Beskrivelse av mønsteret av forkalkning som er observert.",
             "comment" : "Mønsteret kan kodes om ønskelig."
           },
-          "ac0.175" : {
+          "ac0.180" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.175",
+            "code" : "ac0.180",
             "description" : ""
           }
         },
         "de" : {
-          "ac0.175" : {
+          "ac0.180" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.175",
+            "code" : "ac0.180",
             "description" : ""
           }
         }
@@ -78085,6 +78057,31 @@
         "ac0.175" : {
           "@type" : "VALUE_SET",
           "id" : "ac0.175",
+          "members" : [ "at0017" ]
+        },
+        "ac0.176" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.176",
+          "members" : [ "at0017" ]
+        },
+        "ac0.177" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.177",
+          "members" : [ "at0017" ]
+        },
+        "ac0.178" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.178",
+          "members" : [ "at0017" ]
+        },
+        "ac0.179" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.179",
+          "members" : [ "at0017" ]
+        },
+        "ac0.180" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.180",
           "members" : [ "at0017" ]
         }
       }
