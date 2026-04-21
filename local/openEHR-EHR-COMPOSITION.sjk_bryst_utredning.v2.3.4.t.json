@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "6c56f7028ba904d2f7f5986853eb16b3",
+      "MD5-CAM-1.0.1" : "bf23482ce92a08a25395d9ea563347a8",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "350.1.0",
+      "sem_ver" : "351.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -77016,14 +77016,6 @@
                   "constraint" : [ ],
                   "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "30807003",
-                    "value" : "Benign"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "64957009",
-                    "value" : "Usikker"
-                  }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "415684004",
                     "value" : "Suspekt"
