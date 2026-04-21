@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "60f704510f0d86cf31a641f607e119b5",
+      "MD5-CAM-1.0.1" : "f523eea0cdefbe7a6aaa520d66d3bd40",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "340.0.0",
+      "sem_ver" : "340.0.1",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -62016,7 +62016,7 @@
             "description" : "Navnet på analyseresultatet.",
             "hl7v2_mapping" : "OBX.3",
             "fhir_mapping" : "Observation.code",
-            "comment" : "Designkommentar:\nHar brukt koden: 1255078008 |Percent of cell nuclei positive for proliferation marker protein Ki-67 in primary malignant neoplasm by immunohistochemistry (observable entity)|.\n\n"
+            "comment" : "Designkommentar:\nHar brukt koden: 1255078008 |Percent of cell nuclei positive for proliferation marker protein Ki-67 in primary malignant neoplasm by immunohistochemistry (observable entity).\n\n"
           }
         },
         "pt-br" : {
