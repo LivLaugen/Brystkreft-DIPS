@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "f523eea0cdefbe7a6aaa520d66d3bd40",
+      "MD5-CAM-1.0.1" : "438576544d6fbe79ea8688046f4a1112",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "340.0.1",
+      "sem_ver" : "340.0.2",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -65597,7 +65597,7 @@
             "code" : "at0000.1",
             "text" : "NGS gradering av tumor",
             "description" : "Den mest sannsynlig gradering av tumoren vha. NGS graderingsystem (Nottingham Gradering System)",
-            "comment" : "Designkommentar\nNottingham-graderingssystemet for primær ondartet svulst i bryst\n1287020007 - Nottingham grade system for primary malignant neoplasm of breast |\n"
+            "comment" : "Designkommentar\nNottingham-graderingssystemet for primær ondartet svulst i bryst\n1287020007 - Nottingham grade system for primary malignant neoplasm of breast\n"
           }
         },
         "de" : {
@@ -66536,7 +66536,7 @@
             "code" : "at0005",
             "text" : "Undersøkelsesnavn",
             "description" : "Navn på laboratorieundersøkelsen som er utført på prøvematerialet.",
-            "comment" : "Designkommentar: \nNavn på laboratorieundersøkelsen, patologiundersøkelsen som er gjort på lesjonen. Her er det satt inn SNOMED-CT koden for 108257001 | Anatomic pathology procedure |(procedure).\nDenne skal ikke vises i skjermbildet, men lagres ned ved utfylling av noen av elementene i denne arketypen (OBSERVATION.laboratory_test_result.v1)\nVises ikke i skjermbildet."
+            "comment" : "Designkommentar: \nNavn på laboratorieundersøkelsen, patologiundersøkelsen som er gjort på lesjonen. Her er det satt inn SNOMED-CT koden for 108257001  Anatomic pathology procedure (procedure).\nDenne skal ikke vises i skjermbildet, men lagres ned ved utfylling av noen av elementene i denne arketypen (OBSERVATION.laboratory_test_result.v1)\nVises ikke i skjermbildet."
           },
           "at0094.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -76599,7 +76599,7 @@
             "code" : "at0021.1",
             "text" : "Navn på landemerke",
             "description" : "Identifisert kroppssted som benyttes som referansepunkt for det aktuelle kroppsstedet.",
-            "comment" : "Designkommentar\ner det   musculus pectoralis major, 60005003 | musculus pectoralis major |   Pectoralis major muscle structure (body structure)\n\neller 81802002 | pectoralismuskel |  Pectoral muscle structure (body structure)"
+            "comment" : "Designkommentar\nmusculus pectoralis major, 60005003 - Pectoralis major muscle structure (body structure)"
           },
           "at0022.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -91497,7 +91497,7 @@
             "description" : "Navnet på analyseresultatet.",
             "hl7v2_mapping" : "OBX.3",
             "fhir_mapping" : "Observation.code",
-            "comment" : "Designkommentar:\nHar brukt koden: 1255078008 |Percent of cell nuclei positive for proliferation marker protein Ki-67 in primary malignant neoplasm by immunohistochemistry (observable entity)|."
+            "comment" : "Designkommentar:\nHar brukt koden: 1255078008 Percent of cell nuclei positive for proliferation marker protein Ki-67 in primary malignant neoplasm by immunohistochemistry (observable entity)."
           }
         },
         "pt-br" : {
@@ -95064,7 +95064,7 @@
             "code" : "at0003.1",
             "text" : "Grad (NGS)",
             "description" : "Sannsynlig grad av tumoren. Graderingen som brukes er Nottingham grade system for primary malignant neoplasm of breast (NGS) ",
-            "comment" : "Designkommentar:\nBrukt 1287020007 | Nottingham grade system for primary malignant neoplasm of breast | \nDet endelige svaret kommer i patologisvaret etter fjerning av tumoren."
+            "comment" : "Designkommentar:\nBrukt 1287020007  Nottingham grade system for primary malignant neoplasm of breast\nDet endelige svaret kommer i patologisvaret etter fjerning av tumoren."
           },
           "at0005.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -96015,7 +96015,7 @@
             "code" : "at0005",
             "text" : "Undersøkelsesnavn",
             "description" : "Navn på laboratorieundersøkelsen som er utført på prøvematerialet.",
-            "comment" : "Designkommentar: \nNavn på laboratorieundersøkelsen, patologiundersøkelsen som er gjort på lesjonen. Her er det satt inn SNOMED-CT koden for 108257001 | Anatomic pathology procedure |(procedure).\n\nDenne skal ikke vises i skjermbildet, men lagres ned ved utfylling av noen av elementene i denne arketypen (OBSERVATION.laboratory_test_result.v1)\nVises ikke i skjermbildet."
+            "comment" : "Designkommentar: \nNavn på laboratorieundersøkelsen, patologiundersøkelsen som er gjort på lesjonen. Her er det satt inn SNOMED-CT koden for 108257001 -Anatomic pathology procedure |(procedure).\n\nDenne skal ikke vises i skjermbildet, men lagres ned ved utfylling av noen av elementene i denne arketypen (OBSERVATION.laboratory_test_result.v1)\nVises ikke i skjermbildet."
           },
           "at0094.1" : {
             "@type" : "ARCHETYPE_TERM",
