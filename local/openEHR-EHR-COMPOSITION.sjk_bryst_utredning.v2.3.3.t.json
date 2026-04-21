@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "0ecab436a04d9539bd7ba8ca4ebc9c47",
+      "MD5-CAM-1.0.1" : "ccfe9c77f4c36f3dc059af5ed73b954b",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "336.0.0",
+      "sem_ver" : "337.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -65364,52 +65364,7 @@
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "nodeId" : "at0003.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "defining_code",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "TERMINOLOGY_CODE",
-                  "occurrences" : "0..1",
-                  "terminologyId" : {
-                    "value" : "no.onk.bryst.pat"
-                  },
-                  "constraint" : [ ],
-                  "selectedTerminologies" : [ "no.onk.bryst.pat" ],
-                  "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "no.onk.bryst.pat",
-                    "code" : "G1",
-                    "value" : "Sannsynlig grad 1",
-                    "translations" : {
-                      "nb" : "Sannsynlig G1"
-                    }
-                  }, {
-                    "terminologyId" : "no.onk.bryst.pat",
-                    "code" : "G2",
-                    "value" : "Sannsynlig grad 2",
-                    "translations" : {
-                      "nb" : "Sannsynlig G2"
-                    }
-                  }, {
-                    "terminologyId" : "no.onk.bryst.pat",
-                    "code" : "G3",
-                    "value" : "Sannsynlig grad 3",
-                    "translations" : {
-                      "nb" : "Sannsynlig G3"
-                    }
-                  } ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -85607,7 +85562,43 @@
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "nodeId" : "at0004.1",
-          "attributes" : [ ],
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "no.onk.bryst_pat"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "no.onk.bryst_pat" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "no.onk.bryst_pat",
+                    "code" : "1",
+                    "value" : "< 10% (Neg)"
+                  }, {
+                    "terminologyId" : "no.onk.bryst_pat",
+                    "code" : "2",
+                    "value" : ">10 < 50% (Pos)"
+                  }, {
+                    "terminologyId" : "no.onk.bryst_pat",
+                    "code" : "3",
+                    "value" : ">50% (Pos)"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -87148,7 +87139,43 @@
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "nodeId" : "at0004.1",
-          "attributes" : [ ],
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "no.onk.bryst_pat"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "no.onk.bryst_pat" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "no.onk.bryst_pat",
+                    "code" : "1",
+                    "value" : "< 10% (Neg)"
+                  }, {
+                    "terminologyId" : "no.onk.bryst_pat",
+                    "code" : "2",
+                    "value" : ">10 < 50% (Pos)"
+                  }, {
+                    "terminologyId" : "no.onk.bryst_pat",
+                    "code" : "3",
+                    "value" : ">50% (Pos)"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -88586,35 +88613,9 @@
             "existence" : "0..1",
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_CODED_TEXT",
+              "rmTypeName" : "DV_TEXT",
               "occurrences" : "1..1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "defining_code",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "TERMINOLOGY_CODE",
-                  "occurrences" : "0..1",
-                  "terminologyId" : {
-                    "value" : "NORPAT"
-                  },
-                  "constraint" : [ ],
-                  "selectedTerminologies" : [ "NORPAT" ],
-                  "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "NORPAT",
-                    "code" : "F29601",
-                    "value" : "HER2 neg (0)"
-                  }, {
-                    "terminologyId" : "NORPAT",
-                    "code" : "F29602",
-                    "value" : "HER2 borderline (1+2+)"
-                  }, {
-                    "terminologyId" : "NORPAT",
-                    "code" : "F29603",
-                    "value" : "HER2 pos (3+)"
-                  } ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -89800,9 +89801,31 @@
             "existence" : "0..1",
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
+              "rmTypeName" : "DV_CODED_TEXT",
               "occurrences" : "1..1",
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "NORPAT"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "NORPAT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "NORPAT",
+                    "code" : "F29605",
+                    "value" : "HER2 pos ved ISH"
+                  }, {
+                    "terminologyId" : "NORPAT",
+                    "code" : "F29604",
+                    "value" : "HER2 neg ved ISH"
+                  } ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -94786,7 +94809,43 @@
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "nodeId" : "at0003.1",
-          "attributes" : [ ],
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "no.onk.bryst_pat"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "no.onk.bryst_pat" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "no.onk.bryst_pat",
+                    "code" : "G1",
+                    "value" : "Sannsynlig G1"
+                  }, {
+                    "terminologyId" : "no.onk.bryst_pat",
+                    "code" : "G2",
+                    "value" : "Sannsynlig G2"
+                  }, {
+                    "terminologyId" : "no.onk.bryst_pat",
+                    "code" : "G3",
+                    "value" : "Sannsynlig G3"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
