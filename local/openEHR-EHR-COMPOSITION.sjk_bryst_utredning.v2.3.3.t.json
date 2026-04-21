@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "5c4b86fc6d2ae11e8d99af027f246458",
+      "MD5-CAM-1.0.1" : "963c26767b7a27dcf8635a9c3b0c0d89",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "341.0.0",
+      "sem_ver" : "342.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -60428,22 +60428,18 @@
                   "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "0..1",
                   "terminologyId" : {
-                    "value" : "no.onk.bryst_pat"
+                    "value" : "NORPAT"
                   },
                   "constraint" : [ ],
-                  "selectedTerminologies" : [ "no.onk.bryst_pat" ],
+                  "selectedTerminologies" : [ "NORPAT" ],
                   "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "no.onk.bryst_pat",
-                    "code" : "G1",
-                    "value" : "Sannsynlig G1"
+                    "terminologyId" : "NORPAT",
+                    "code" : "F29605",
+                    "value" : "HER2 pos ved ISH"
                   }, {
-                    "terminologyId" : "no.onk.bryst_pat",
-                    "code" : "G2",
-                    "value" : "Sannsynlig G2"
-                  }, {
-                    "terminologyId" : "no.onk.bryst_pat",
-                    "code" : "G3",
-                    "value" : "Sannsynlig G3"
+                    "terminologyId" : "NORPAT",
+                    "code" : "F29604",
+                    "value" : "HER2 neg ved ISH"
                   } ]
                 } ]
               } ],
