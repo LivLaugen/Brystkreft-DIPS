@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "c8dcd4e486eae2d53e031717751d9b67",
+      "MD5-CAM-1.0.1" : "6c56f7028ba904d2f7f5986853eb16b3",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "350.0.0",
+      "sem_ver" : "350.1.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -77188,21 +77188,21 @@
           "at0007.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0007.1",
-            "text" : "Palpabelt funn",
+            "text" : "Merknad forkalkning",
             "description" : "Kryss av dersom det foreligger en palpabel kul.",
             "comment" : "Designkommentar:\nLegge inn en sjekkboks for om funnet er palpabelt.\nBrukt koden 103357000 Palpable (qualifier value)\n\nDenne hører egentlig ikke til radiologi, og skal ikke gjenbrukes. Dette er kun en huskelapp/beskrivelse til kliniker"
           },
           "at0041.1" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0041",
-            "text" : "Forkalkning",
+            "code" : "at0041.1",
+            "text" : "Forkalkning tilstede",
             "description" : "Tilstedeværelse av forkalkning i lesjonen.",
             "comment" : "Designkommentar:\nSkal ikke vises i skjermbildet, men skal settes om kalk er tilstede - her skal denne settes automatisk hvis man velger en av verdiene i elementet \"Forkalkning\" (beningn, suspekt, usikker)."
           },
           "at0042.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0042.1",
-            "text" : "Forkalkning tolkning",
+            "text" : "Forkalkning",
             "description" : "Beskrivelse av mønsteret av forkalkning som er observert.",
             "comment" : "Mønsteret kan kodes om ønskelig."
           },
