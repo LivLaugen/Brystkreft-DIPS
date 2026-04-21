@@ -1,0 +1,2574 @@
+= sjk_bryst_utredning
+
+
+== Metadata
+
+
+TemplateId:: openEHR-EHR-COMPOSITION.sjk_bryst_utredning.v2.3.3
+
+
+Archetype:: openEHR-EHR-COMPOSITION.encounter.v1
+
+
+
+
+:toc:
+
+
+
+
+// Not supported rmType COMPOSITION
+== EVENT_CONTEXT
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*EVENT_CONTEXT* + 
+EVENT_CONTEXT: __
+5+a|*Onkologi AQL hjelpefelt* + 
+CLUSTER: _openEHR-EHR-CLUSTER.oncology_aql_support_dips.v1_
+|at0001| 0..1| DV_TEXT | AQL krefttype
+a|
+5+a|*Template versjonsinformasjon* + 
+CLUSTER: _openEHR-EHR-CLUSTER.template_semver_dips.v1_
+|at0001| 0..1| DV_CODED_TEXT | Navn
+a|
+* Oncology-Medical-Evaluation (no.dips.oncology.breast: TM2)
+|====
+== Utredning
+== Sykdomsstatus (tumorhendelse)
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Sykdomsstatus (tumorhendelse)* + 
+OBSERVATION: _openEHR-EHR-OBSERVATION.problem_screening.v1_
+
+
+Designkommentar:
+Registrering av aktuelle tumorhendelse.
+Det som registreres her skal arves ned i Problem/diagnose kvalifikator på overordnet Diagnose:
+-372087000 -Primærtumor (med eller uten metastase(r)) = episoditet ny 
+-25173007 -Lokalt residiv (med eller uten metastase(r)) = residivert 
+-128462008 -Kun metastase(r) = progresjon 
+-74964007 -Annet  - ingen automatikk 
+
+Kun avkryssing i syskdomsutvikling (tumorhendelse) som skal vises i skjermbildet. 
+|at0034| 0..1| DV_CODED_TEXT | Kartleggingsformål
+a|
+* Tumorhendelse (no.onk.kartlegging: 03)
+
+
+Feltet er teknisk og skjules for bruker. 
+5+a|*Spesifikt problem eller diagnose* + 
+CLUSTER: _at0022_
+|at0004| 1..1| DV_CODED_TEXT | Sykdomsutvikling (tumorhendelse)
+a|
+* Primærtumor (med eller uten metastase(r)) (SNOMED-CT: 372087000)
+* Lokalt residiv (med eller uten metastase(r)) (SNOMED-CT: 25173007)
+* Kun metastase(r) (SNOMED-CT: 128462008)
+* Annet (SNOMED-CT: 74964007)
+
+
+-372087000 - Primærtumor (med eller uten metastase(r))  - Primary malignant neoplasm (disorder) 
+-25173007 - Lokalt residiv (med eller uten metastase(r)) - Recurrent neoplasm (disorder) -128462008 - Kun metastase(r) Metastatic malignant neoplasm (disorder) 
+-74964007 - Annet  Other (qualifier value) 
+
+https://hsorhf.sharepoint.com/:x:/r/sites/OUSHF-X-Strukturertkreftjournal/Shared%20Documents/General/Kodeverk/Funn%20i%20utredning.xlsx?d=wef78dd9f28284146a414b101b6afff36&csf=1&web=1&e=bDSLOz
+|====
+== Anamnese
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Anamnese* + 
+OBSERVATION: _openEHR-EHR-OBSERVATION.story.v1_
+|at0004| 0..1| DV_TEXT | Aktuelt
+a|
+|====
+== Utsagn om graviditet
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Utsagn om graviditet* + 
+OBSERVATION: _openEHR-EHR-OBSERVATION.pregnancy_assertion_sjk_no.v1_
+|at0004| 1..1| DV_CODED_TEXT | Kjent gravid på diagnosetidspunktet
+a|
+* at0005 -> Gravid 
+
+
+Dette utsagnet anses som korrekt kun på det tidspunktet det avgis, og er vanligvis ment å støtte trygg klinisk beslutningstaking. Antatte verdier og uttrykk for usikkerhet er bevisst utelatt.
+|====
+== Henvisningsårsak
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Henvisningsårsak* + 
+EVALUATION: _openEHR-EHR-EVALUATION.reason_for_encounter.v1_
+|at0004| 0..1| DV_CODED_TEXT | Henvisningsårsak
+a|
+* Screening (no.onk.henvisningsaarsak: 1)
+* Symptomer (no.onk.henvisningsaarsak: 2)
+
+
+Designkommentar:
+Grunnen til at pasienten blir utredet.
+Det er bruk lokalt kodeverk da det ikke finnes gode SNOMED-CT for dette.
+|====
+== Bildediagnostikk
+== Kartlegging bildediagnostikk
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Kartlegging bildediagnostikk* + 
+OBSERVATION: _openEHR-EHR-OBSERVATION.investigation_screening.v1_
+
+
+Designkommentar:
+Det brukes kartleggingsarketypen for å kunne få et svar om det faktisk er gjort en bildediagnostiske undersøkelse, og kan svare ja/nei. Dermed har man også dokumentert "nei". 
+Hvis ja, så kan det registreres hvilke modalitet som er gjort.
+|at0040| 0..1| DV_CODED_TEXT | Kartleggingsformål
+a|
+* Bildediagnostikk (no.onk.kartlegging: 02)
+
+
+Designkommentar:
+Dette feltet er navnet no.onk.kartlegging for å si at kartleggingsformålet er om det er gjort noe bildediagnostikk innenfor onkoloki (felles kreftjournalprosjektet). 
+
+valglistene for kartleggingsformål ligger her: https://github.com/bjornna/modelling-sjk/blob/main/background/kodeverk_kartlegging.adoc
+5+a|*Spesifikk undersøkelse mammografi* + 
+CLUSTER: _at0026_
+
+
+Designkommentar:
+Spesifikke undersøkelsen kodet med DICOM, med tilhørende resyme for hele undersøkelsen samt slottet inn CLUSTERet "anatomisk lokalisering" for hver anatomiske lokalasjon man har undersøkt.
+
+Det ønskes en tabell hvor man har modalitet førs, så korppsstruktur som en multikomboboks slik at man kan velge flere kroppsstrukturer samtidig, til slutt resyme. 
+
+Klinikken ønsker å alltid vise mammografi, ultralyd og MR. 
+Det skal samtidig være mulighet til å velge "legg til modalitet/undersøkelse" for å kunne legge til CT, Skjellettscintigrafi osv. 
+
+|at0021| 1..1| DV_CODED_TEXT | Bildeprosedyre mammografi
+a|
+* Mammografi (DICOM_modality: MG)
+
+
+Designkommentar:
+I SJK har vi valgt å legge inn DICOM modalitet i dette feltet.
+
+
+
+|at0024| 0..1| DV_CODED_TEXT | Er denne undersøkelsen utført?
+a|
+* at0036 -> Ja 
+* at0037 -> Nei 
+
+
+Designkommentar 
+Det settes automatisk ja hvis man velger en undersøkelse. 
+|at0047| 0..*| DV_CODED_TEXT | Type
+a|
+* Kontrast mammografi (SNOMED-CT: 726551006)
+* Tomosyntese (DBT) (SNOMED-CT: 450566007)
+
+
+For eksempel: kontrastforsterket mammografi, forstørrelsesmammografi, digital tomosyntese av bryst, kontrastbildeteknikk, fluorescens in situ hybridisering (FISH), immunoassay-metode.
+|at0003| 0..1| DV_DATE_TIME | Dato
+|
+
+
+Designkommentar:
+
+|at0002| 0..1| DV_TEXT | Resymé mammografi
+a|
+
+
+Designkommentar:
+Kort beskrivelse, oppsummering eller tolkning av funnene på undersøkelsen.
+5+a|*Spesifikk undersøkelse UL* + 
+CLUSTER: _at0026_
+
+
+Designkommentar:
+Spesifikke undersøkelsen kodet med DICOM, med tilhørende resyme for hele undersøkelsen samt slottet inn CLUSTERet "anatomisk lokalisering" for hver anatomiske lokalasjon man har undersøkt.
+
+Det ønskes en tabell hvor man har modalitet førs, så korppsstruktur som en multikomboboks slik at man kan velge flere kroppsstrukturer samtidig, til slutt resyme. 
+
+Klinikken ønsker å alltid vise mammografi, ultralyd og MR. 
+Det skal samtidig være mulighet til å velge "legg til modalitet/undersøkelse" for å kunne legge til CT, Skjellettscintigrafi osv. 
+
+|at0021| 1..1| DV_CODED_TEXT | Undersøkelsesnavn
+a|
+* Ultralyd (DICOM_modality: US)
+
+
+Designkommentar:
+I SJK har vi valgt å legge inn DICOM modalitet i dette feltet.
+
+
+
+|at0024| 0..1| DV_CODED_TEXT | Er denne undersøkelsen utført?
+a|
+* at0036 -> Ja 
+
+
+Designkommentar 
+Det settes automatisk ja hvis man velger en undersøkelse. 
+|at0002| 0..1| DV_TEXT | Resymé
+a|
+
+
+Designkommentar:
+Kort beskrivelse, oppsummering eller tolkning av funnene på undersøkelsen.
+5+a|*Anatomisk lokalisering* + 
+CLUSTER: _openEHR-EHR-CLUSTER.anatomical_location.v1_
+|at0001| 1..1| DV_CODED_TEXT | Navn på kroppssted
+a|
+* kroppsdel (SNOMED-CT: 38866009)
+
+
+Designkommentar:
+Denne skal være skjult i skjermbildet. 
+
+Vi legger inn cluster anatomisk lokalisering og sette kroppsdel på øverste 38866009 | kroppsdel | Body part structure (body structure) i feltet “navn på kroppssted” som er 0..1, og sette inn liste for spesifikke kroppssteder i elementet “Spesifikt sted” som er 0..*. 
+Dette er for å få en tabell for bildeundersøkelse med elementene  modalitet, dato, flere kroppsdeler i samme modalitet (spesifik sted), og et resyme for modaliteten. 
+|at0065| 0..*| DV_CODED_TEXT | Spesifikt sted
+a|
+* Aksille (SNOMED-CT: 91470000)
+* Mamma (bryst) (SNOMED-CT: 76752008)
+
+
+Designkommentar:
+Liste over spesifikk kroppssted for hvor man har tatt bildeundersøkelsen. 
+
+I SJK har vi brukt denne i stedet for den overordnede da vi trenger å ha denne repiterende. 
+5+a|*Spesifikk undersøkelse MR* + 
+CLUSTER: _at0026_
+
+
+Designkommentar:
+Spesifikke undersøkelsen kodet med DICOM, med tilhørende resyme for hele undersøkelsen samt slottet inn CLUSTERet "anatomisk lokalisering" for hver anatomiske lokalasjon man har undersøkt.
+
+Det ønskes en tabell hvor man har modalitet førs, så korppsstruktur som en multikomboboks slik at man kan velge flere kroppsstrukturer samtidig, til slutt resyme. 
+
+Klinikken ønsker å alltid vise mammografi, ultralyd og MR. 
+Det skal samtidig være mulighet til å velge "legg til modalitet/undersøkelse" for å kunne legge til CT, Skjellettscintigrafi osv. 
+
+|at0021| 1..1| DV_CODED_TEXT | Undersøkelsesnavn
+a|
+* MR (DICOM_modality: MR)
+
+
+Designkommentar:
+I SJK har vi valgt å legge inn DICOM modalitet i dette feltet.
+
+
+
+|at0024| 0..1| DV_CODED_TEXT | Er denne undersøkelsen utført?
+a|
+* at0036 -> Ja 
+
+
+Designkommentar 
+Det settes automatisk ja hvis man velger en undersøkelse. 
+|at0002| 0..1| DV_TEXT | Resymé
+a|
+
+
+Designkommentar:
+Kort beskrivelse, oppsummering eller tolkning av funnene på undersøkelsen.
+5+a|*Anatomisk lokalisering* + 
+CLUSTER: _openEHR-EHR-CLUSTER.anatomical_location.v1_
+|at0001| 1..1| DV_CODED_TEXT | Navn på kroppssted
+a|
+* kroppsdel (SNOMED-CT: 38866009)
+
+
+Designkommentar:
+Denne skal være skjult i skjermbildet. 
+
+Vi legger inn cluster anatomisk lokalisering og sette kroppsdel på øverste 38866009 | kroppsdel | Body part structure (body structure) i feltet “navn på kroppssted” som er 0..1, og sette inn liste for spesifikke kroppssteder i elementet “Spesifikt sted” som er 0..*. 
+Dette er for å få en tabell for bildeundersøkelse med elementene  modalitet, dato, flere kroppsdeler i samme modalitet (spesifik sted), og et resyme for modaliteten. 
+|at0065| 0..*| DV_CODED_TEXT | Spesifikt sted
+a|
+* Mamma (bryst) (SNOMED-CT: 76752008)
+
+
+Designkommentar:
+Liste over spesifikk kroppssted for hvor man har tatt bildeundersøkelsen. 
+
+I SJK har vi brukt denne i stedet for den overordnede da vi trenger å ha denne repiterende. 
+5+a|*Spesifikk undersøkelse* + 
+CLUSTER: _at0026_
+
+
+Designkommentar:
+Spesifikke undersøkelsen kodet med DICOM, med tilhørende resyme for hele undersøkelsen samt slottet inn CLUSTERet "anatomisk lokalisering" for hver anatomiske lokalasjon man har undersøkt.
+
+Det ønskes en tabell hvor man har modalitet førs, så korppsstruktur som en multikomboboks slik at man kan velge flere kroppsstrukturer samtidig, til slutt resyme. 
+
+Klinikken ønsker å alltid vise mammografi, ultralyd og MR. 
+Det skal samtidig være mulighet til å velge "legg til modalitet/undersøkelse" for å kunne legge til CT, Skjellettscintigrafi osv. 
+
+|at0021| 1..1| DV_CODED_TEXT | Undersøkelsesnavn
+a|
+* Ultralyd (DICOM_modality: US)
+* CT (DICOM_modality: CT)
+* MR (DICOM_modality: MR)
+* Nukleærmedisin (DICOM_modality: NM)
+* PET (DICOM_modality: PT)
+* PET-CT (DICOM_modality: PTCT)
+* PET-MR (DICOM_modality: PTMR)
+* Annen modalitet (DICOM_modality: OT)
+
+
+Designkommentar:
+I SJK har vi valgt å legge inn DICOM modalitet i dette feltet.
+
+
+
+|at0024| 0..1| DV_CODED_TEXT | Er denne undersøkelsen utført?
+a|
+* at0036 -> Ja 
+
+
+Designkommentar 
+Det settes automatisk ja hvis man velger en undersøkelse. 
+|at0002| 0..1| DV_TEXT | Resymé
+a|
+
+
+Designkommentar:
+Kort beskrivelse, oppsummering eller tolkning av funnene på undersøkelsen.
+5+a|*Anatomisk lokalisering* + 
+CLUSTER: _openEHR-EHR-CLUSTER.anatomical_location.v1_
+|at0001| 1..1| DV_CODED_TEXT | Navn på kroppssted
+a|
+* kroppsdel (SNOMED-CT: 38866009)
+
+
+Designkommentar:
+Denne skal være skjult i skjermbildet. 
+
+Vi legger inn cluster anatomisk lokalisering og sette kroppsdel på øverste 38866009 | kroppsdel | Body part structure (body structure) i feltet “navn på kroppssted” som er 0..1, og sette inn liste for spesifikke kroppssteder i elementet “Spesifikt sted” som er 0..*. 
+Dette er for å få en tabell for bildeundersøkelse med elementene  modalitet, dato, flere kroppsdeler i samme modalitet (spesifik sted), og et resyme for modaliteten. 
+|at0065| 0..*| DV_CODED_TEXT | Spesifikt sted
+a|
+* Aksille (SNOMED-CT: 91470000)
+* Mamma (bryst) (SNOMED-CT: 76752008)
+* Thorax (brystkasse) (SNOMED-CT: 51185008)
+* Columna vertebralis (ryggrad) (SNOMED-CT: 421060004)
+* Abdomen (SNOMED-CT: 818983003)
+* Pelvis (bekken) (SNOMED-CT: 12921003)
+* Caput (hode) (SNOMED-CT: 69536005)
+* Lever (SNOMED-CT: 10200004)
+* Skjelett (SNOMED-CT: 113192009)
+* Annen (spesifiser) (SNOMED-CT: 74964007)
+
+
+Designkommentar:
+Liste over spesifikk kroppssted for hvor man har tatt bildeundersøkelsen. 
+
+I SJK har vi brukt denne i stedet for den overordnede da vi trenger å ha denne repiterende. 
+|====
+== Sykdomstegn
+== Kartleggingsspørsmål om symptomer/sykdomstegn
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Kartleggingsspørsmål om symptomer/sykdomstegn* + 
+OBSERVATION: _openEHR-EHR-OBSERVATION.symptom_sign_screening.v1_
+
+
+Svarene kan være selvrapporterte.
+// Not supported rmType EVENT
+|at0034| 0..1| DV_CODED_TEXT | Kartleggingsformål
+a|
+* Symptom_onk (no.onk.kartlegging: 05)
+
+
+Dette dataelementet er ment for å sette en kontekst for spørsmålene om man senere ønsker å gjøre spørringer på dataene. Det er ikke forventet at dette dataelementet skal være synlig for en bruker av skjemaet, men kun tilgjengelig i de lagrede dataene. 
+For eksempel: "Pre operativ screening" eller navnet på det faktiske spørreskjemaet.
+|at0028| 0..*| DV_CODED_TEXT | Sykdomstegn ved undersøkelse
+a|
+* Ingen (no.onk.kroppside: 1)
+* Høyre side (no.onk.kroppside: 2)
+* Venstre side (no.onk.kroppside: 3)
+* Begge/bilateralt (no.onk.kroppside: 4)
+
+
+Designkommentar:
+Sykdomstegn ved undersøkelse
+
+***Her kan man også bare velge ja/nei og ved ja så viser man en sjekkboks for både høyre og venstre. 
+|undefined| 1..1| DV_DATE_TIME | Time
+|
+|====
+== Funn ved fysisk undersøkelse
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Funn ved fysisk undersøkelse* + 
+OBSERVATION: _openEHR-EHR-OBSERVATION.exam.v1_
+// Not supported rmType EVENT
+|at0004| 0..1| DV_TEXT | Beskrivelse
+a|
+
+
+Kan anvendes til å registrere en tekstlig sammenfatning av en komplett klinisk undersøkelse eller nøkkelfunn ved den kliniske undersøkelsen, som vil bli understøttet av strukturerte data. Dette dataelementet kan brukes for å fange opp "legacy data" som ikke er tilgjengelig i et strukturert format. Detaljer om spesifikt strukturert funn inkluderes ved å bruke CLUSTER-arketyper i "Examination Detail" SLOT.
+5+a|*Funn undersøkelse høyre side* + 
+CLUSTER: _openEHR-EHR-CLUSTER.exam.v2_
+|at0001| 1..1| DV_CODED_TEXT | Undersøkt organsystem eller struktur
+a|
+* Right breast structure (SNOMED-CT: 73056007)
+
+
+Designkommentar:
+I SJK prosjektet er denne satt til 73056007 - Right breast structure (body structure)), da utvalgslisten både inneholder bryst og aksille. Akslille er en av undergruppene i hirarkiet under denne koden. 
+
+
+
+|at0006| 0..*| DV_CODED_TEXT | Fortolkning
+a|
+* Palpabel kul i bryst (SNOMED-CT: 157551000202106)
+* Smerter i mamma (SNOMED-CT: 53430007)
+* Ømhet i mamma (SNOMED-CT: 55222007)
+* Peau d'Orange (SNOMED-CT: 87386002)
+* Hudretraksjon på mamma (SNOMED-CT: 197681000202106)
+* Ødem i mamma (SNOMED-CT: 290077003)
+* Betennelse i mamma (mastitt) (SNOMED-CT: 266579006)
+* Ulcus på mamma (SNOMED-CT: 248818003)
+* Ulcus på brystvorte (SNOMED-CT: 95604008)
+* Sekresjon fra brystvorte (SNOMED-CT: 54302000)
+* Kul i aksille (SNOMED-CT: 300863000)
+* Annet (spesifiser) (SNOMED-CT: 74964007)
+
+
+For eksempel "Uten anmerkning" eller "Moderat inflammasjon". Det anbefales å kode "Fortolkning" med en terminologi dersom mulig.
+|at0007| 0..1| DV_TEXT | Kommentar/annet
+a|
+5+a|*Funn ved undersøkelse venstre side* + 
+CLUSTER: _openEHR-EHR-CLUSTER.exam.v2_
+|at0001| 1..1| DV_CODED_TEXT | Undersøkt organsystem eller struktur
+a|
+* Venstre brystregion (SNOMED-CT: 80248007)
+
+
+Designkommentar:
+I SJK prosjektet er denne satt til 73056007 - Right breast structure (body structure)), da utvalgslisten både inneholder bryst og aksille. Akslille er en av undergruppene i hirarkiet under denne koden. 
+|at0006| 0..*| DV_CODED_TEXT | Fortolkning
+a|
+* Palpabel kul i bryst (SNOMED-CT: 157551000202106)
+* Smerter i mamma (SNOMED-CT: 53430007)
+* Ømhet i mamma (SNOMED-CT: 55222007)
+* Peau d'Orange (SNOMED-CT: 87386002)
+* Hudretraksjon på mamma (SNOMED-CT: 197681000202106)
+* Ødem i mamma (SNOMED-CT: 290077003)
+* Betennelse i mamma (mastitt) (SNOMED-CT: 266579006)
+* Ulcus på mamma (SNOMED-CT: 248818003)
+* Ulcus på brystvorte (SNOMED-CT: 95604008)
+* Sekresjon fra brystvorte (SNOMED-CT: 54302000)
+* Kul i aksille (SNOMED-CT: 300863000)
+* Annet (spesifiser) (SNOMED-CT: 74964007)
+
+
+For eksempel "Uten anmerkning" eller "Moderat inflammasjon". Det anbefales å kode "Fortolkning" med en terminologi dersom mulig.
+
+Designkommentar:
+Her har SJK prosjektet valgt å legge inn en liste over funn som er gjort ved en undersøkelse av en kliniker enten ved ultralyd undersøkelsen eller av fastlegen (hva de er henvist for). 
+|at0007| 0..1| DV_TEXT | Kommentar/annet
+a|
+|undefined| 1..1| DV_DATE_TIME | Time
+|
+|====
+== Lesjon/funn i bryst og aksille høyre
+== Templat-overskrift
+== Bildediagnostisk svar
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Bildediagnostisk svar* + 
+OBSERVATION: _openEHR-EHR-OBSERVATION.imaging_exam_result.v1_
+
+
+Designkommentar:
+Resultatene på lesjon/funn som er gjort ved hjelp av bildediagnostisk metode.
+|at0004| 1..1| DV_CODED_TEXT | Undersøkelsesnavn
+a|
+* Bildediagnostikk (SNOMED-CT: 363679005)
+
+
+Designkommentar:
+Her er det satt inn SNOMED-CT koden for bildediagnostikk - 363679005 - Imaging (procedure).
+Denne skal ikke vises i skjermbildet, men lagres ned ved utfylling av noen av elementene i denne arketypen (OBSERVATION.imaging_exam_result.v1)
+5+a|*Anatomisk lokalisering* + 
+CLUSTER: _openEHR-EHR-CLUSTER.anatomical_location.v1_
+|at0001| 1..1| DV_CODED_TEXT | Navn på kroppssted
+a|
+* Høyre bryst (SNOMED-CT: 73056007)
+* Høyre aksilleregion (SNOMED-CT: 19654004)
+* Annet (spesifiser) (SNOMED-CT: 74964007)
+
+
+Designkommentar:
+Angi om lesjonen er funnet i brystet eller i aksilleregionen, eller annet sted. 
+Ved valg av annet sted kan klinikere skrive nærmere hvor i funn/lesjonsID og utvidet beskrivelse funn.
+
+Det skal lages logikk i skjema ut i fra hva man velger her, det er flere felter som skal vises hvis man velger bryst enn aksille og annet. 
+
+Hvis det er valgt bryst på en side, skal følgende felt vises:  
+-- Lesjon/funn/navnID
+-- Lengdemål
+-- Kommentar til dimensjon/plassering
+-- Anatomisk lokalisasjon
+-- Sirkulær retning
+-- Avstand fra brystvorte
+-- Avstand fra m. pectoralis
+-- Forkalkning (tilstede/fraværende)
+-- Palpabel tumor (kun avkrysning ved bekreftende)
+-- Innlagt markør (kun avkrysning ved bekreftende)
+-- Kommentar markør
+-- Prøvetakingsmetode
+-------Hvis valgt metode ≠ FNAC:  imprint + ER, PR, HER2, Ki67 + NGS-resultat + Diagnose / tumor-morfologi
+------ Hvis valgt metode = FNAC: impring +cytologi
+
+Hvis det er er valgt aksille:
+-- Lesjon/funn navn/ID
+-- Kommentar dimensjon/plassering
+-- Palpabel tumor
+-- Innlagt markør
+-- Kommentar markør
+-- Prøvetakningsmetode
+-------Hvis valgt prøvetakningsmetode = FNAC (finnålsaspirasjon) av lymfeknute i aksille:
+------- Vis imprint
+------- Vis cytologi
+
+Hvis det er valgt annet 
+- Lesjon/funn navnID
+- Kommentar dimensjon/plassering (fra bildediagnostikk)
+- Beskrivelse patologi (eget overordnet kommentarfelt – fra laboratorieprøve)
+
+|at0002| 0..1| DV_CODED_TEXT | Kroppsside
+a|
+* at0004 -> Høyre 
+
+
+Designkommentar:
+Denne trengs ikke vises fordi man allerede har sagt at dette er lesjon/funn på høyre siden.
+5+a|*Lesjon/funn i bryst og aksille* + 
+CLUSTER: _openEHR-EHR-CLUSTER.imaging_exam_anomaly_sjk_no.v1_
+
+
+Designkommentar:
+Her brukes arketypen CLUSTER.imaging_exam_anomaly_SJK_no - som er en lokal arketype da CLUSTER.imaging_exam_anomaly ikke er godkjent enda. 
+I denne arketypen kan man sette inn hvor lesjonen befinner seg vha. anatomisk lokalsisering, beskrivelse av funn, størrelse på funn, ID og konklusjon kalk og markør som evt. er lagt inn.
+
+|at0002| 0..1| DV_CODED_TEXT | Anatomisk lokalisasjon
+a|
+* Sentralt (SNOMED-CT: 110493007)
+* Øvre ytre kvadrant (SNOMED-CT: 110496004)
+* Øvre indre kvadrant (SNOMED-CT: 110494001)
+* Nedre ytre kvadrant (SNOMED-CT: 110497008)
+* Nedre indre kvadrant (SNOMED-CT: 110495000)
+* Brystvorte (SNOMED-CT: 735379000)
+
+
+Designkommentar:
+Identifisering av hvor i brystet lesjonen/funnet befinner seg vha. inndeling.
+5+a|*Sirkulær anatomisk lokalisering* + 
+CLUSTER: _openEHR-EHR-CLUSTER.anatomical_location_circle.v1_
+
+
+Designkommentar:
+Lokaliseringen av lesjon/funn beskrevet med angivelse av retning (klokkeposisjon) og eventuelt avstand fra brystvorten, basert på bildediagnostiske undersøkelser.
+|at0079| 0..1| DV_CODED_TEXT | Brystvorte
+a|
+* Høyre brystvorte (SNOMED-CT: 735379000)
+
+
+Designkommentar:
+Midtpunkt er satt som brystvorte.
+|at0061| 0..1| DV_CODED_TEXT | Sirkulær retning
+a|
+* at0067 -> Klokken 1 
+* at0068 -> Klokken 2 
+* at0069 -> Klokken 3 
+* at0070 -> Klokken 4 
+* at0071 -> Klokken 5 
+* at0072 -> Klokken 6 
+* at0073 -> Klokken 7 
+* at0074 -> Klokken 8 
+* at0075 -> Klokken 9 
+* at0076 -> Klokken 10 
+* at0077 -> Klokken 11 
+* at0078 -> Klokken 12 
+
+
+Designkommentar:
+Posisjonen ved hjelp av klokkeretining hvor lesjonen/funnet befinner seg på bildediagnostisk undersøkele.
+|at0080| 0..1| DV_QUANTITY | Avstand fra brystvorte
+|
+
+
+Designkommentar:
+Avstanden fra brystvorten.
+5+a|*Relativ anatomisk lokalisering* + 
+CLUSTER: _openEHR-EHR-CLUSTER.anatomical_location_relative.v2_
+5+a|*Relativ lokalisering* + 
+CLUSTER: _at0020_
+
+
+Mer enn en relativ lokalisering kan bli nødvendig for å gi en nøyaktig kryssreferanse.
+|at0021| 1..1| DV_CODED_TEXT | Navn på landemerke
+a|
+* m. pectoralis (SNOMED-CT: 60005003)
+
+
+Designkommentar
+musculus pectoralis major, 60005003 - Pectoralis major muscle structure (body structure)
+
+|at0062| 0..1| DV_CODED_TEXT | Kroppsside
+a|
+* at0069 -> Høyre 
+
+
+Designkommentar:
+Settes skjult
+|at0022| 0..1| DV_QUANTITY | Avstand fra m. pectoralis
+|
+
+
+Designkommentar:
+
+|at0004| 0..1| DV_TEXT | Kommentar dimensjon/plassering
+a|
+|at0035| 0..1| DV_TEXT | Lesjon/funn navn/ID
+a|
+
+
+Designkommentar:
+Brukes for å skille mellom en anomali fra en annen dersom det er flere anomaliser til stede innenfor samme kroppsstruktur eller region.
+5+a|*Fysiske egenskaper* + 
+CLUSTER: _openEHR-EHR-CLUSTER.physical_properties.v1_
+|at0049| 0..1| DV_QUANTITY | Lengste tverrmål
+|
+
+
+Designkommentar:
+Lengde 3. 
+Den målte lengden på akse 3, når det ikke er noen  spesifikk orientering.
+|at0049| 0..1| DV_QUANTITY | Lengde 2
+|
+
+
+Designkommentar:
+Lengde 3. 
+Den målte lengden på akse 3, når det ikke er noen  spesifikk orientering.
+|at0049| 0..1| DV_QUANTITY | Lengde 3
+|
+
+
+Designkommentar:
+Lengde 3. 
+Den målte lengden på akse 3, når det ikke er noen  spesifikk orientering.
+|at0041| 0..1| DV_CODED_TEXT | Forkalkning
+a|
+* at0017 -> Tilstede 
+
+
+Designkommentar:
+Skal ikke vises i skjermbildet, men skal settes om kalk er tilstede - her skal denne settes automatisk hvis man velger en av verdiene i elementet "Forkalkning" (beningn, suspekt, usikker).
+|at0042| 0..1| DV_CODED_TEXT | Forkalkning tolkning
+a|
+* Benign (SNOMED-CT: 30807003)
+* Usikker (SNOMED-CT: 64957009)
+* Suspekt (SNOMED-CT: 415684004)
+
+
+Designkommentar:
+Det er denne som skal vises i skjermbildet.
+|at0007| 0..1| DV_CODED_TEXT | Palpabelt funn
+a|
+* Funnet er palpabelt (SNOMED-CT: 103357000)
+
+
+Designkommentar:
+Legge inn en sjekkboks for om funnet er palpabelt.
+Brukt koden 103357000 Palpable (qualifier value)
+
+Denne hører egentlig ikke til radiologi, og skal ikke gjenbrukes. Dette er kun en huskelapp/beskrivelse til kliniker
+5+a|*Markør* + 
+CLUSTER: _openEHR-EHR-CLUSTER.device.v1_
+
+
+Designkommentar:
+
+|at0001| 1..1| DV_CODED_TEXT | Markør
+a|
+* Implanted-marker patient positioning system (SNOMED-CT: 700616009)
+
+
+Designkommentar:
+Denne skal ikke vises i skjermbildet. Denne skal kun settes hvis en av verdiene i Type 
+Bruker koden 700616009 - implanted-marker patient positioning system (physical object), som kan lagres ned hvis man har krysset ut ett av velgene i "Type markør" feltet.
+
+
+
+|at0003| 0..1| DV_CODED_TEXT | Type markør
+a|
+* Savi Scout (no.onk.breast.markers: Savi Scout)
+* Seed (radioaktivt frø) (no.onk.breast.markers: Seed (radioaktivt frø))
+* Hydromark (no.onk.breast.markers: Hydromark)
+* Metall markør (no.onk.breast.markers: Metall markør)
+* Annen/ny (spesifiser) (no.onk.breast.markers: Annen/ny (spesifiser))
+
+
+Brukes ikke om kategori som er dokumentert i "Navn på medisinsk utstyr".
+
+Eksempel: Hvis utstyret er navngitt som "urinkateter", kan typen registreres som "inneliggende kateter" eller "engangskateter". Koding med en terminologi er ønskelig om mulig, og dette kan inkludere GTIN/EAN-nummer.
+|at0002| 0..1| DV_TEXT | Beskrivelse markør
+a|
+|at0023| 0..*| DV_TEXT | Kommentar forkalkning
+a|
+
+
+For eksempel et notat om at kopi av bilde eller svarrapport er gitt til pasienten. Tilsvarer DiagnosticReport.note i FHIR.
+|====
+== Laboratorieresultat
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Laboratorieresultat* + 
+OBSERVATION: _openEHR-EHR-OBSERVATION.laboratory_test_result.v1_
+
+
+Designkommentar:
+Resultatet på en laboratorieundersøkelse av lesjonen/funnet beskrevet i bildediagnostikken.
+Det er lagt inn en lesjonsID som kan koble bildediagnostikken og patologiresultatet sammen.
+
+Per nå ønskes det ikke at det skal være noen overskrift på patologi/labresultat. 
+
+Det er kun prøvetakninsmetode som skal vises før man har valgt en prøvetakningsmetode. Hva som skal vises har en logikk som står i elementet prøvetakningsmetode. 
+
+|at0005| 1..1| DV_CODED_TEXT | Undersøkelsesnavn
+a|
+* Anatomic pathology procedure (SNOMED-CT: 108257001)
+
+
+Designkommentar: 
+Navn på laboratorieundersøkelsen, patologiundersøkelsen som er gjort på lesjonen. Her er det satt inn SNOMED-CT koden for 108257001  Anatomic pathology procedure (procedure).
+Denne skal ikke vises i skjermbildet, men lagres ned ved utfylling av noen av elementene i denne arketypen (OBSERVATION.laboratory_test_result.v1)
+Vises ikke i skjermbildet.
+5+a|*Prøvemateriale* + 
+CLUSTER: _openEHR-EHR-CLUSTER.specimen.v1_
+|at0029| 0..1| DV_CODED_TEXT | Type prøvemateriale
+a|
+* Vev (SNOMED-CT: 119376003)
+* Cytologisk materiale (SNOMED-CT: 48469005)
+
+
+Designkommentar:
+Denne vises ikke i skjermbildet, men blir satt automatisk ut i fra type biopsi - prøvetakningsmetode. Hvis det er FNAC vil den bli satt til cytologisk materiale. Med de andre alternativene blir den satt til vev.
+|at0098| 0..1| DV_TEXT | Lesjon/funn navn/ID
+a|
+
+
+Designkommentar:
+Dette arves fra bildediagnostikk - lesjonID.
+
+Vises ikke i skjermbildet under forutsetning at  det ikke er mulig å legge inn noe i patologi hvis man ikke har lagt inn lesjonsID på radiologidelen. Dvs. Man kan aldri fylle inn kun patologi uten å legge inn lesjon/funn navn ID i radiologidelen. 
+Kanskje legge lesjonsID obligatorisk hvis man trykker på legg til lesjon. 
+
+|at0007| 0..1| DV_CODED_TEXT | Prøvetakingsmetode
+a|
+* Sylinder-, grovnål-, pistol-, tru-cut-, eller stansebiopsi av mamma (SNOMED-CT: 122548005)
+* Vakuumbiopsi av lesjon i mamma (SNOMED-CT: 771625002)
+* Kirurgisk biopsi av mamma (SNOMED-CT: 274331003)
+* Eksisjonsbiopsi av mamma med preoperativ lokalisering (Diagnostisk kirurgisk merkebiopsi) (SNOMED-CT: 10940003)
+* Biopsi av aksillær lymfeknute (grovnål) (SNOMED-CT: 234271004)
+* Kirurgisk eksisjon av lymfeknute (tilfeldig funn av lymfeknute) (lymfadenektomi) (SNOMED-CT: 58347006)
+* FNAC (finnålsaspirasjon) av mamma (SNOMED-CT: 387736007)
+* FNAC (finnålsaspirasjon) av lymfeknute i aksille (SNOMED-CT: 234282007)
+
+
+Designkommentar_
+Prøvetakingsmetoden som er brukt for å ta ut prøve til patologiundersøkelsen.
+
+Logikk:
+Hvis det er valgt alt annet enn FNAC skal følgende vises:
+-- Imprint + kommentar
+-- ER
+-- PR
+-- HER2 (IHC)
+-- HER2 (ISH)
+-- Ki67
+-- Tumor morfologi (evt. «Diagnose/Tumor morfologi» hvis ønsket)
+-- Kommentar morfologi
+-- NGS‑gradering
+
+Ved valg av prøvetakningsmetode FNAC (finnålsaspirasjon) av mamma + FNAC aksille: 
+- Imprint + kommentar
+- Cytologi + kommentar
+
+
+
+
+|at0087| 0..1| DV_CODED_TEXT | Anatomisk lokalisasjon
+a|
+* Høyre bryst (SNOMED-CT: 73056007)
+* Høyre aksilleregion (SNOMED-CT: 19654004)
+
+
+Designkommentar:
+Dette skal arves fra bildediagnostikk anomali slik at man kan koble funnene sammen.
+
+Dette visis ikke i skjermbildet. 
+Hvis det ikke er satt noe i anatomisk lokalisering i bildediagnostikk, har man heller ikke noe mulighet for å legge inn anatomisk lokalisering for patologianalysen. 
+
+5+a|*Anatomisk lokalisering* + 
+CLUSTER: _openEHR-EHR-CLUSTER.anatomical_location.v1_
+
+
+Designkommentar:
+Dette skal arves fra bildediagnostikk anomali slik at man kan koble funnene sammen.
+
+Dette visis ikke i skjermbildet. 
+Hvis det ikke er satt noe i anatomisk lokalisering i bildediagnostikk, har man heller ikke noe mulighet for å legge inn anatomisk lokalisering for patologianalysen. 
+
+|at0001| 1..1| DV_CODED_TEXT | Navn på kroppssted
+a|
+* Høyre bryst (SNOMED-CT: 73056007)
+* Høyre aksilleregion (SNOMED-CT: 19654004)
+* Annet (spesifiser) (SNOMED-CT: 74964007)
+
+
+
+
+|at0065| 0..1| DV_CODED_TEXT | Spesifikt sted
+a|
+* Sentralt (SNOMED-CT: 110493007)
+* Øvre ytre kvadrant (SNOMED-CT: 110496004)
+* Øvre indre kvadrant (SNOMED-CT: 110494001)
+* Nedre ytre kvadrant (SNOMED-CT: 110497008)
+* Nedre indre kvadrant (SNOMED-CT: 110495000)
+* Brystvorte (SNOMED-CT: 735379000)
+|at0002| 0..1| DV_CODED_TEXT | Kroppsside
+a|
+* at0004 -> Høyre 
+
+
+Designkommentar:
+Denne trengs ikke vises fordi man allerede har sagt at dette er lesjon/funn på høyre siden.
+5+a|*Sirkulær anatomisk lokalisering* + 
+CLUSTER: _openEHR-EHR-CLUSTER.anatomical_location_circle.v1_
+
+
+Designkommentar:
+Dette skal arves fra bildediagnostikk anomali slik at man kan koble funnene sammen.
+
+Dette visis ikke i skjermbildet. 
+Hvis det ikke er satt noe i anatomisk lokalisering i bildediagnostikk, har man heller ikke noe mulighet for å legge inn anatomisk lokalisering for patologianalysen. 
+
+|at0079| 0..1| DV_CODED_TEXT | Brystvorte
+a|
+* Høyre brystvorte (SNOMED-CT: 735379000)
+
+
+Designkommentar:
+Midtpunkt er satt som brystvorte.
+|at0061| 0..1| DV_CODED_TEXT | Sirkulær retning
+a|
+* at0067 -> Klokken 1 
+* at0068 -> Klokken 2 
+* at0069 -> Klokken 3 
+* at0070 -> Klokken 4 
+* at0071 -> Klokken 5 
+* at0072 -> Klokken 6 
+* at0073 -> Klokken 7 
+* at0074 -> Klokken 8 
+* at0075 -> Klokken 9 
+* at0076 -> Klokken 10 
+* at0077 -> Klokken 11 
+* at0078 -> Klokken 12 
+
+
+Designkommentar:
+Skal arves fra anatoisk lokalisasjon fra bildediagnostikk anomali.
+|at0080| 0..1| DV_QUANTITY | Avstand fra midtpunktet
+|
+
+
+Avstanden fra brystvorten.
+5+a|*Relativ anatomisk lokalisering* + 
+CLUSTER: _openEHR-EHR-CLUSTER.anatomical_location_relative.v2_
+
+
+Designkommentar.
+Arver fra bildediagnostikken samme felt. 
+vises ikke i skjermbildet.
+5+a|*Relativ lokalisering* + 
+CLUSTER: _at0020_
+
+
+Mer enn en relativ lokalisering kan bli nødvendig for å gi en nøyaktig kryssreferanse.
+|at0021| 1..1| DV_CODED_TEXT | Navn på landemerke
+a|
+* m. pectoralis (SNOMED-CT: 60005003)
+
+
+Designkommentar
+musculus pectoralis major, 60005003 - Pectoralis major muscle structure (body structure)
+
+|at0062| 0..1| DV_CODED_TEXT | Kroppsside
+a|
+* at0069 -> Høyre 
+
+
+Designkommentar:
+Settes skjult
+|at0022| 0..1| DV_QUANTITY | Avstand fra m. pectoralis
+|
+
+
+Designkommentar:
+Arver fra bildediagnostikk, settes skjult. 
+
+5+a|*Imprint* + 
+CLUSTER: _openEHR-EHR-CLUSTER.laboratory_test_analyte.v1_
+
+
+Designkommentar:
+Resultatet på analysen imprint cytologi (også kalt "touch preparation"). 
+|at0024| 0..1| DV_CODED_TEXT | Imprint
+a|
+* Imprintundersøkelse (NORPAT: P31070)
+
+
+Designkommentar:
+Bruker NORPAT koden P31070
+Imprintundersøkelse.
+
+|at0001| 0..1| DV_CODED_TEXT | Imprint svar
+a|
+* Benign tumor (SNOMED-CT: 3898006)
+* Tumor med usikkert malignitetspotensial (SNOMED-CT: 86251006)
+* Malign tumor (SNOMED-CT: 1240414004)
+
+
+Designkommentar:
+Strukturert svar på imprint undersøkelsen vha. SNOMED-CT koder. 
+-3898006 -  Neoplasm, benign (morphologic abnormality)
+-86251006 - Neoplasm of uncertain behavior (morphologic abnormality)
+-1240414004 - Malignant neoplasm (morphologic abnormality)
+
+
+|at0028| 0..1| DV_CODED_TEXT | Testmetode (skjules i form)
+a|
+* Touch imprint cytology technique (qualifier value) (SNOMED-CT: 1285484006)
+
+
+Designkommentar:
+Beskrivelse av metoden brukt for imprintanalysen.
+Bruker koden 1285484006
+Touch imprint cytology technique (qualifier value), som må brukes sammen med NORPAT koden. 
+Vises ikke i skjermbildet, men lagres sammen med analyseresultatet.
+|at0003| 0..1| DV_TEXT | Kommentar imprint
+a|
+
+
+
+5+a|*ER* + 
+CLUSTER: _openEHR-EHR-CLUSTER.laboratory_test_analyte.v1_
+|at0024| 0..1| DV_CODED_TEXT | Analysenavn
+a|
+* ER (østrogenreseptor) (HGNC: HGNC:3467)
+
+
+Designkommentar:
+Vi har besluttet at vi bruker HGNC - koder for disse analysene. 
+Ved genetiske og cytogenetiske analyser, prøver vi så langt det lar seg gjøre, å bruke HGNC.
+|at0001| 0..1| DV_CODED_TEXT | Analyseresultat (Skjules i form)
+a|
+* Påvist (tilstede) (SNOMED-CT: 52101004)
+* Ikke påvist (ikke tilstede) (SNOMED-CT: 2667000)
+
+
+Designkommentar:
+Denne vises ikke i skjermbildet, men lagres ned ut i fra resultatene valgt i elementet "veileder for referanseområdet"
+|at0004| 0..1| DV_CODED_TEXT | ER
+a|
+* < 10% (Neg) (no.onk.bryst_pat: 1)
+* >10 < 50% (Pos) (no.onk.bryst_pat: 2)
+* >50% (Pos) (no.onk.bryst_pat: 3)
+
+
+Designkommentar:
+Det er denne som skal vises i skjermbildet, og resultatet skal arves til analyseresultat om det er positivt eller negativt. 
+5+a|*PR* + 
+CLUSTER: _openEHR-EHR-CLUSTER.laboratory_test_analyte.v1_
+|at0024| 0..1| DV_CODED_TEXT | Analysenavn
+a|
+* PR (progesteron reseptor) (HGNC: HGNC:8910)
+
+
+Designkommentar:
+Vi har besluttet at vi bruker HGNC - koder for disse analysene. 
+|at0001| 0..1| DV_CODED_TEXT | Analyseresultat (Skjules i form)
+a|
+* Påvist (tilstede) (SNOMED-CT: 52101004)
+* Ikke påvist (ikke tilstede) (SNOMED-CT: 2667000)
+
+
+Designkommentar:
+Denne vises ikke i skjermbildet, men lagres ned ut i fra resultatene valgt i elementet "veileder for referanseområdet"
+|at0004| 0..1| DV_CODED_TEXT | PR
+a|
+* < 10% (Neg) (no.onk.bryst_pat: 1)
+* >10 < 50% (Pos) (no.onk.bryst_pat: 2)
+* >50% (Pos) (no.onk.bryst_pat: 3)
+
+
+Designkommentar:
+Det er denne som skal vises i skjermbildet, og resultatet skal arves til analyseresultat om det er positivt eller negativt. 
+5+a|*HER2 (IHC)* + 
+CLUSTER: _openEHR-EHR-CLUSTER.laboratory_test_analyte.v1_
+
+
+Designkommentar:
+Analysen HER2 analysert ved hjelp av immunhistokjemi (IHC).
+Vi bruker NORPAT koder på både analysenavn og svar.
+
+|at0024| 0..1| DV_CODED_TEXT | Analysenavn
+a|
+* HER2 (ICH) (NORPAT: P36555)
+
+
+Designkommentar:
+HER2 analyse gjort ved hjelp av immunhistokjemisk (ICH).
+Kodet med NORPAT - prosedyrekode.
+
+|at0001| 0..1| DV_CODED_TEXT | Analyseresultat
+a|
+* HER2 neg (0) (NORPAT: F29601)
+* HER2 borderline (1+2+) (NORPAT: F29602)
+* HER2 pos (3+) (NORPAT: F29603)
+
+
+Designkommentar:
+Resultatet for HER2 analsyen gjort ved hjelp av immunihistokjemi (IHC). Navn på analysen sier at dette er en immunihistokjemi, og denne svarkoden sier noe om resultatet av denne analyseprosedyren.
+5+a|*HER2 (ISH)* + 
+CLUSTER: _openEHR-EHR-CLUSTER.laboratory_test_analyte.v1_
+
+
+Designkommentar:
+Analysen HER2 analysert ved in situ hybridisering (ISH).
+Vi bruker NORPAT koder.
+Vi bruker ikke analysenavn her da dette ligger direktekodet i NORPAT koden - altså analyenavn+analysesvar.
+|at0001| 0..1| DV_CODED_TEXT | Analyseresultat
+a|
+* Sannsynlig G1 (no.onk.bryst_pat: G1)
+* Sannsynlig G2 (no.onk.bryst_pat: G2)
+* Sannsynlig G3 (no.onk.bryst_pat: G3)
+
+
+Designkommentar:
+Resultatet for HER2 analsyen gjort ved in situ hybridisering (ISH).
+Vi bruker NORPAT kode som inneholder både analyse, analysemetode og resultatet.
+|at0028| 0..1| DV_CODED_TEXT | Testmetode
+a|
+* In situ hybridisering (NORPAT: P33760)
+
+
+Designkommentar:
+Metoden for påvisning av HER2.
+Vises ikke i skjermbildet, lagres bare ned.
+5+a|*ki67* + 
+CLUSTER: _openEHR-EHR-CLUSTER.laboratory_test_analyte.v1_
+|at0024| 0..1| DV_CODED_TEXT | Ki67 (Tumorcelleproliferasjon)
+a|
+* Ki-67 (proliferasjonsmarkør) (SNOMED-CT: 1255078008)
+
+
+Designkommentar:
+Har brukt koden: 1255078008 |Percent of cell nuclei positive for proliferation marker protein Ki-67 in primary malignant neoplasm by immunohistochemistry (observable entity).
+
+
+|at0001| 0..1| DV_QUANTITY | Ki-67 %
+|
+
+
+
+5+a|*Cytologi* + 
+CLUSTER: _openEHR-EHR-CLUSTER.laboratory_test_analyte.v1_
+|at0024| 0..1| DV_CODED_TEXT | Analysenavn
+a|
+* Cytologisk test (prosedyre) (SNOMED-CT: 116147009)
+
+
+Designkommentar:
+Bruker SNOMED-CT kode for cytologiundersøkelse.
+116147009 Cytologisk test (prosedyre)
+
+|at0001| 0..1| DV_CODED_TEXT | Cytologi svar
+a|
+* Vevscytologi normal (SNOMED-CT: 168442001)
+* Tumorceller, usikker beninge/maligne (SNOMED-CT: 39577004)
+* Tumorceller, maligne (SNOMED-CT: 88400008)
+
+
+Designkommentar:
+Analyseresultatet er direktekodet med SNOMED-CT koder. 
+-168442001- Tissue cytology normal (finding) - Vevscytologi normal
+-39577004 -Tumorceller, usikker beninge/maligne - Neoplasm cell of uncertain behavior (cell)
+-56696000 - Tumorceller, benigne Benign neoplasm cell (cell)
+-88400008 Tumorceller, maligne - Malignant neoplasm cell (cell)
+
+|at0003| 0..1| DV_TEXT | Kommentar cytologi
+a|
+
+
+
+|at0098| 0..1| DV_CODED_TEXT | Morfologi tumor
+a|
+* DCIS - intraduktalt carcinoma in situ (SNOMED-CT: 1162814007)
+* Infiltrerende karsinom NST (SNOMED-CT: 408643008)
+* LCIS - lobulær carcinoma in situ (SNOMED-CT: 77284006)
+* Classic lobular carcinoma in situ (SNOMED-CT: 444739008)
+* ILC - infiltrerende lobulært karsinom (SNOMED-CT: 89740008)
+* IBC - inflammatorisk karsinom (SNOMED-CT: 32968003)
+* Medullært karsinom (SNOMED-CT: 32913002)
+* Mucinøst (kolloid) adenokarsinom (SNOMED-CT: 72495009)
+* Tubulær karsinom (SNOMED-CT: 703596001)
+* Papilært karsinom (SNOMED-CT: 25910003)
+* Mikropapillært karsinom (SNOMED-CT: 128674003)
+* Malign phylloidestumor (SNOMED-CT: 87913009)
+* Pagets sykdom i mamma (SNOMED-CT: 2985005)
+* PLCIC - pleomorft lobulært carcinoma in situ (SNOMED-CT: 444591006)
+* Histologic type cannot be determined (SNOMED-CT: 372269006)
+* Flat epitelial atypi i mamma (FEA) (SNOMED-CT: 860895001)
+* Columnar cell change (CCC) (atypiske sylindereptelceller) (SNOMED-CT: 55465005)
+* columnar cell hyperplasia (CCH) (SNOMED-CT: 2)
+* atypisk duktal mammahyperplasi (ADH) (SNOMED-CT: 427785007)
+* atypisk lobulær mammahyperplasi (ALH) (SNOMED-CT: 450697004)
+* PLCIC - pleomorft lobulært carcinoma in situ (SNOMED-CT: 444591006)
+* Florid lobular carcinoma in situ (SNOMED-CT: 1290750006)
+* Florid LCIS med comedonekrose (SNOMED-CT: 6)
+
+
+Designkommentar
+Morfologi til tumoren/lesjonen.
+|at0101| 0..*| DV_TEXT | Kommentar morfologi
+a|
+
+
+Designkommentar:
+Denne skal bare vises hvis man har valgt annet i lesjon/funn annet. 
+Da kan man legge inn beskrivelse her hvis man vil. 
+|at0101| 0..1| DV_TEXT | Beskrivelse patologi
+a|
+
+
+Designkommentar:
+Denne skal bare vises hvis man har valgt annet i lesjon/funn annet. 
+Da kan man legge inn beskrivelse her hvis man vil. 
+5+a|*NGS gradering av tumor* + 
+CLUSTER: _openEHR-EHR-CLUSTER.clinical_evidence.v1_
+
+
+Designkommentar
+Nottingham-graderingssystemet for primær ondartet svulst i bryst
+1287020007 - Nottingham grade system for primary malignant neoplasm of breast
+
+|at0003| 0..1| DV_CODED_TEXT | Grad (NGS)
+a|
+* Sannsynlig G1 (no.onk.bryst_pat: G1)
+* Sannsynlig G2 (no.onk.bryst_pat: G2)
+* Sannsynlig G3 (no.onk.bryst_pat: G3)
+
+
+Designkommentar
+Nottingham-graderingssystemet for primær ondartet svulst i bryst
+1287020007 - Nottingham grade system for primary malignant neoplasm of breast (qualifier value)
+|====
+== Lesjon/funn i bryst og aksille venstre
+== Templat-overskrift
+== Bildediagnostisk svar
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Bildediagnostisk svar* + 
+OBSERVATION: _openEHR-EHR-OBSERVATION.imaging_exam_result.v1_
+
+
+Designkommentar:
+Skal ikke vises i skjermbildet. 
+
+Resultatene på lesjon/funn som er gjort ved hjelp av bildediagnostisk metode.
+|at0004| 1..1| DV_CODED_TEXT | Undersøkelsesnavn
+a|
+* Bildediagnostikk (SNOMED-CT: 363679005)
+
+
+Designkommentar:
+Her er det satt inn SNOMED-CT koden for bildediagnostikk - 363679005 - Imaging (procedure).
+Denne skal ikke vises i skjermbildet, men lagres ned ved utfylling av noen av elementene i denne arketypen (OBSERVATION.imaging_exam_result.v1)
+5+a|*Anatomisk lokalisering* + 
+CLUSTER: _openEHR-EHR-CLUSTER.anatomical_location.v1_
+|at0001| 1..1| DV_CODED_TEXT | Navn på kroppssted
+a|
+* Venstre bryst (SNOMED-CT: 80248007)
+* Venstre aksilleregion (SNOMED-CT: 20437008)
+* Annet (spesifiser) (SNOMED-CT: 74964007)
+
+
+Designkommentar:
+Angi om lesjonen er funnet i brystet eller i aksilleregionen, eller annet sted. 
+Ved valg av annet sted kan klinikere skrive nærmere hvor i funn/lesjonsID og utvidet beskrivelse funn.
+
+Det skal lages logikk i skjema ut i fra hva man velger her, det er flere felter som skal vises hvis man velger bryst enn aksille og annet. 
+
+Hvis det er valgt bryst på en side, skal følgende felt vises:  
+-- Lesjon/funn/navnID
+-- Lengdemål
+-- Kommentar til dimensjon/plassering
+-- Anatomisk lokalisasjon
+-- Sirkulær retning
+-- Avstand fra brystvorte
+-- Avstand fra m. pectoralis
+-- Forkalkning (tilstede/fraværende)
+-- Palpabel tumor (kun avkrysning ved bekreftende)
+-- Innlagt markør (kun avkrysning ved bekreftende)
+-- Kommentar markør
+-- Prøvetakingsmetode
+-------Hvis valgt metode ≠ FNAC:  imprint + ER, PR, HER2, Ki67 + NGS-resultat + Diagnose / tumor-morfologi
+------ Hvis valgt metode = FNAC: impring +cytologi
+
+Hvis det er er valgt aksille:
+-- Lesjon/funn navn/ID
+-- Kommentar dimensjon/plassering
+-- Palpabel tumor
+-- Innlagt markør
+-- Kommentar markør
+-- Prøvetakningsmetode
+-------Hvis valgt prøvetakningsmetode = FNAC (finnålsaspirasjon) av lymfeknute i aksille:
+------- Vis imprint
+------- Vis cytologi
+
+Hvis det er valgt annet 
+- Lesjon/funn navnID
+- Kommentar dimensjon/plassering (fra bildediagnostikk)
+- Beskrivelse patologi (eget overordnet kommentarfelt – fra laboratorieprøve)
+
+|at0002| 0..1| DV_CODED_TEXT | Kroppsside
+a|
+* at0003 -> Venstre 
+
+
+Designkommentar:
+Denne trengs ikke vises fordi man allerede har sagt at dette er lesjon/funn på venstre siden.
+5+a|*Lesjon/funn i bryst og aksille* + 
+CLUSTER: _openEHR-EHR-CLUSTER.imaging_exam_anomaly_sjk_no.v1_
+
+
+Designkommentar:
+Her brukes arketypen CLUSTER.imaging_exam_anomaly_SJK_no - som er en lokal arketype da CLUSTER.imaging_exam_anomaly ikke er godkjent enda. 
+I denne arketypen kan man sette inn hvor lesjonen befinner seg vha. anatomisk lokalsisering, beskrivelse av funn, størrelse på funn, ID og konklusjon kalk og markør som evt. er lagt inn.
+
+|at0002| 0..1| DV_CODED_TEXT | Anatomisk lokalisasjon
+a|
+* Sentralt (SNOMED-CT: 110493007)
+* Øvre ytre kvadrant (SNOMED-CT: 110496004)
+* Øvre indre kvadrant (SNOMED-CT: 110494001)
+* Nedre ytre kvadrant (SNOMED-CT: 110497008)
+* Nedre indre kvadrant (SNOMED-CT: 110495000)
+* Brystvorte (SNOMED-CT: 735379000)
+
+
+Identifisering av organ eller kroppsdel.
+5+a|*Sirkulær anatomisk lokalisering* + 
+CLUSTER: _openEHR-EHR-CLUSTER.anatomical_location_circle.v1_
+|at0079| 0..1| DV_CODED_TEXT | Brystvorte
+a|
+* Venstre brystvorte (SNOMED-CT: 735376007)
+
+
+Designkommentar:
+Midtpunkt er satt som brystvorte.
+|at0061| 0..1| DV_CODED_TEXT | Sirkulær retning
+a|
+* at0067 -> Klokken 1 
+* at0068 -> Klokken 2 
+* at0069 -> Klokken 3 
+* at0070 -> Klokken 4 
+* at0071 -> Klokken 5 
+* at0072 -> Klokken 6 
+* at0073 -> Klokken 7 
+* at0074 -> Klokken 8 
+* at0075 -> Klokken 9 
+* at0076 -> Klokken 10 
+* at0077 -> Klokken 11 
+* at0078 -> Klokken 12 
+|at0080| 0..1| DV_QUANTITY | Avstand fra brystvorte
+|
+
+
+Designkommentar:
+Avstanden fra brystvorten.
+5+a|*Relativ anatomisk lokalisering* + 
+CLUSTER: _openEHR-EHR-CLUSTER.anatomical_location_relative.v2_
+5+a|*Relativ lokalisering* + 
+CLUSTER: _at0020_
+
+
+Mer enn en relativ lokalisering kan bli nødvendig for å gi en nøyaktig kryssreferanse.
+|at0021| 1..1| DV_CODED_TEXT | Navn på landemerke
+a|
+* m. pectoralis (SNOMED-CT: 60005003)
+
+
+Designkommentar
+musculus pectoralis major, 60005003 - Pectoralis major muscle structure (body structure)
+|at0062| 0..1| DV_CODED_TEXT | Kroppsside
+a|
+* at0068 -> Venstre 
+
+
+Designkommentar:
+Settes skjult
+|at0022| 0..1| DV_QUANTITY | Avstand fra m. pectoralis
+|
+|at0004| 0..1| DV_TEXT | Kommentar dimensjon/plassering
+a|
+|at0035| 0..1| DV_TEXT | Lesjon/funn navn/ID
+a|
+
+
+Designkommentar:
+Brukes for å skille mellom en anomali fra en annen dersom det er flere anomaliser til stede innenfor samme kroppsstruktur eller region.
+5+a|*Fysiske egenskaper* + 
+CLUSTER: _openEHR-EHR-CLUSTER.physical_properties.v1_
+|at0049| 0..1| DV_QUANTITY | Lengste tverrmål
+|
+
+
+Den målte lengden på akse 3, når det ikke er noen  spesifikk orientering.
+|at0049| 0..1| DV_QUANTITY | Lengde 2
+|
+
+
+Den målte lengden på akse 3, når det ikke er noen  spesifikk orientering.
+|at0049| 0..1| DV_QUANTITY | Lengde 3
+|
+
+
+Den målte lengden på akse 3, når det ikke er noen  spesifikk orientering.
+|at0041| 0..1| DV_CODED_TEXT | Forkalkning
+a|
+* at0017 -> Tilstede 
+
+
+Designkommentar:
+Skal ikke vises i skjermbildet, men skal settes om kalk er tilstede - her skal denne settes automatisk hvis man velger en av verdiene i elementet "Forkalkning" (beningn, suspekt, usikker).
+|at0042| 0..1| DV_CODED_TEXT | Forkalkning tolkning
+a|
+* Benign (SNOMED-CT: 30807003)
+* Usikker (SNOMED-CT: 64957009)
+* Suspekt (SNOMED-CT: 415684004)
+
+
+Mønsteret kan kodes om ønskelig.
+|at0007| 0..1| DV_CODED_TEXT | Palpabelt funn
+a|
+* Funnet er palpabelt (SNOMED-CT: 103357000)
+
+
+Designkommentar:
+Legge inn en sjekkboks for om funnet er palpabelt.
+Brukt koden 103357000 Palpable (qualifier value)
+
+Denne hører egentlig ikke til radiologi, og skal ikke gjenbrukes. Dette er kun en huskelapp/beskrivelse til kliniker
+5+a|*Markør* + 
+CLUSTER: _openEHR-EHR-CLUSTER.device.v1_
+
+
+Designkommentar:
+
+|at0001| 1..1| DV_CODED_TEXT | Markør
+a|
+* Implanted-marker patient positioning system (SNOMED-CT: 700616009)
+
+
+Designkommentar:
+Denne skal ikke vises i skjermbildet. Denne skal kun settes hvis en av verdiene i Type 
+Bruker koden 700616009 - implanted-marker patient positioning system (physical object), som kan lagres ned hvis man har krysset ut ett av velgene i "Type markør" feltet.
+
+
+
+|at0003| 0..1| DV_CODED_TEXT | Type markør
+a|
+* Savi Scout (no.onk.breast.markers: Savi Scout)
+* Seed (radioaktivt frø) (no.onk.breast.markers: Seed (radioaktivt frø))
+* Hydromark (no.onk.breast.markers: Hydromark)
+* Metall markør (no.onk.breast.markers: Metall markør)
+* Annen/ny (spesifiser) (no.onk.breast.markers: Annen/ny (spesifiser))
+
+
+Brukes ikke om kategori som er dokumentert i "Navn på medisinsk utstyr".
+
+Eksempel: Hvis utstyret er navngitt som "urinkateter", kan typen registreres som "inneliggende kateter" eller "engangskateter". Koding med en terminologi er ønskelig om mulig, og dette kan inkludere GTIN/EAN-nummer.
+|at0002| 0..1| DV_TEXT | Beskrivelse markør
+a|
+|at0023| 0..*| DV_TEXT | Kommentar
+a|
+
+
+For eksempel et notat om at kopi av bilde eller svarrapport er gitt til pasienten. Tilsvarer DiagnosticReport.note i FHIR.
+|====
+== Laboratorieresultat
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Laboratorieresultat* + 
+OBSERVATION: _openEHR-EHR-OBSERVATION.laboratory_test_result.v1_
+
+
+Designkommentar:
+Resultatet på en laboratorieundersøkelse av lesjonen/funnet beskrevet i bildediagnostikken.
+Det er lagt inn en lesjonsID som kan koble bildediagnostikken og patologiresultatet sammen.
+
+Per nå ønskes det ikke at det skal være noen overskrift på patologi/labresultat. 
+
+Det er kun prøvetakninsmetode som skal vises før man har valgt en prøvetakningsmetode. Hva som skal vises har en logikk som står i elementet prøvetakningsmetode. 
+|at0005| 1..1| DV_CODED_TEXT | Undersøkelsesnavn
+a|
+* Anatomic pathology procedure (SNOMED-CT: 108257001)
+
+
+Designkommentar: 
+Navn på laboratorieundersøkelsen, patologiundersøkelsen som er gjort på lesjonen. Her er det satt inn SNOMED-CT koden for 108257001 -Anatomic pathology procedure |(procedure).
+
+Denne skal ikke vises i skjermbildet, men lagres ned ved utfylling av noen av elementene i denne arketypen (OBSERVATION.laboratory_test_result.v1)
+Vises ikke i skjermbildet.
+5+a|*Prøvemateriale* + 
+CLUSTER: _openEHR-EHR-CLUSTER.specimen.v1_
+|at0029| 0..1| DV_CODED_TEXT | Type prøvemateriale
+a|
+* Vev (SNOMED-CT: 119376003)
+* Cytologisk materiale (SNOMED-CT: 48469005)
+
+
+Designkommentar:
+Denne vises ikke i skjermbildet, men blir satt automatisk ut i fra type biopsi - prøvetakningsmetode. Hvis det er FNAC vil den bli satt til cytologisk materiale. Med de andre alternativene blir den satt til vev.
+|at0098| 0..1| DV_TEXT | Lesjon/funn navn/ID
+a|
+
+
+Designkommentar:
+Dette arves fra bildediagnostikk - lesjonID.
+
+Vises ikke i skjermbildet under forutsetning at  det ikke er mulig å legge inn noe i patologi hvis man ikke har lagt inn lesjonsID på radiologidelen. Dvs. Man kan aldri fylle inn kun patologi uten å legge inn lesjon/funn navn ID i radiologidelen. 
+Kanskje legge lesjonsID obligatorisk hvis man trykker på legg til lesjon. 
+|at0007| 0..1| DV_CODED_TEXT | Prøvetakingsmetode
+a|
+* Sylinder-, grovnål-, pistol-, tru-cut-, eller stansebiopsi av mamma (SNOMED-CT: 122548005)
+* Vakuumbiopsi av lesjon i mamma (SNOMED-CT: 771625002)
+* Kirurgisk biopsi av mamma (SNOMED-CT: 274331003)
+* Eksisjonsbiopsi av mamma med preoperativ lokalisering (Diagnostisk kirurgisk merkebiopsi) (SNOMED-CT: 10940003)
+* Biopsi av aksillær lymfeknute (grovnål) (SNOMED-CT: 234271004)
+* Kirurgisk eksisjon av lymfeknute (tilfeldig funn av lymfeknute) (lymfadenektomi) (SNOMED-CT: 58347006)
+* FNAC (finnålsaspirasjon) av mamma (SNOMED-CT: 387736007)
+* FNAC (finnålsaspirasjon) av lymfeknute i aksille (SNOMED-CT: 234282007)
+
+
+Designkommentar_
+Prøvetakingsmetoden som er brukt for å ta ut prøve til patologiundersøkelsen.
+
+Logikk:
+Hvis det er valgt alt annet enn FNAC skal følgende vises:
+-- Imprint + kommentar
+-- ER
+-- PR
+-- HER2 (IHC)
+-- HER2 (ISH)
+-- Ki67
+-- Tumor morfologi (evt. «Diagnose/Tumor morfologi» hvis ønsket)
+-- Kommentar morfologi
+-- NGS‑gradering
+
+Ved valg av prøvetakningsmetode FNAC (finnålsaspirasjon) av mamma + FNAC aksille: 
+- Imprint + kommentar
+- Cytologi + kommentar
+
+|at0087| 0..1| DV_CODED_TEXT | Anatomisk lokalisasjon
+a|
+* Venstre bryst (SNOMED-CT: 80248007)
+* Venstre aksilleregion (SNOMED-CT: 20437008)
+
+
+Designkommentar:
+Dette skal arves fra bildediagnostikk anomali slik at man kan koble funnene sammen.
+
+Dette visis ikke i skjermbildet. 
+Hvis det ikke er satt noe i anatomisk lokalisering i bildediagnostikk, har man heller ikke noe mulighet for å legge inn anatomisk lokalisering for patologianalysen. 
+Man kan derimot legge inn kun patologi generelt uten å koble til bildediagnostikk.
+5+a|*Anatomisk lokalisering* + 
+CLUSTER: _openEHR-EHR-CLUSTER.anatomical_location.v1_
+
+
+Designkommentar:
+Dette skal arves fra bildediagnostikk anomali slik at man kan koble funnene sammen.
+
+Dette visis ikke i skjermbildet. 
+Hvis det ikke er satt noe i anatomisk lokalisering i bildediagnostikk, har man heller ikke noe mulighet for å legge inn anatomisk lokalisering for patologianalysen. 
+Man kan derimot legge inn kun patologi generelt uten å koble til bildediagnostikk.
+|at0001| 1..1| DV_CODED_TEXT | Navn på kroppssted
+a|
+* Venstre bryst (SNOMED-CT: 80248007)
+* Venstre aksilleregion (SNOMED-CT: 20437008)
+* Annet (spesifiser) (SNOMED-CT: 74964007)
+|at0065| 0..1| DV_CODED_TEXT | Spesifikt sted
+a|
+* Sentralt (SNOMED-CT: 110493007)
+* Øvre ytre kvadrant (SNOMED-CT: 110496004)
+* Øvre indre kvadrant (SNOMED-CT: 110494001)
+* Nedre ytre kvadrant (SNOMED-CT: 110497008)
+* Nedre indre kvadrant (SNOMED-CT: 110495000)
+* Brystvorte (SNOMED-CT: 735379000)
+|at0002| 0..1| DV_CODED_TEXT | Kroppsside
+a|
+* at0003 -> Venstre 
+
+
+Designkommentar:
+Denne trengs ikke vises fordi man allerede har sagt at dette er lesjon/funn på venstre siden.
+5+a|*Sirkulær anatomisk lokalisering* + 
+CLUSTER: _openEHR-EHR-CLUSTER.anatomical_location_circle.v1_
+
+
+Designkommentar:
+Dette skal arves fra bildediagnostikk anomali slik at man kan koble funnene sammen.
+
+Dette visis ikke i skjermbildet. 
+Hvis det ikke er satt noe i anatomisk lokalisering i bildediagnostikk, har man heller ikke noe mulighet for å legge inn anatomisk lokalisering for patologianalysen. 
+Man kan derimot legge inn kun patologi generelt uten å koble til bildediagnostikk.
+|at0079| 0..1| DV_CODED_TEXT | Brystvorte
+a|
+* Venstre brystvorte (SNOMED-CT: 735376007)
+
+
+Designkommentar:
+Midtpunkt er satt som brystvorte.
+|at0061| 0..1| DV_CODED_TEXT | Sirkulær retning
+a|
+* at0067 -> Klokken 1 
+* at0068 -> Klokken 2 
+* at0069 -> Klokken 3 
+* at0070 -> Klokken 4 
+* at0071 -> Klokken 5 
+* at0072 -> Klokken 6 
+* at0073 -> Klokken 7 
+* at0074 -> Klokken 8 
+* at0075 -> Klokken 9 
+* at0076 -> Klokken 10 
+* at0077 -> Klokken 11 
+* at0078 -> Klokken 12 
+
+
+Designkommentar:
+Skal arves fra anatoisk lokalisasjon fra bildediagnostikk anomali.
+|at0080| 0..1| DV_QUANTITY | Avstand fra midtpunktet
+|
+
+
+Avstanden fra brystvorten
+5+a|*Relativ anatomisk lokalisering* + 
+CLUSTER: _openEHR-EHR-CLUSTER.anatomical_location_relative.v2_
+5+a|*Relativ lokalisering* + 
+CLUSTER: _at0020_
+
+
+Mer enn en relativ lokalisering kan bli nødvendig for å gi en nøyaktig kryssreferanse.
+|at0021| 1..1| DV_CODED_TEXT | Navn på landemerke
+a|
+* m. pectoralis (SNOMED-CT: 60005003)
+
+
+Designkommentar
+musculus pectoralis major, 60005003 - Pectoralis major muscle structure (body structure)
+|at0062| 0..1| DV_CODED_TEXT | Kroppsside
+a|
+* at0068 -> Venstre 
+
+
+Designkommentar:
+Settes skjult
+|at0022| 0..1| DV_QUANTITY | Avstand fra m. pectoralis
+|
+
+
+Designkommentar:
+Arver fra bildediagnostikk, settes skjult. 
+5+a|*Imprint* + 
+CLUSTER: _openEHR-EHR-CLUSTER.laboratory_test_analyte.v1_
+
+
+Resultatet på analysen imprint cytologi (også kalt "touch preparation
+|at0024| 0..1| DV_CODED_TEXT | Imprint
+a|
+* Imprintundersøkelse (NORPAT: P31070)
+
+
+Analysen imprint cytologi (også kalt "touch preparation"). 
+|at0001| 0..1| DV_CODED_TEXT | Imprint svar
+a|
+* Benign tumor (SNOMED-CT: 3898006)
+* Tumor med usikkert malignitetspotensial (SNOMED-CT: 86251006)
+* Malign tumor (SNOMED-CT: 1240414004)
+
+
+
+|at0028| 0..1| DV_CODED_TEXT | Testmetode (skjules i form)
+a|
+* Touch imprint cytology technique (qualifier value) (SNOMED-CT: 1285484006)
+
+
+Designkommentar:
+Skjules i skermbildet, lagres bare ned.
+|at0003| 0..1| DV_TEXT | Kommentar imprint
+a|
+
+
+
+5+a|*ER* + 
+CLUSTER: _openEHR-EHR-CLUSTER.laboratory_test_analyte.v1_
+|at0024| 0..1| DV_CODED_TEXT | Analysenavn
+a|
+* ER (østrogenreseptor) (HGNC: HGNC:3467)
+
+
+Designkommentar:
+Vi har besluttet at vi bruker HGNC - koder for disse analysene. 
+Ved genetiske og cytogenetiske analyser, prøver vi så langt det lar seg gjøre, å bruke HGNC.
+|at0001| 0..1| DV_CODED_TEXT | Analyseresultat (Skjules i form)
+a|
+* Påvist (tilstede) (SNOMED-CT: 52101004)
+* Ikke påvist (ikke tilstede) (SNOMED-CT: 2667000)
+
+
+Designkommentar:
+Denne vises ikke i skjermbildet, men lagres ned ut i fra resultatene valgt i elementet "veileder for referanseområdet"
+|at0004| 0..1| DV_CODED_TEXT | ER
+a|
+* < 10% (Neg) (no.onk.bryst_pat: 1)
+* >10 < 50% (Pos) (no.onk.bryst_pat: 2)
+* >50% (Pos) (no.onk.bryst_pat: 3)
+
+
+Designkommentar:
+Det er denne som skal vises i skjermbildet, og resultatet skal arves til analyseresultat om det er positivt eller negativt. 
+5+a|*PR* + 
+CLUSTER: _openEHR-EHR-CLUSTER.laboratory_test_analyte.v1_
+|at0024| 0..1| DV_CODED_TEXT | Analysenavn
+a|
+* PR (progesteron reseptor) (HGNC: HGNC:8910)
+
+
+Designkommentar:
+Vi har besluttet at vi bruker HGNC - koder for disse analysene. 
+|at0001| 0..1| DV_CODED_TEXT | Analyseresultat (Skjules i form)
+a|
+* Påvist (tilstede) (SNOMED-CT: 52101004)
+* Ikke påvist (ikke tilstede) (SNOMED-CT: 2667000)
+
+
+Designkommentar:
+Denne vises ikke i skjermbildet, men lagres ned ut i fra resultatene valgt i elementet "veileder for referanseområdet"
+|at0004| 0..1| DV_CODED_TEXT | PR
+a|
+* < 10% (Neg) (no.onk.bryst_pat: 1)
+* >10 < 50% (Pos) (no.onk.bryst_pat: 2)
+* >50% (Pos) (no.onk.bryst_pat: 3)
+
+
+Designkommentar:
+Det er denne som skal vises i skjermbildet, og resultatet skal arves til analyseresultat om det er positivt eller negativt. 
+5+a|*HER2 (IHC)* + 
+CLUSTER: _openEHR-EHR-CLUSTER.laboratory_test_analyte.v1_
+
+
+Analysen HER2 analysert ved hjelp av immunhistokjemi (IHC).
+|at0024| 0..1| DV_CODED_TEXT | Analysenavn
+a|
+* HER2 (ICH) (NORPAT: P36555)
+
+
+HER2 analyse gjort ved hjelp av immunhistokjemisk (ICH).
+|at0001| 0..1| DV_CODED_TEXT | Analyseresultat
+a|
+* HER2 neg (0) (NORPAT: F29601)
+* HER2 borderline (1+2+) (NORPAT: F29602)
+* HER2 pos (3+) (NORPAT: F29603)
+
+
+Resultatet for HER2 analsyen gjort ved hjelp av immunihistokjemi (ICH).
+5+a|*HER2 (ISH)* + 
+CLUSTER: _openEHR-EHR-CLUSTER.laboratory_test_analyte.v1_
+
+
+Analysen HER2 analysert ved in situ hybridisering (ISH).
+|at0001| 0..1| DV_CODED_TEXT | Analyseresultat
+a|
+* HER2 pos ved ISH (NORPAT: F29605)
+* HER2 neg ved ISH (NORPAT: F29604)
+
+
+Resultatet for HER2 analsyen gjort ved in situ hybridisering (ISH).
+|at0028| 0..1| DV_CODED_TEXT | Testmetode
+a|
+* In situ hybridisering (NORPAT: P33760)
+
+
+Metoden for påvisning av HER2.
+
+Designkommentar;
+Vises ikke i skjermbildet, lagres bare ned.
+5+a|*ki67* + 
+CLUSTER: _openEHR-EHR-CLUSTER.laboratory_test_analyte.v1_
+|at0024| 0..1| DV_CODED_TEXT | Ki67 (Tumorcelleproliferasjon)
+a|
+* Ki-67 (proliferasjonsmarkør) (SNOMED-CT: 1255078008)
+
+
+Designkommentar:
+Har brukt koden: 1255078008 Percent of cell nuclei positive for proliferation marker protein Ki-67 in primary malignant neoplasm by immunohistochemistry (observable entity).
+|at0001| 0..1| DV_QUANTITY | Ki-67 %
+|
+
+
+
+5+a|*Cytologi* + 
+CLUSTER: _openEHR-EHR-CLUSTER.laboratory_test_analyte.v1_
+|at0024| 0..1| DV_CODED_TEXT | Analysenavn
+a|
+* Cytologisk test (prosedyre) (SNOMED-CT: 116147009)
+
+
+Designkommentar:
+Bruker SNOMED-CT kode for cytologiundersøkelse.
+116147009 Cytologisk test (prosedyre)
+|at0001| 0..1| DV_CODED_TEXT | Cytologi svar
+a|
+* Vevscytologi normal (SNOMED-CT: 168442001)
+* Tumorceller, usikker beninge/maligne (SNOMED-CT: 39577004)
+* Tumorceller, maligne (SNOMED-CT: 88400008)
+
+
+Designkommentar:
+Analyseresultatet er direktekodet med SNOMED-CT koder. 
+-168442001- Tissue cytology normal (finding) - Vevscytologi normal
+-39577004 -Tumorceller, usikker beninge/maligne - Neoplasm cell of uncertain behavior (cell)
+-56696000 - Tumorceller, benigne Benign neoplasm cell (cell)
+-88400008 Tumorceller, maligne - Malignant neoplasm cell (cell)
+
+
+|at0003| 0..1| DV_TEXT | Kommentar cytologi
+a|
+
+
+
+|at0098| 0..1| DV_CODED_TEXT | Morfologi tumor
+a|
+* DCIS - intraduktalt carcinoma in situ (SNOMED-CT: 1162814007)
+* Infiltrerende karsinom NST (SNOMED-CT: 408643008)
+* LCIS - lobulær carcinoma in situ (SNOMED-CT: 77284006)
+* Classic lobular carcinoma in situ (SNOMED-CT: 444739008)
+* ILC - infiltrerende lobulært karsinom (SNOMED-CT: 89740008)
+* IBC - inflammatorisk karsinom (SNOMED-CT: 32968003)
+* Medullært karsinom (SNOMED-CT: 32913002)
+* Mucinøst (kolloid) adenokarsinom (SNOMED-CT: 72495009)
+* Tubulær karsinom (SNOMED-CT: 703596001)
+* Papilært karsinom (SNOMED-CT: 25910003)
+* Mikropapillært karsinom (SNOMED-CT: 128674003)
+* Malign phylloidestumor (SNOMED-CT: 87913009)
+* Pagets sykdom i mamma (SNOMED-CT: 2985005)
+* PLCIC - pleomorft lobulært carcinoma in situ (SNOMED-CT: 444591006)
+* Histologic type cannot be determined (SNOMED-CT: 372269006)
+* Flat epitelial atypi i mamma (FEA) (SNOMED-CT: 860895001)
+* Columnar cell change (CCC) (atypiske sylindereptelceller) (SNOMED-CT: 55465005)
+* columnar cell hyperplasia (CCH) (SNOMED-CT: 2)
+* atypisk duktal mammahyperplasi (ADH) (SNOMED-CT: 427785007)
+* atypisk lobulær mammahyperplasi (ALH) (SNOMED-CT: 450697004)
+* PLCIC - pleomorft lobulært carcinoma in situ (SNOMED-CT: 444591006)
+* Florid lobular carcinoma in situ (SNOMED-CT: 1290750006)
+* Florid LCIS med comedonekrose (SNOMED-CT: 6)
+
+
+Designkommentar:
+Morfologien til tumoren/lesjonen
+|at0101| 0..1| DV_TEXT | Kommentar morfologi
+a|
+|at0101| 0..*| DV_TEXT | Beskrivelse patologi
+a|
+5+a|*NGS gradering av tumor* + 
+CLUSTER: _openEHR-EHR-CLUSTER.clinical_evidence.v1_
+
+
+Designkommentar
+Nottingham-graderingssystemet for primær ondartet svulst i bryst
+1287020007 - Nottingham grade system for primary malignant neoplasm of breast (qualifier value)
+
+|at0003| 0..1| DV_CODED_TEXT | Grad (NGS)
+a|
+* Sannsynlig G1 (no.onk.bryst_pat: G1)
+* Sannsynlig G2 (no.onk.bryst_pat: G2)
+* Sannsynlig G3 (no.onk.bryst_pat: G3)
+
+
+Designkommentar:
+Brukt 1287020007  Nottingham grade system for primary malignant neoplasm of breast
+Det endelige svaret kommer i patologisvaret etter fjerning av tumoren.
+|====
+== Gentest
+== Kartlegging genetisk biomarkør
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Kartlegging genetisk biomarkør* + 
+OBSERVATION: _openEHR-EHR-OBSERVATION.investigation_screening.v1_
+|at0040| 0..1| DV_CODED_TEXT | Kartleggingsformål
+a|
+* Biomarkor (no.onk.kartlegging: 04)
+
+
+Designkommentar:
+Et lokalt kodeverk no.onk.kartlegging for å si noe om kartleggingsformålet.
+
+5+a|*Spesifikk undersøkelse* + 
+CLUSTER: _at0026_
+
+
+Bruk separate instanser av dette CLUSTER'et for å skille mellom spesifikke undersøkelser eller gruppering av undersøkelser.
+|at0021| 1..1| DV_CODED_TEXT | Undersøkelsesnavn
+a|
+* Genetiske biomarkører (no.onk.type_biomarkorer: B1)
+
+
+Designkommentar:
+skjules i skjermbildet.
+
+|at0002| 0..*| DV_TEXT | Svar gentest:
+a|
+
+
+Designkommentar:
+Her kan legene skrive inn svaret på gentesten hvis det er gjort noe. 
+|====
+== Problem/diagnose utredning
+== Problem/diagnose overordnet
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Problem/diagnose overordnet* + 
+EVALUATION: _openEHR-EHR-EVALUATION.problem_diagnosis.v1_
+
+
+Designkommentar:
+Dette er diagnose på overordnet nivå. 
+Brystkreft ønsker ikke å legge inn diagnosekode per side per nå, de vil ha diagnose kode på den verste diagnosen. 
+Antagelig vil de mest sannsynlig bruke ICD10 koden for uspesifisert brystkreft - C50.9 Ondartet svulst med uspesifisert lokalisasjon i bryst. 
+
+|at0002| 1..1| DV_CODED_TEXT | Diagnose
+a|
+* Neoplastisk sykdom (SNOMED-CT: 55342001)
+
+
+Designkommentar:
+Denne skal ikke vises i skjermbildet, men settes default skjult. Dermed trenger ikke diagnosen å være obligatorisk, noe som kan være vanskelig i utredningsøyeblikket. 
+Selve diagnosen som de settes i utredningen settes inn i arketypen "CLUSTER.problem_diagnosis_dips.v1". 
+
+|at0012| 0..1| DV_CODED_TEXT | Beliggenhet
+a|
+* Breast structure (body structure) (SNOMED-CT: 76752008)
+
+
+Designkommentar:
+Skal ikke vises i skjermbildet 
+
+Registrering av det anatomisk stedet der diagnosen er lokalisert.
+
+For brystkreft, når det er snakk om en overordnet diagnosekode (den verste) må denne stå som mamma. 
+76752008 -  mamma (Breast structure (body structure))
+
+
+
+
+5+a|*Anatomisk lokalisering* + 
+CLUSTER: _openEHR-EHR-CLUSTER.anatomical_location.v1_
+|at0001| 1..1| DV_CODED_TEXT | Navn på kroppssted
+a|
+* Breast structure (body structure) (SNOMED-CT: 76752008)
+
+
+Designkommentar:
+Det speisfikke kroppsstedet. Hvis man f.eks. har satt venstre mamma i dataelementet beliggenhet ville dette feltet blitt mamma. 
+Anatomi kodes med SNOMED-CT så langt det er mulig. 
+
+Det er laget en mapping for spesifikt sted ved bruk av gruppering i elementet Beliggenhet i Problem/diagnosen (ref. sarkom).
+
+For brystkreft må denne stå som mamma. 
+76752008 -  mamma 
+
+|at0002| 0..1| DV_CODED_TEXT | Kroppsside
+a|
+* at0003 -> Venstre 
+* at0004 -> Høyre 
+* at0083 -> Venstre og høyre 
+
+
+Designkommentar:
+Dette elementet skal kun brukes for side på kroppen for parorgan (bryst på venstre side) eller f.eks. hud så er det venstre side for kroppen som helhet.  
+
+Dette vil vises i skjermbildet for å vise hvilke side av kroppen lesjonen/funnet sitter som man stiller diagnose for. 
+Denne styrer også logikken for hva som vises av diagnose per side. 
+
+Ved valg av kroppsside vises TNM og multifokalitet for høyre, venstre eller begge sider.
+Logikk:
+--- Hvis lesjon er valgt på venstre side → kun venstre TNM/multifokalitet vises.
+--- Hvis lesjon er valgt på høyre side → kun høyre TNM/multifokalitet vises.
+--- Hvis lesjoner er valgt på begge sider → begge settene av TNM/multifokalitet vises.
+
+
+|at0003| 0..1| DV_DATE_TIME | Dato/tid for klinisk bekreftelse
+|
+
+
+Designkommentar: 
+Reglene er;
+Anslått eller faktisk dato/tid da diagnosen ble bekreftet:
+1. prøvetakningsdato for første positiv histologi/cytologi 
+2. Mottaksdato så svardato for patologiprøve. 
+3. Andre undersøkelser som bildediagnostikk, blodprøve etc. hvor man bestemmer seg for at pasienten har
+kreft.
+5+a|*Problem/diagnose detaljer* + 
+CLUSTER: _openEHR-EHR-CLUSTER.problem_diagnosis_dips.v1_
+
+
+Designkommentar:
+En lokal CLUSTER arketype som brukes til å 
+legge inn diagnosekode, her er det ICD10 diagnosekoder.
+
+Denne brukes for spesifikk ICD-10 diagnose i stedet for øverst i Problem/diagnose - elementet problem/diagnosenavn da man i en utredningssistuasjon kanskje ikke har en gitt diagnose, og heller ikke vil registrere denne icd-10 koden. 
+
+
+|at0001| 0..*| DV_CODED_TEXT | Diagnose ICD-10
+a|
+
+
+Designkommentar:
+Det er denne verdien som skal vises i skjermbildet. 
+Den trenger nå ikke å være obligatorisk. 
+Kodes med ICD-10
+5+a|*Problem/diagnose-kvalifikator overordnet* + 
+CLUSTER: _openEHR-EHR-CLUSTER.problem_qualifier.v2_
+
+
+Designkommentar_
+Denne skal ikke vises i skjermbildet, men kan settes skjult ut i fra hva som velges i "Sykdomsstatus (tumorhendelse)" kartlegging helt øverst i templatet. 
+
+|at0111| 0..*| DV_CODED_TEXT | Sykdomskatergori
+a|
+* Neoplastisk sykdom (SNOMED-CT: 55342001)
+
+
+Designkommentar:
+Denne skal skjules i skermbildet. 
+
+Ved utredning :
+-Neoplastisk sykdom settes som Problem/diagnose-navn i Problem/diagnose arketypen. (55342001 -Neoplastisk sykdom) 
+-Problem /diagnose - elementet Sykdomskategori i arketypen problem_qualifier.v2 (Problem/Diagnosis qualifier)  settes til neoplastisk sykdom.  
+-ICD-10 diagnose fylles ut i clusterarketypen for diagnose utviklet av DIPS (problem_diagnosis_dips.v1) 
+|at0102| 0..1| DV_CODED_TEXT | Progresjon
+a|
+* at0105 -> I forverring 
+
+
+Designkommentar:
+Arves fra Tumorevent øverst, valg kun metastaser. 
+|at0083| 0..1| DV_CODED_TEXT | Residivert
+a|
+* at0097 -> Residivert 
+
+
+Designkommentar:
+Arves fra Tumorevent øverst hvis det er valgt residiv. 
+|at0001| 0..1| DV_CODED_TEXT | Episodisitet
+a|
+* at0034 -> Ny 
+
+
+Designkommentar:
+Arves fra Tumorevent øverst. 
+Denne settes hvis det er krysset av primærtumor.
+|at0070| 0..1| DV_DATE_TIME | Sist oppdatert
+|
+|====
+== Problem/diagnose (inkl TNM) Høyre
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Problem/diagnose (inkl TNM) Høyre* + 
+EVALUATION: _openEHR-EHR-EVALUATION.problem_diagnosis.v1_
+
+
+Designkommentar:
+I skjermbildet skal det bare vises høyre side som overskrift. 
+|at0002| 1..1| DV_CODED_TEXT | Diagnose
+a|
+* Neoplasi i mamma (SNOMED-CT: 126926005)
+
+
+Designkommentar:
+Denne skal ikke vises i skjermbildet, men settes default skjult. Dermed trenger ikke diagnosen å være obligatorisk, noe som kan være vanskelig i utredningsøyeblikket. Selve diagnosen som de settes i utredningen settes inn i arketypen "CLUSTER.problem_diagnosis_dips.v1". 
+
+|at0012| 0..1| DV_CODED_TEXT | Beliggenhet
+a|
+* Right breast structure (body structure) (SNOMED-CT: 73056007)
+
+
+Designkommentar:
+Registrering av det anatomisk stedet der diagnosen er lokalisert.
+
+Her har vi lagt inn direktekode til høyre bryst. 
+73056007 - Right breast structure (body structure)
+
+5+a|*Anatomisk lokalisering* + 
+CLUSTER: _openEHR-EHR-CLUSTER.anatomical_location.v1_
+
+
+Designkommentar:
+Skal ikke vises i skjermbildet.
+|at0001| 1..1| DV_CODED_TEXT | Navn på kroppssted
+a|
+* Breast structure (body structure) (SNOMED-CT: 76752008)
+
+
+Designkommentar:
+Det speisfikke kroppsstedet. Hvis man f.eks. har satt venstre mamma i dataelementet beliggenhet ville dette feltet blitt mamma. 
+Anatomi kodes med SNOMED-CT så langt det er mulig. 
+
+|at0002| 0..1| DV_CODED_TEXT | Kroppsside
+a|
+* at0004 -> Høyre 
+
+
+Designkommentar:
+
+Dette elementet skal kun brukes for side på kroppen for parorgan (bryst på venstre side) eller f.eks. hud så er det venstre side for kroppen som helhet.  
+
+
+5+a|*Oncology problem details dips* + 
+CLUSTER: _openEHR-EHR-CLUSTER.oncology_problem_details_dips.v1_
+
+
+Designkommentar:
+Denne brukes for å legge til om tumoren er multifokal eller ikke. For brys er dette definert som flere samtidige tumorer i samme bryst. 
+|at0003| 0..1| DV_CODED_TEXT | Tumorutbredelsesmønster
+a|
+* Multifokal tumor (SNOMED-CT: 399506006)
+
+
+Designkommentar:
+Skal være avkryssing. 
+Logikk - krysses automatisk hvis det er satt mer enn en lesjon for bryst (ikke aksille eller annet)
+
+Bruker koden - 399506006  Multifocal tumor (finding), 
+Multifokalitet er vanskelig for det er litt forskjellige definisjoner / bruk i de forskjellige kreftformene, men vi har besluttet å bruke denne koden for bryst. 
+
+
+
+5+a|*cTNM-klassifikasjon klinisk* + 
+CLUSTER: _openEHR-EHR-CLUSTER.tnm.v1_
+
+
+Designkommentar:
+Her skal det komme en link til helsedirektoratets sider om TNM bryst. 
+https://www.helsedirektoratet.no/retningslinjer/brystkreft--handlingsprogram/diagnostisering-og-utredning/tnm-klassifikasjon
+|at0003| 0..1| DV_CODED_TEXT | Primærtumor (T)
+a|
+* cTX (no.onk.tmn: TX)
+* cT0 (no.onk.tmn: T0)
+* cTis (no.onk.tmn: Tis)
+* cTis (DCIS) (no.onk.tmn: Tis (DCIS))
+* cTis (LCIS) (no.onk.tmn: Tis (LCIS))
+* cTis (Paget) (no.onk.tmn: Tis (Paget))
+* cT1 (no.onk.tmn: T1)
+* cT1mic (no.onk.tmn: T1mic)
+* cT1a (no.onk.tmn: T1a)
+* cT1b (no.onk.tmn: T1b)
+* cT1c (no.onk.tmn: T1c)
+* cT2 (no.onk.tmn: T2)
+* cT3 (no.onk.tmn: T3)
+* cT4 (no.onk.tmn: T4)
+* cT4a (no.onk.tmn: T4a)
+* cT4b (no.onk.tmn: T4b)
+* cT4c (no.onk.tmn: T4c)
+* cT4d (no.onk.tmn: T4d)
+
+
+Designkommentar:
+Vi bruker lokalt kodeverk no.onk.tmn, og UICC versjon. Kodene er bokstavene/graderingen og tekst som bokstav/gradering med c-prefix.
+|at0004| 0..1| DV_CODED_TEXT | Regionale lymfeknuter (N)
+a|
+* cNX (no.onk.tmn: NX)
+* cN0 (no.onk.tmn: N0)
+* cN1 (no.onk.tmn: N1)
+* cN2 (no.onk.tmn: N2)
+* cN2a (no.onk.tmn: N2a)
+* cN2b (no.onk.tmn: N2b)
+* cN3 (no.onk.tmn: N3)
+* cN3a (no.onk.tmn: N3a)
+* cN3b (no.onk.tmn: N3b)
+* cN3c (no.onk.tmn: N3c)
+
+
+Designkommentar:
+Vi bruker lokalt kodeverk no.onk.tmn, og UICC versjon. Kodene er bokstavene/graderingen og tekst som bokstav/gradering med c-prefix.
+|at0005| 0..1| DV_CODED_TEXT | Fjernmetastase (M)
+a|
+* cM0 (no.onk.tmn: M0)
+* cM0(i+) (no.onk.tmn: M0(i+))
+* cM1 (no.onk.tmn: M1)
+* cMX (no.onk.tmn: MX)
+
+
+Designkommentar:
+Vi bruker lokalt kodeverk no.onk.tmn, og UICC versjon. Kodene er bokstavene/graderingen og tekst som bokstav/gradering med c-prefix.
+|at0027| 0..1| DV_BOOLEAN | Residiv (r)
+|
+
+
+Angis ved å legge til prefikset "r" i "TNM-vurdering".
+|at0030| 0..1| DV_TEXT | TNM-vurdering
+a|
+
+
+Designkommentar:
+sammenslåing av T+n+m verdien. Den må komme med p-som prefix.
+5+a|*Problem/diagnose-kvalifikator* + 
+CLUSTER: _openEHR-EHR-CLUSTER.problem_qualifier.v2_
+
+
+Designkommentar_
+Denne skal ikke vises i skjermbildet, men kan settes skjult ut i fra hva som velges i "Sykdomsstatus (tumorhendelse)" kartlegging helt øverst i templatet. 
+
+|at0111| 0..*| DV_CODED_TEXT | Sykdomskatergori
+a|
+* Neoplastisk sykdom (SNOMED-CT: 55342001)
+
+
+Designkommentar:
+Denne skal skjules i skermbildet. 
+
+Ved utredning :
+-Neoplastisk sykdom settes som Problem/diagnose-navn i Problem/diagnose arketypen. (55342001 -Neoplastisk sykdom) 
+-Problem /diagnose - elementet Sykdomskategori i arketypen problem_qualifier.v2 (Problem/Diagnosis qualifier)  settes til neoplastisk sykdom.  
+-ICD-10 diagnose fylles ut i clusterarketypen for diagnose utviklet av DIPS (problem_diagnosis_dips.v1) 
+|at0070| 0..1| DV_DATE_TIME | Sist oppdatert
+|
+|====
+== Problem/diagnose (inkl TNM) Venstre
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Problem/diagnose (inkl TNM) Venstre* + 
+EVALUATION: _openEHR-EHR-EVALUATION.problem_diagnosis.v1_
+
+
+Designkommentar:
+I skjermbildet skal det bare vises høyre side som overskrift. 
+|at0002| 1..1| DV_CODED_TEXT | Diagnose
+a|
+* Neoplasi i mamma (SNOMED-CT: 126926005)
+
+
+Designkommentar:
+Denne skal ikke vises i skjermbildet, men settes default skjult. Dermed trenger ikke diagnosen å være obligatorisk, noe som kan være vanskelig i utredningsøyeblikket. Selve diagnosen som de settes i utredningen settes inn i arketypen "CLUSTER.problem_diagnosis_dips.v1". 
+
+|at0012| 0..1| DV_CODED_TEXT | Beliggenhet
+a|
+* Venstre mamma (SNOMED-CT: 80248007)
+
+
+Designkommentar:
+Registrering av det anatomisk stedet der diagnosen er lokalisert.
+
+Her har vi lagt inn direktekode til venste bryst. 
+76752008 - Breast structure (body structure)
+
+5+a|*Anatomisk lokalisering* + 
+CLUSTER: _openEHR-EHR-CLUSTER.anatomical_location.v1_
+|at0001| 1..1| DV_CODED_TEXT | Navn på kroppssted
+a|
+* Breast structure (body structure) (SNOMED-CT: 76752008)
+
+
+Designkommentar:
+Det speisfikke kroppsstedet. Hvis man f.eks. har satt venstre mamma i dataelementet beliggenhet ville dette feltet blitt mamma. 
+Anatomi kodes med SNOMED-CT så langt det er mulig. 
+
+Det er laget en mapping for spesifikt sted ved bruk av gruppering i elementet Beliggenhet i Problem/diagnosen (ref. sarkom).
+
+76752008 - Breast structure (body structure)
+
+|at0002| 0..1| DV_CODED_TEXT | Kroppsside
+a|
+* at0003 -> Venstre 
+
+
+Designkommentar:
+
+Dette elementet skal kun brukes for side på kroppen for parorgan (bryst på venstre side) eller f.eks. hud så er det venstre side for kroppen som helhet.  
+5+a|*Oncology problem details dips* + 
+CLUSTER: _openEHR-EHR-CLUSTER.oncology_problem_details_dips.v1_
+
+
+Designkommentar:
+Denne brukes for å legge til om tumoren er multifokal eller ikke. For brys er dette definert som flere samtidige tumorer i samme bryst. 
+|at0003| 0..1| DV_CODED_TEXT | Tumorutbredelsesmønster
+a|
+* Multifokal tumor (SNOMED-CT: 399506006)
+
+
+Designkommentar:
+Skal være avkryssing. 
+Logikk - krysses automatisk hvis det er satt mer enn en lesjon for bryst (ikke aksille eller annet)
+
+Bruker koden - 399506006  Multifocal tumor (finding), 
+Multifokalitet er vanskelig for det er litt forskjellige definisjoner / bruk i de forskjellige kreftformene, men vi har besluttet å bruke denne koden for bryst. 
+5+a|*cTNM-klassifikasjon klinisk* + 
+CLUSTER: _openEHR-EHR-CLUSTER.tnm.v1_
+
+
+Designkommentar:
+Her skal det komme en link til helsedirektoratets sider om TNM bryst. 
+https://www.helsedirektoratet.no/retningslinjer/brystkreft--handlingsprogram/diagnostisering-og-utredning/tnm-klassifikasjon
+|at0003| 0..1| DV_CODED_TEXT | Primærtumor (T)
+a|
+* cTX (no.onk.tmn: TX)
+* cT0 (no.onk.tmn: T0)
+* cTis (no.onk.tmn: Tis)
+* cTis (DCIS) (no.onk.tmn: Tis (DCIS))
+* cTis (LCIS) (no.onk.tmn: Tis (LCIS))
+* cTis (Paget) (no.onk.tmn: Tis (Paget))
+* cT1 (no.onk.tmn: T1)
+* cT1mic (no.onk.tmn: T1mic)
+* cT1a (no.onk.tmn: T1a)
+* cT1b (no.onk.tmn: T1b)
+* cT1c (no.onk.tmn: T1c)
+* cT2 (no.onk.tmn: T2)
+* cT3 (no.onk.tmn: T3)
+* cT4 (no.onk.tmn: T4)
+* cT4a (no.onk.tmn: T4a)
+* cT4b (no.onk.tmn: T4b)
+* cT4c (no.onk.tmn: T4c)
+* cT4d (no.onk.tmn: T4d)
+
+
+Designkommentar:
+Vi bruker lokalt kodeverk no.onk.tmn, og UICC versjon. Kodene er bokstavene/graderingen og tekst som bokstav/gradering med c-prefix.
+|at0004| 0..1| DV_CODED_TEXT | Regionale lymfeknuter (N)
+a|
+* cNX (no.onk.tmn: NX)
+* cN0 (no.onk.tmn: N0)
+* cN1 (no.onk.tmn: N1)
+* cN2 (no.onk.tmn: N2)
+* cN2a (no.onk.tmn: N2a)
+* cN2b (no.onk.tmn: N2b)
+* cN3 (no.onk.tmn: N3)
+* cN3a (no.onk.tmn: N3a)
+* cN3b (no.onk.tmn: N3b)
+* cN3c (no.onk.tmn: N3c)
+
+
+Designkommentar:
+Vi bruker lokalt kodeverk no.onk.tmn, og UICC versjon. Kodene er bokstavene/graderingen og tekst som bokstav/gradering med c-prefix.
+|at0005| 0..1| DV_CODED_TEXT | Fjernmetastase (M)
+a|
+* cM0 (no.onk.tmn: M0)
+* cM0(i+) (no.onk.tmn: M0(i+))
+* cM1 (no.onk.tmn: M1)
+* cMX (no.onk.tmn: MX)
+
+
+Designkommentar:
+Vi bruker lokalt kodeverk no.onk.tmn, og UICC versjon. Kodene er bokstavene/graderingen og tekst som bokstav/gradering med c-prefix.
+|at0027| 0..1| DV_BOOLEAN | Residiv (r)
+|
+
+
+Angis ved å legge til prefikset "r" i "TNM-vurdering".
+|at0030| 0..1| DV_TEXT | TNM-vurdering
+a|
+
+
+Designkommentar:
+sammenslåing av T+n+m verdien. Den må komme med p-som prefix.
+5+a|*Problem/diagnose-kvalifikator* + 
+CLUSTER: _openEHR-EHR-CLUSTER.problem_qualifier.v2_
+
+
+Designkommentar_
+Denne skal ikke vises i skjermbildet, men kan settes skjult ut i fra hva som velges i "Sykdomsstatus (tumorhendelse)" kartlegging helt øverst i templatet. 
+
+|at0111| 0..*| DV_CODED_TEXT | Sykdomskatergori
+a|
+* Neoplastisk sykdom (SNOMED-CT: 55342001)
+
+
+Designkommentar:
+Denne skal skjules i skermbildet. 
+
+Ved utredning :
+-Neoplastisk sykdom settes som Problem/diagnose-navn i Problem/diagnose arketypen. (55342001 -Neoplastisk sykdom) 
+-Problem /diagnose - elementet Sykdomskategori i arketypen problem_qualifier.v2 (Problem/Diagnosis qualifier)  settes til neoplastisk sykdom.  
+-ICD-10 diagnose fylles ut i clusterarketypen for diagnose utviklet av DIPS (problem_diagnosis_dips.v1) 
+|at0070| 0..1| DV_DATE_TIME | Sist oppdatert
+|
+|====
+== Regional (N) lymfeknutemetastase
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Regional (N) lymfeknutemetastase* + 
+EVALUATION: _openEHR-EHR-EVALUATION.problem_diagnosis.v1_
+
+
+Designkommentar:
+Dukker opp om N er annet enn 0 eller X
+
+NB! denne skal baseres på småtemplatarketypen no.openehr__openEHR-EHR-EVALUATION.sjk_metastase.v1.0.0. 
+Endringer her må tilbakeføres til småtemplatet. 
+
+
+|at0002| 1..1| DV_CODED_TEXT | Regional lymfeknutemetastase
+a|
+* Metastase i regionale lymfeknuter (SNOMED-CT: 399374009)
+
+
+Designkommentar:
+Denne vises ikke i skjermbildet. 
+Bruker disorder kode for metastase. 
+Setter i variant om det er regional eller fjernmetastase.
+
+Regional lymph node metastasis present (finding)
+ SCTID: 399374009
+
+399374009	Metastase i regionale lymfeknuter
+128462008	Metastase
+ 
+|at0079| 0..1| DV_CODED_TEXT | Variant
+a|
+* Regional (SNOMED-CT: 410674003)
+
+
+Designkommentar:
+Skal ikke vises i skjermbildet.
+
+410674003	Regional
+261007001	Fjern
+
+
+
+
+5+a|*Problem/diagnose detaljer* + 
+CLUSTER: _openEHR-EHR-CLUSTER.problem_diagnosis_dips.v1_
+|at0001| 0..*| DV_CODED_TEXT | Diagnosenavn ICD-10
+a|
+
+
+Designkommentar:
+Her kan man skrive inn ICD-10 koden på lymfeknutemetastasen. 
+5+a|*Utredningsmetode regionale lymfeknutemetastaser* + 
+CLUSTER: _openEHR-EHR-CLUSTER.clinical_evidence.v1_
+
+
+Designkommentar:
+Hvis det skal beskrives metode og dato per kroppsdel metastasen befinner seg må denne gjentas.
+
+NB! Måtte endre navnet på denne for å støtte eldre versjoner av DIPS Arena 
+
+
+Designkommentar:
+Brukes til å beksrive typen undersøkelse eller utredning som er utført for å komme fram til funnet.
+
+Denne er satt 0..* slik at i tilfeller man ønsker dato for den spesifikke metoden kan man gjenta hele clusteret. Hvis man ikke ønsker dato kan man kun gjenta Metode - elementet.
+|at0003| 0..1| DV_CODED_TEXT | Grunnlag
+a|
+* Regional lymph node metastasis present (finding) (SNOMED-CT: 399374009)
+
+
+Designkommentar:
+Denne visis ikke i skjermbildet. 
+|at0022| 0..*| DV_CODED_TEXT | Metode
+a|
+* Klinisk vurdering (SNOMED-CT: 58147004)
+* Palpasjon (SNOMED-CT: 113011001)
+* Bildediagnostikk (SNOMED-CT: 363679005)
+* Cytologi (SNOMED-CT: 116147009)
+* Biopsi (SNOMED-CT: 86273004)
+* Reseksjon (SNOMED-CT: 65801008)
+* Annet (SNOMED-CT: 74964007)
+* Ukjent (SNOMED-CT: 69466000)
+
+
+Designkommentar:
+Typen undersøkelse eller utredning som er utført for å komme fram til funn av den regionale metastasen.
+Her er det tenkt at man kan ha flere utredningsmetoder. 
+|at0001| 0..1| DV_TEXT | Spesifiser annen metode
+a|
+|at0070| 0..1| DV_DATE_TIME | Sist oppdatert
+|
+|====
+== Fjernmetastaser (M)
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Fjernmetastaser (M)* + 
+EVALUATION: _openEHR-EHR-EVALUATION.problem_diagnosis.v1_
+
+
+Designkommentar:
+Dukker opp om M er annet enn 0 eller X
+
+NB! denne skal baseres på småtemplatarketypen no.openehr__openEHR-EHR-EVALUATION.sjk_metastase.v1.0.0. 
+Endringer her må tilbakeføres til småtemplatet. 
+|at0002| 1..1| DV_CODED_TEXT | Fjernmetastaser
+a|
+* Metastase (SNOMED-CT: 128462008)
+
+
+Designkommentar:
+Denne vises ikke i skjermbildet. 
+Bruker disorder kode for metastase. 
+Setter i variant om det er regional eller fjernmetastase.
+
+Metastatic malignant neoplasm (disorder)
+SCTID: 128462008
+
+399374009	Metastase i regionale lymfeknuter
+128462008	Metastase
+ 
+|at0079| 0..1| DV_CODED_TEXT | Variant
+a|
+* Fjern (SNOMED-CT: 261007001)
+
+
+Designkommentar:
+Anatomisk lokalisering av fjernmetastasen. Lagrer direktelokalisasjon av fjernmetastasen. Hvis ikke koden ligger her må man skrive det inn i fritekst.
+Koden for disse er:
+261007001	Distant (qualifier value)
+
+410674003	Regional
+261007001	Fjern
+
+
+
+|at0012| 0..*| DV_CODED_TEXT | Anatomisk lokalisering
+a|
+* Skjelett (SNOMED-CT: 113192009)
+* Lever (SNOMED-CT: 10200004)
+* Venstre lunge (SNOMED-CT: 44029006)
+* Høyre lunge (SNOMED-CT: 3341006)
+* Pleura (SNOMED-CT: 3120008)
+* Hjerne (SNOMED-CT: 12738006)
+* Hud (SNOMED-CT: 39937001)
+* Lymfeknuter (SNOMED-CT: 59441001)
+* Annet (SNOMED-CT: 74964007)
+
+
+ Designkommentar:
+avkryssing for kroppsdel. 
+Hvis "annet" er krysset av skal det komme en kommentarboks. 
+
+Det er valgt at man kan bruke denne anatomiske lokaliseringen i stedet for spesifikke detaljer, da man ikke ønsker å si annet enn at man har funnet en fjernmetastase på et speisfikt sted uten detaljer om at det verken er på høyre eller venstre side. 
+Hvis man ønsker å si noe om hvilken kroppside eller om metastasen er på midlinjen, må man bruke anatomisk lokalisering clusteret i spesifikke detaljer. 
+5+a|*Utredningsmetode fjernmetastaser* + 
+CLUSTER: _openEHR-EHR-CLUSTER.clinical_evidence.v1_
+
+
+Designkommentar:
+Hvis det skal beskrives metode og dato per kroppsdel metastasen befinner seg må denne gjentas.
+
+NB! Måtte endre navnet på denne for å støtte eldre versjoner av DIPS Arena 
+
+Designkommentar:
+Brukes til å beksrive typen undersøkelse eller utredning som er utført for å komme fram til funnet.
+
+Denne er satt 0..* slik at i tilfeller man ønsker dato for den spesifikke metoden kan man gjenta hele clusteret. Hvis man ikke ønsker dato kan man kun gjenta Metode - elementet.
+|at0003| 0..1| DV_CODED_TEXT | Grunnlag
+a|
+* Metastatic malignant neoplasm (disorder) (SNOMED-CT: 128462008)
+
+
+Designkommentar:
+Denne visis ikke i skjermbildet. 
+|at0022| 0..*| DV_CODED_TEXT | Metode
+a|
+* Klinisk vurdering (SNOMED-CT: 58147004)
+* Palpasjon (SNOMED-CT: 113011001)
+* Bildediagnostikk (SNOMED-CT: 363679005)
+* Cytologi (SNOMED-CT: 116147009)
+* Biopsi (SNOMED-CT: 86273004)
+* Reseksjon (SNOMED-CT: 65801008)
+* Annet (SNOMED-CT: 74964007)
+* Ukjent (SNOMED-CT: 69466000)
+
+
+Designkommentar:
+Typen undersøkelse eller utredning som er utført for å komme fram til funn av fjernmetastasen.
+Her er det tenkt at man kan ha flere utredningsmetoder. 
+|at0001| 0..1| DV_TEXT | Spesifiser annen metode
+a|
+|at0069| 0..1| DV_TEXT | Spesifiser annet
+a|
+|at0070| 0..1| DV_DATE_TIME | Sist oppdatert
+|
+|====
+== Tentativ videre plan/behandling
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Tentativ videre plan/behandling* + 
+OBSERVATION: _openEHR-EHR-OBSERVATION.progress_note.v1_
+
+
+Fritekstbeskrivelse av en foreløpig plan for videre utredning, behandling eller oppfølging. 
+|at0004| 0..1| DV_TEXT | Tentativ videre plan/behandling
+a|
+
+
+Designkommentar:
+Fritekstbeskrivelse av en foreløpig plan for videre utredning, behandling eller oppfølging. 
+|====
+== Klinisk sammendrag utredning (autogenerert)
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Klinisk sammendrag utredning (autogenerert)* + 
+EVALUATION: _openEHR-EHR-EVALUATION.clinical_synopsis.v1_
+
+
+Designkommentar: 
+Automatisk fritekstsammendrag av det som står i de strukturerte feltene.
+
+Dette skal ikke vises, men kun være autogenerert og skal kun vises når dokumentet er lagret - "vis neste"
+
+|at0002| 1..1| DV_TEXT | Sammendrag av utredning
+a|
+
+
+Designkommentar: Dette legges inn i tooltip:
+Automatisk fritekstsammendrag av det som står i de strukturerte feltene. Dette sammendraget kan redigeres.
+-OBS1! Hvis det gjøres endringer i de strukturerte feltene etter at man har autogenerert/trykket knappen må det autogenereres på nytt. 
+-OBS2! Autogenereres det på nytt forsvinner egen redigering.
+|====
+// Not supported rmType CODE_PHRASE
+// Not supported rmType CODE_PHRASE
+// Not supported rmType PARTY_PROXY
