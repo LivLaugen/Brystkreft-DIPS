@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "438576544d6fbe79ea8688046f4a1112",
+      "MD5-CAM-1.0.1" : "5c4b86fc6d2ae11e8d99af027f246458",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "340.0.2",
+      "sem_ver" : "341.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -88715,9 +88715,35 @@
             "existence" : "0..1",
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
+              "rmTypeName" : "DV_CODED_TEXT",
               "occurrences" : "1..1",
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "NORPAT"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "NORPAT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "NORPAT",
+                    "code" : "F29601",
+                    "value" : "HER2 neg (0)"
+                  }, {
+                    "terminologyId" : "NORPAT",
+                    "code" : "F29602",
+                    "value" : "HER2 borderline (1+2+)"
+                  }, {
+                    "terminologyId" : "NORPAT",
+                    "code" : "F29603",
+                    "value" : "HER2 pos (3+)"
+                  } ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
