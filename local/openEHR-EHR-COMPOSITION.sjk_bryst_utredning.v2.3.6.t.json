@@ -28,7 +28,7 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "d39395a92b6062c32d256ea08d7aaaf9",
+      "MD5-CAM-1.0.1" : "677727a93beac876298a0ec6dc9a80eb",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
       "sem_ver" : "355.0.0",
@@ -49222,7 +49222,7 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..0",
+              "occurrences" : "0..1",
               "nodeId" : "at0027.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -49251,7 +49251,6 @@
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
-                  "occurrences" : "0..0",
                   "nodeId" : "at0028.1",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
@@ -49259,11 +49258,9 @@
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "DV_IDENTIFIER",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_TEXT",
+                      "defaultValue" : {
+                        "@type" : "DV_IDENTIFIER"
+                      },
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
                     } ]
@@ -66313,7 +66310,7 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..0",
+              "occurrences" : "0..1",
               "nodeId" : "at0094.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -66328,7 +66325,6 @@
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
-                  "occurrences" : "0..0",
                   "nodeId" : "at0062.1",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
@@ -66336,11 +66332,9 @@
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "DV_IDENTIFIER",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_TEXT",
+                      "defaultValue" : {
+                        "@type" : "DV_IDENTIFIER"
+                      },
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
                     } ]
@@ -66457,7 +66451,7 @@
           "at0063.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0063.1",
-            "text" : "Rekvisisjonsnummer",
+            "text" : "Rekvisisjonsmottakers rekvisisjonsID",
             "description" : "Rekvisisjonsnummeret til undersøkelsen.",
             "comment" : "Denne identifikatoren kalles også ofte \"rekvisisjonsnummer\" eller \"remissenummer\"."
           },
@@ -78725,7 +78719,7 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..0",
+              "occurrences" : "0..1",
               "nodeId" : "at0027.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -78754,7 +78748,6 @@
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
-                  "occurrences" : "0..0",
                   "nodeId" : "at0028.1",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
@@ -78762,11 +78755,9 @@
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "DV_IDENTIFIER",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_TEXT",
+                      "defaultValue" : {
+                        "@type" : "DV_IDENTIFIER"
+                      },
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
                     } ]
@@ -95809,7 +95800,7 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..0",
+              "occurrences" : "0..1",
               "nodeId" : "at0094.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -95824,7 +95815,6 @@
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
-                  "occurrences" : "0..0",
                   "nodeId" : "at0062.1",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
@@ -95832,11 +95822,9 @@
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "DV_IDENTIFIER",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_TEXT",
+                      "defaultValue" : {
+                        "@type" : "DV_IDENTIFIER"
+                      },
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
                     } ]
@@ -95845,6 +95833,7 @@
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
                   "nodeId" : "at0063.1",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
@@ -95952,7 +95941,7 @@
           "at0063.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0063.1",
-            "text" : "Rekvisisjonsnummer",
+            "text" : "Rekvisisjonsmottakers rekvisisjonsID",
             "description" : "Rekvisisjonsnummeret til undersøkelsen."
           },
           "at0057.1" : {
