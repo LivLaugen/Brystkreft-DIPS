@@ -1,5 +1,5 @@
-archetype (adl_version=1.4; uid=752bdebc-9c67-4190-b872-db5361dab992)
-	openEHR-EHR-OBSERVATION.pregnancy_assertion.v1
+archetype (adl_version=1.4; uid=d2aa1e30-3413-4712-a053-f9614a4b4e8a)
+	openEHR-EHR-OBSERVATION.pregnancy_assertion_sjk_no.v1
 
 concept
 	[at0000]
@@ -117,14 +117,14 @@ Not to be used to record absence of known pregnancy history. The need for a spec
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"81647a957d16890225f637059de4ed92">
+		["MD5-CAM-1.0.1"] = <"a144edd17b6b7c7aec4fc0f7f51928d6">
 		["build_uid"] = <"dcdd9b71-d610-4d1a-b203-6aee37397029">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	OBSERVATION[at0000] matches {    -- Pregnancy assertion
+	OBSERVATION[at0000] matches {    -- pregnancy_assertion_sjk_no
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {0..*; unordered} matches {
@@ -182,7 +182,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Pregnancy assertion">
+					text = <"pregnancy_assertion_sjk_no">
 					description = <"A declaration made by a clinician of the presence or absence of pregnancy at a specific point in time, as confirmed by available clinical evidence and valid only at the time it is made.">
 				>
 				["at0001"] = <
@@ -237,7 +237,7 @@ ontology
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"Feststellung der Schwangerschaft">
+					text = <"pregnancy_assertion_sjk_no">
 					description = <"*A declaration made by a clinician of the presence or absence of pregnancy at a specific point in time, as confirmed by available clinical evidence and valid only at the time it is made. (en)">
 				>
 				["at0001"] = <
