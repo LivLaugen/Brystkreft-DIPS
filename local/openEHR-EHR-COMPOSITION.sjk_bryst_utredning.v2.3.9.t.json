@@ -28,7 +28,7 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "df3e0cb5f384ac1e0391bbd124c28cd7",
+      "MD5-CAM-1.0.1" : "570097310408166c381a238e195919c9",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
       "sem_ver" : "360.0.0",
@@ -49352,7 +49352,10 @@
                     "rmAttributeName" : "value",
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_TEXT",
+                      "rmTypeName" : "DV_IDENTIFIER",
+                      "defaultValue" : {
+                        "@type" : "DV_IDENTIFIER"
+                      },
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
                     } ]
@@ -66423,7 +66426,10 @@
                     "rmAttributeName" : "value",
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_TEXT",
+                      "rmTypeName" : "DV_IDENTIFIER",
+                      "defaultValue" : {
+                        "@type" : "DV_IDENTIFIER"
+                      },
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
                     } ]
@@ -78903,7 +78909,10 @@
                     "rmAttributeName" : "value",
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_TEXT",
+                      "rmTypeName" : "DV_IDENTIFIER",
+                      "defaultValue" : {
+                        "@type" : "DV_IDENTIFIER"
+                      },
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
                     } ]
@@ -95967,7 +95976,10 @@
                     "rmAttributeName" : "value",
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_TEXT",
+                      "rmTypeName" : "DV_IDENTIFIER",
+                      "defaultValue" : {
+                        "@type" : "DV_IDENTIFIER"
+                      },
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
                     } ]
