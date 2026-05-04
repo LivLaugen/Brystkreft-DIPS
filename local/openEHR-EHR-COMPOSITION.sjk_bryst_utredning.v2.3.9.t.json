@@ -1,6 +1,6 @@
 {
   "@type" : "TEMPLATE",
-  "uid" : "7eedf6ea-f3ca-4527-a05a-7bc0698f3d6b",
+  "uid" : "523aac91-9d82-4f1e-b83c-5871dd0e7a63",
   "description" : {
     "@type" : "RESOURCE_DESCRIPTION",
     "originalAuthor" : {
@@ -28,7 +28,7 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "4aad9d1d25068bc6ee20bfb66620f5ad",
+      "MD5-CAM-1.0.1" : "df3e0cb5f384ac1e0391bbd124c28cd7",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
       "sem_ver" : "360.0.0",
