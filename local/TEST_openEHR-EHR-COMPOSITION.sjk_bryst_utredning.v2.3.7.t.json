@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "3a5f783f1a7dfefe881313bc882e10d8",
+      "MD5-CAM-1.0.1" : "ca0ed729eedb08921483fb5e800f743f",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "357.3.0",
+      "sem_ver" : "357.4.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -25093,7 +25093,7 @@
             }, {
               "@type" : "C_ARCHETYPE_ROOT",
               "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..0",
+              "occurrences" : "0..*",
               "nodeId" : "at0043.6",
               "attributes" : [ ],
               "attributeTuples" : [ ],
@@ -30568,7 +30568,7 @@
             }, {
               "@type" : "C_ARCHETYPE_ROOT",
               "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..0",
+              "occurrences" : "0..*",
               "nodeId" : "at0043.6",
               "attributes" : [ ],
               "attributeTuples" : [ ],
