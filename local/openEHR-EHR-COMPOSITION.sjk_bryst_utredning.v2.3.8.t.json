@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "4c793b2127dfa0e8024ef511a52dabea",
+      "MD5-CAM-1.0.1" : "377ec40b60b310a8724033d0ca6b5a02",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "356.1.2",
+      "sem_ver" : "356.1.3",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -46413,7 +46413,7 @@
           "at0022.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.1",
-            "text" : "Avstand fra m. pectoralis",
+            "text" : "Avstand fra m. pectoralis major",
             "description" : "Avstanden til lokaliseringen fra Musculus pectoralis major.",
             "comment" : "Designkommentar:\n"
           },
@@ -98073,7 +98073,7 @@
           "at0022.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.1",
-            "text" : "Avstand fra m. pectoralis",
+            "text" : "Avstand fra m. pectoralis major",
             "description" : "Avstanden til lokaliseringen fra Musculus pectoralis major.",
             "comment" : "Designkommentar:\nArver fra bildediagnostikk, settes skjult. \n"
           },
