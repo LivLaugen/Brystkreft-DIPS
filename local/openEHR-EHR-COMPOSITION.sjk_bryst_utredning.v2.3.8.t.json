@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "76b800e7f21f4d74e12d8e643348668e",
+      "MD5-CAM-1.0.1" : "a0f3753701c1ae659eafe0fbd716b820",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "357.0.0",
+      "sem_ver" : "358.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -49346,16 +49346,14 @@
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
                   "nodeId" : "at0028.1",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
                     "rmAttributeName" : "value",
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_IDENTIFIER",
-                      "defaultValue" : {
-                        "@type" : "DV_IDENTIFIER"
-                      },
+                      "rmTypeName" : "DV_TEXT",
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
                     } ]
@@ -66420,16 +66418,14 @@
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
                   "nodeId" : "at0062.1",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
                     "rmAttributeName" : "value",
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_IDENTIFIER",
-                      "defaultValue" : {
-                        "@type" : "DV_IDENTIFIER"
-                      },
+                      "rmTypeName" : "DV_TEXT",
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
                     } ]
@@ -78894,11 +78890,6 @@
                     "rmAttributeName" : "value",
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_IDENTIFIER",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "DV_CODED_TEXT",
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
@@ -78908,16 +78899,14 @@
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
                   "nodeId" : "at0028.1",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
                     "rmAttributeName" : "value",
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_IDENTIFIER",
-                      "defaultValue" : {
-                        "@type" : "DV_IDENTIFIER"
-                      },
+                      "rmTypeName" : "DV_TEXT",
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
                     } ]
@@ -95975,16 +95964,14 @@
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
                   "nodeId" : "at0062.1",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
                     "rmAttributeName" : "value",
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_IDENTIFIER",
-                      "defaultValue" : {
-                        "@type" : "DV_IDENTIFIER"
-                      },
+                      "rmTypeName" : "DV_TEXT",
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
                     } ]
