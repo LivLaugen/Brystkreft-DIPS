@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "3e41fd8a84d011a07b2d1c5e658f9175",
+      "MD5-CAM-1.0.1" : "f50a32ead4f0ab9e765c24e4b4bcdc06",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "358.2.0",
+      "sem_ver" : "358.3.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -45026,21 +45026,21 @@
           "at0049.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0049.1",
-            "text" : "Lengste mål",
+            "text" : "Lengste mål (bilde)",
             "description" : "Målt lengde av lesjonens/funnets største utstrekning gjort ved hjelp av bildediagnostikk.",
             "comment" : "Designkommentar:\nLengste tverrmål.\nDen målte lengden på den lengste aspekten av strukturen/objektet."
           },
           "at0049.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0049.2",
-            "text" : "Lengde 2",
+            "text" : "Lengde 2 (bilde)",
             "description" : "Den målte lengden på akse 2, når det ikke er noen  spesifikk orientering. Målt ved hjelp av bildediagnostikk.",
             "comment" : "Designkommentar;\nLenge 2\nDen målte lengden på akse 2, når det ikke er noen  spesifikk orientering."
           },
           "at0049.3" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0049.3",
-            "text" : "Lengde 3",
+            "text" : "Lengde 3 (bilde)",
             "description" : "Den målte lengden på akse 3, når det ikke er noen  spesifikk orientering. Målt ved hjelp av bildediagnostikk.",
             "comment" : "Designkommentar:\nLengde 3. \nDen målte lengden på akse 3, når det ikke er noen  spesifikk orientering."
           }
@@ -76205,21 +76205,21 @@
           "at0049.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0049.1",
-            "text" : "Lengste mål",
+            "text" : "Lengste mål (bilde)",
             "description" : "Målt lengde av lesjonens/funnets største utstrekning gjort ved hjelp av bildediagnostikk.",
             "comment" : "Den målte lengden på den lengste aspekten av strukturen/objektet."
           },
           "at0049.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0049.2",
-            "text" : "Lengde 2",
+            "text" : "Lengde 2 (bilde)",
             "description" : "Den målte lengden på akse 2, når det ikke er noen  spesifikk orientering. Målt ved hjelp av bildediagnostikk.",
             "comment" : "Den målte lengden på akse 2, når det ikke er noen  spesifikk orientering."
           },
           "at0049.3" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0049.3",
-            "text" : "Lengde 3",
+            "text" : "Lengde 3 (bilde)",
             "description" : "Den målte lengden på akse 3, når det ikke er noen  spesifikk orientering. Målt ved hjelp av bildediagnostikk.",
             "comment" : "Den målte lengden på akse 3, når det ikke er noen  spesifikk orientering."
           }
