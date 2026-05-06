@@ -40,7 +40,7 @@ description
 		>
 	>
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"DA38D7FDB467BD8746408BF41D8C608D">
+		["MD5-CAM-1.0.1"] = <"eda818374880aa14d6202a03ad6b03b2">
 		["build_uid"] = <"e3962933-26b5-3094-82dd-06a00a506308">
 	>
 
@@ -135,7 +135,8 @@ ontology
 				>
 				["at0001"] = <
 					text = <"Navn">
-					description = <"*The name/title of the composition. Used to group information. (nb)">
+					description = <"Navnet som identifiserer template/composition. Brukes for å gruppere informasjon. ">
+					comment = <"Det foretrekkes å bruke kodet tekst for dette">
 				>
 				["at0003"] = <
 					text = <"Semver">
