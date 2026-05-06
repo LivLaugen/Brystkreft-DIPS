@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "eb5c176f5ab4881c98dce3b12014663d",
+      "MD5-CAM-1.0.1" : "61c69d70f671d5f7b738533c294885d6",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "360.0.0",
+      "sem_ver" : "360.0.1",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -718,7 +718,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "DA38D7FDB467BD8746408BF41D8C608D"
+        "PARENT:MD5-CAM-1.0.1" : "eda818374880aa14d6202a03ad6b03b2"
       },
       "details" : {
         "nb" : {
