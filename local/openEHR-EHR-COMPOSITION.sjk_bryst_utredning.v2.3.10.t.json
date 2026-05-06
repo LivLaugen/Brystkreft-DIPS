@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "cd2e25e155df176f518392bface34be9",
+      "MD5-CAM-1.0.1" : "aa2afafdedd8a2b83c791b2a51dc39dc",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "361.0.0",
+      "sem_ver" : "361.0.1",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -111616,6 +111616,13 @@
             "code" : "at0007.1",
             "text" : "Kommentar/annet",
             "description" : "Ytterligere fritekst om funn ved undersøkelsen, som ikke dekkes av andre elementer."
+          },
+          "at0006.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "Fortolkning",
+            "description" : "Funn i den fysiske undersøkelsen gjort.",
+            "comment" : "For eksempel \"Uten anmerkning\" eller \"Moderat inflammasjon\". Det anbefales å kode \"Fortolkning\" med en terminologi dersom mulig.\n\nDesignkommentar:\nHer har SJK prosjektet valgt å legge inn en liste over funn som er gjort ved en undersøkelse av en kliniker enten ved ultralyd undersøkelsen eller av fastlegen (hva de er henvist for). "
           }
         },
         "pt-br" : { },
@@ -112062,7 +112069,7 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0006.1",
             "text" : "Fortolkning",
-            "description" : "Enkelt ord, setning, frase eller kort beskrivelse som representerer den kliniske betydning og viktigheten av funnene ved den fysiske undersøkelsen.",
+            "description" : "Funn i den fysiske undersøkelsen gjort.",
             "comment" : "For eksempel \"Uten anmerkning\" eller \"Moderat inflammasjon\". Det anbefales å kode \"Fortolkning\" med en terminologi dersom mulig.\n\nDesignkommentar:\nHer har SJK prosjektet valgt å legge inn en liste over funn som er gjort ved en undersøkelse av en kliniker enten ved ultralyd undersøkelsen eller av fastlegen (hva de er henvist for). "
           },
           "at0007.1" : {
@@ -116143,7 +116150,7 @@
             "code" : "at0006.1",
             "text" : "Fortolkning",
             "description" : "Om funnet er palpabelt.",
-            "comment" : "Designkommentar:\nLegge inn en sjekkboks for om funnet er palpabelt.\nBrukt koden 103357000 Palpable (qualifier value)\n\nDenne hører egentlig ikke til radiologi, men den er en del av mammografiundersøkelsen av radiologer/radiografer. . "
+            "comment" : "Designkommentar:\nLegge inn en sjekkboks for om funnet er palpabelt.\nBrukt koden 443607001 Palpabelt funn (finding)\n\nDenne hører egentlig ikke til radiologi, men den er en del av mammografiundersøkelsen av radiologer/radiografer. . "
           }
         },
         "pt-br" : { },
@@ -116547,7 +116554,7 @@
             "code" : "at0006.1",
             "text" : "Fortolkning",
             "description" : "Om funnet er palpabelt.",
-            "comment" : "Designkommentar:\nLegge inn en sjekkboks for om funnet er palpabelt.\nBrukt koden 103357000 Palpable (qualifier value)\n\nDenne hører egentlig ikke til radiologi, men den er en del av mammografiundersøkelsen av radiologer/radiografer. . "
+            "comment" : "Designkommentar:\nLegge inn en sjekkboks for om funnet er palpabelt.\nBrukt koden 443607001 Palpabelt funn (finding)\n\nDenne hører egentlig ikke til radiologi, men den er en del av mammografiundersøkelsen av radiologer/radiografer."
           }
         },
         "pt-br" : {
