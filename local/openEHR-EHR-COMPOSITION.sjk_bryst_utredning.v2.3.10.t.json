@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "7389dabd3a79216c60092b0b743465cd",
+      "MD5-CAM-1.0.1" : "cd2e25e155df176f518392bface34be9",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "360.0.1",
+      "sem_ver" : "361.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -46852,27 +46852,49 @@
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "110493007",
-                    "value" : "Sentralt"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "110496004",
-                    "value" : "Øvre ytre kvadrant"
+                    "value" : "Sentralt",
+                    "translations" : {
+                      "nb" : "sentrale del av høyre mamma"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "110494001",
-                    "value" : "Øvre indre kvadrant"
+                    "value" : "Øvre indre kvadrant",
+                    "translations" : {
+                      "nb" : "øvre mediale kvadrant av høyre mamma"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "110497008",
-                    "value" : "Nedre ytre kvadrant"
+                    "code" : "110496004",
+                    "value" : "Øvre ytre kvadrant",
+                    "translations" : {
+                      "nb" : "øvre laterale kvadrant av høyre mamma"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "110495000",
-                    "value" : "Nedre indre kvadrant"
+                    "value" : "Nedre indre kvadrant",
+                    "translations" : {
+                      "nb" : "nedre mediale kvadrant av høyre mamma"
+                    }
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "110497008",
+                    "value" : "Nedre ytre kvadrant",
+                    "translations" : {
+                      "nb" : "nedre laterale kvadrant av høyre mamma"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "735379000",
-                    "value" : "Brystvorte"
+                    "value" : "Brystvorte",
+                    "translations" : {
+                      "nb" : "høyre brystvorte"
+                    }
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "722158007",
+                    "value" : "hud på høyre mamma"
                   } ]
                 } ]
               } ],
@@ -76940,28 +76962,32 @@
                   "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "110493007",
-                    "value" : "Sentralt"
+                    "code" : "110498003",
+                    "value" : "sentrale del av venstre mamma"
                   }, {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "110496004",
-                    "value" : "Øvre ytre kvadrant"
+                    "code" : "110499006",
+                    "value" : "øvre mediale kvadrant av venstre mamma"
                   }, {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "110494001",
-                    "value" : "Øvre indre kvadrant"
+                    "code" : "110501003",
+                    "value" : "øvre laterale kvadrant av venstre mamma"
                   }, {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "110497008",
-                    "value" : "Nedre ytre kvadrant"
+                    "code" : "110500002",
+                    "value" : "nedre mediale kvadrant av venstre mamma"
                   }, {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "110495000",
-                    "value" : "Nedre indre kvadrant"
+                    "code" : "110502005",
+                    "value" : "nedre laterale kvadrant av venstre mamma"
                   }, {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "735379000",
-                    "value" : "Brystvorte"
+                    "code" : "735376007",
+                    "value" : "venstre brystvorte"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "722157002",
+                    "value" : "hud på venstre mamma"
                   } ]
                 } ]
               } ],
