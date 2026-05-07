@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "2b2b061dc9efb53f585a325c1c0b725a",
+      "MD5-CAM-1.0.1" : "698c20d02dce7ec2648b4c0e380122e1",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "370.0.0",
+      "sem_ver" : "370.0.1",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -96106,7 +96106,7 @@
             "code" : "at0005",
             "text" : "Undersøkelsesnavn",
             "description" : "Navn på laboratorieundersøkelsen som er utført på prøvematerialet.",
-            "comment" : "Designkommentar: \nNavn på laboratorieundersøkelsen, patologiundersøkelsen som er gjort på lesjonen. Her er det satt inn SNOMED-CT koden for 108257001 -Anatomic pathology procedure |(procedure).\n\nDenne skal ikke vises i skjermbildet, men lagres ned ved utfylling av noen av elementene i denne arketypen (OBSERVATION.laboratory_test_result.v1)\nVises ikke i skjermbildet."
+            "comment" : "Designkommentar: \nNavn på laboratorieundersøkelsen, patologiundersøkelsen som er gjort på lesjonen. Her er det satt inn SNOMED-CT koden for 108257001 -Anatomic pathology procedure (procedure).\n\nDenne skal ikke vises i skjermbildet, men lagres ned ved utfylling av noen av elementene i denne arketypen (OBSERVATION.laboratory_test_result.v1)\nVises ikke i skjermbildet."
           },
           "at0094.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -96119,7 +96119,7 @@
             "code" : "at0000",
             "text" : "Laboratorieresultat",
             "description" : "Resultatet på en laboratorieundersøkelse av lesjonen/funnet beskrevet i bildediagnostikken.\nDet er lagt inn en lesjonsID som kan koble disse bildediagnostikken og patologi analysen sammen.",
-            "comment" : "Designkommentar:\nResultatet på en laboratorieundersøkelse av lesjonen/funnet beskrevet i bildediagnostikken.\nDet er lagt inn en lesjonsID som kan koble bildediagnostikken og patologiresultatet sammen.\n\nPer nå ønskes det ikke at det skal være noen overskrift på patologi/labresultat. \n\nDet er kun prøvetakninsmetode som skal vises før man har valgt en prøvetakningsmetode. Hva som skal vises har en logikk som står i elementet prøvetakningsmetode. "
+            "comment" : "Designkommentar:\nResultatet på en laboratorieundersøkelse av lesjonen/funnet beskrevet i bildediagnostikken.\nDet er lagt inn en lesjonsID som kan koble bildediagnostikken og patologiresultatet sammen.\n\nPer nå ønskes det ikke at det skal være noen overskrift på patologi/labresultat. \n\nDet er kun prøvetakninsmetode som skal vises før man har valgt en prøvetakningsmetode. Hva som skal vises har en logikk som står i elementet prøvetakningsmetode."
           }
         },
         "zh-cn" : {
