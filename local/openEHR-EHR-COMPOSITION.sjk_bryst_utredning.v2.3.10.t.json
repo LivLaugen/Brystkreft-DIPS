@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "ce016a1e0c55878fe595b74cbe1f5aa4",
+      "MD5-CAM-1.0.1" : "377c7e578922b0df8da91a03efec6baa",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "365.0.0",
+      "sem_ver" : "365.0.1",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -52475,20 +52475,26 @@
             "code" : "at0007",
             "text" : "Prøvetakingsmetode",
             "description" : "Prøvetakingsmetoden som er brukt for å ta ut prøve til patologiundersøkelsen.",
-            "comment" : "Designkommentar_\nPrøvetakingsmetoden som er brukt for å ta ut prøve til patologiundersøkelsen.\n\nLogikk:\nHvis det er valgt alt annet enn FNAC skal følgende vises:\n-- Imprint + kommentar\n-- ER\n-- PR\n-- HER2 (IHC)\n-- HER2 (ISH)\n-- Ki67\n-- Tumor morfologi (evt. «Diagnose/Tumor morfologi» hvis ønsket)\n-- Kommentar morfologi\n-- NGS‑gradering\n\nVed valg av prøvetakningsmetode FNAC (finnålsaspirasjon) av mamma + FNAC aksille: \n- Imprint + kommentar\n- Cytologi + kommentar\n\n\n\n"
+            "comment" : "Designkommentar_\nPrøvetakingsmetoden som er brukt for å ta ut prøve til patologiundersøkelsen.\n\nLogikk:\nHvis det er valgt alt annet enn FNAC skal følgende vises:\n-- Imprint + kommentar\n-- ER\n-- PR\n-- HER2 (IHC)\n-- HER2 (ISH)\n-- Ki67\n-- Tumor morfologi (evt. «Diagnose/Tumor morfologi» hvis ønsket)\n-- Kommentar morfologi\n-- NGS‑gradering\n\nVed valg av prøvetakningsmetode FNAC (finnålsaspirasjon) av mamma + FNAC aksille: \n- Imprint + kommentar\n- Cytologi + kommentar"
           },
           "at0087.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0087.1",
             "text" : "Anatomisk lokalisasjon",
             "description" : "Kroppssted eller annen lokalisering som prøven er tatt fra.",
-            "comment" : "Designkommentar:\nDette skal arves fra bildediagnostikk anomali slik at man kan koble funnene sammen.\n\nDette visis ikke i skjermbildet. \nHvis det ikke er satt noe i anatomisk lokalisering i bildediagnostikk, har man heller ikke noe mulighet for å legge inn anatomisk lokalisering for patologianalysen. \n"
+            "comment" : "Designkommentar:\nDette skal arves fra bildediagnostikk anomali slik at man kan koble funnene sammen.\n\nDette visis ikke i skjermbildet. \nHvis det ikke er satt noe i anatomisk lokalisering i bildediagnostikk, har man heller ikke noe mulighet for å legge inn anatomisk lokalisering for patologianalysen. "
           },
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000",
             "text" : "Prøvemateriale",
             "description" : "Et fysisk prøvemateriale tatt fra eller relatert til et individ, for undersøkelse eller analyse."
+          },
+          "at0013" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0013",
+            "text" : "Strukturert anatomisk lokalisering",
+            "description" : "En strukturert anatomisk lokalisering der prøvematerialet ble tatt fra."
           }
         },
         "de" : { },
@@ -53408,7 +53414,7 @@
             "code" : "at0000.1",
             "text" : "Imprint",
             "description" : "Resultatet på analysen imprint cytologi (også kalt \"touch preparation\"). ",
-            "comment" : "Designkommentar:\nResultatet på analysen imprint cytologi (også kalt \"touch preparation\"). "
+            "comment" : "Designkommentar:\nResultatet på analysen imprint cytologi (også kalt \"touch preparation\")."
           },
           "at0001.2" : {
             "@type" : "ARCHETYPE_TERM",
@@ -53426,7 +53432,7 @@
             "description" : "Analysen imprint cytologi (også kalt \"touch preparation\"). ",
             "hl7v2_mapping" : "OBX.3",
             "fhir_mapping" : "Observation.code",
-            "comment" : "Designkommentar:\nBruker NORPAT koden P31070\nImprintundersøkelse.\n"
+            "comment" : "Designkommentar:\nBruker NORPAT koden P31070\nImprintundersøkelse."
           },
           "at0028.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -53450,7 +53456,7 @@
             "description" : "Svar på imprint analysen.",
             "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
             "fhir_mapping" : "Observation.value[x]",
-            "comment" : "Designkommentar:\nStrukturert svar på imprint undersøkelsen vha. SNOMED-CT koder. \n-3898006 -  Neoplasm, benign (morphologic abnormality)\n-86251006 - Neoplasm of uncertain behavior (morphologic abnormality)\n-1240414004 - Malignant neoplasm (morphologic abnormality)\n\n"
+            "comment" : "Designkommentar:\nStrukturert svar på imprint undersøkelsen vha. SNOMED-CT koder. \n-3898006 -  Neoplasm, benign (morphologic abnormality)\n-86251006 - Neoplasm of uncertain behavior (morphologic abnormality)\n-1240414004 - Malignant neoplasm (morphologic abnormality)\n"
           }
         },
         "pt-br" : {
@@ -82094,6 +82100,12 @@
             "code" : "at0000",
             "text" : "Prøvemateriale",
             "description" : "Et fysisk prøvemateriale tatt fra eller relatert til et individ, for undersøkelse eller analyse."
+          },
+          "at0013" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0013",
+            "text" : "Strukturert anatomisk lokalisering",
+            "description" : "En strukturert anatomisk lokalisering der prøvematerialet ble tatt fra."
           }
         },
         "de" : { },
