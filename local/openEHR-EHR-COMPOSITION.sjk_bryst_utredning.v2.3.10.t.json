@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "84d228c6e1b976ac6d3a052c1be1c264",
+      "MD5-CAM-1.0.1" : "2483113a943ace46c9700ba21da56b5f",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "363.0.0",
+      "sem_ver" : "364.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -50067,27 +50067,49 @@
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "110493007",
-                    "value" : "Sentralt"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "110496004",
-                    "value" : "Øvre ytre kvadrant"
+                    "value" : "Sentralt",
+                    "translations" : {
+                      "nb" : "sentrale del"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "110494001",
-                    "value" : "Øvre indre kvadrant"
+                    "value" : "Øvre indre kvadrant",
+                    "translations" : {
+                      "nb" : "øvre mediale kvadrant"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "110497008",
-                    "value" : "Nedre ytre kvadrant"
+                    "code" : "110496004",
+                    "value" : "Øvre ytre kvadrant",
+                    "translations" : {
+                      "nb" : "øvre laterale kvadrant"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "110495000",
-                    "value" : "Nedre indre kvadrant"
+                    "value" : "Nedre indre kvadrant",
+                    "translations" : {
+                      "nb" : "nedre mediale kvadrant"
+                    }
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "110497008",
+                    "value" : "Nedre ytre kvadrant",
+                    "translations" : {
+                      "nb" : "nedre laterale kvadrant"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "735379000",
-                    "value" : "Brystvorte"
+                    "value" : "Brystvorte",
+                    "translations" : {
+                      "nb" : "brystvorte"
+                    }
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "722158007",
+                    "value" : "hud på høyre mamma"
                   } ]
                 } ]
               } ],
@@ -50311,7 +50333,8 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0065",
             "text" : "Spesifikt sted",
-            "description" : "Spesifisert kroppssted i brystet."
+            "description" : "Spesifisert kroppssted i brystet.",
+            "comment" : "Designkommentar:\nDenne arver fra det som er satt i bildediagnostikk anomali arketypen, \"anatomisk lokalisasjon\" under \nIdentifisering av hvor i brystet lesjonen/funnet befinner seg vha. inndeling.\n\nVi har brukt direktekode for side + sted:\n -110493007, sentrale del av høyre mamma\n -110494001, øvre mediale kvadrant av høyre mamma\n -110496004, øvre laterale kvadrant av høyre mamma\n -110495000, nedre mediale kvadrant av høyre mamma\n -110497008, nedre laterale kvadrant av høyre mamma\n -735379000, høyre brystvorte\n -722158007, hud på høyre mamma\n"
           },
           "at0001.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -79672,28 +79695,32 @@
                   "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "110493007",
-                    "value" : "Sentralt"
+                    "code" : "110498003",
+                    "value" : "sentrale del"
                   }, {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "110496004",
-                    "value" : "Øvre ytre kvadrant"
+                    "code" : "110499006",
+                    "value" : "øvre mediale kvadrant"
                   }, {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "110494001",
-                    "value" : "Øvre indre kvadrant"
+                    "code" : "110501003",
+                    "value" : "øvre laterale kvadrant"
                   }, {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "110497008",
-                    "value" : "Nedre ytre kvadrant"
+                    "code" : "110500002",
+                    "value" : "nedre mediale kvadrant"
                   }, {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "110495000",
-                    "value" : "Nedre indre kvadrant"
+                    "code" : "110502005",
+                    "value" : "nedre laterale kvadrant"
                   }, {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "735379000",
-                    "value" : "Brystvorte"
+                    "code" : "735376007",
+                    "value" : "brystvorte"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "722157002",
+                    "value" : "hud på venstre mamma"
                   } ]
                 } ]
               } ],
@@ -79917,7 +79944,8 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0065",
             "text" : "Spesifikt sted",
-            "description" : "Spesifisert kroppssted i brystet."
+            "description" : "Spesifisert kroppssted i brystet.",
+            "comment" : "Designkommentar:\nDenne arver fra det som er satt i bildediagnostikk anomali arketypen, \"anatomisk lokalisasjon\" under \nIdentifisering av hvor i brystet lesjonen/funnet befinner seg vha. inndeling.\n\nVi har brukt direktekode for side + sted:\n -110498003, sentrale del av venstre mamma\n -110499006, øvre mediale kvadrant av venstre mamma\n -110501003, øvre laterale kvadrant av venstre mamma\n -110500002, nedre mediale kvadrant av venstre mamma\n -110502005, nedre laterale kvadrant av venstre mamma\n -735376007, venstre brystvorte\n -722157002, hud på venstre mamma"
           },
           "at0001.1" : {
             "@type" : "ARCHETYPE_TERM",
