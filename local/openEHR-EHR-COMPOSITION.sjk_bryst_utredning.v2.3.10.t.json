@@ -28,7 +28,7 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "2483113a943ace46c9700ba21da56b5f",
+      "MD5-CAM-1.0.1" : "942599cb6e613d356a13e8c4c5841533",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
       "sem_ver" : "364.0.0",
@@ -79942,7 +79942,7 @@
           },
           "at0065.1" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0065",
+            "code" : "at0065.1",
             "text" : "Spesifikt sted",
             "description" : "Spesifisert kroppssted i brystet.",
             "comment" : "Designkommentar:\nDenne arver fra det som er satt i bildediagnostikk anomali arketypen, \"anatomisk lokalisasjon\" under \nIdentifisering av hvor i brystet lesjonen/funnet befinner seg vha. inndeling.\n\nVi har brukt direktekode for side + sted:\n -110498003, sentrale del av venstre mamma\n -110499006, øvre mediale kvadrant av venstre mamma\n -110501003, øvre laterale kvadrant av venstre mamma\n -110500002, nedre mediale kvadrant av venstre mamma\n -110502005, nedre laterale kvadrant av venstre mamma\n -735376007, venstre brystvorte\n -722157002, hud på venstre mamma"
