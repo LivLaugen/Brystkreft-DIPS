@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "1683adfc87d73f2391fa8a18d5fa23ff",
+      "MD5-CAM-1.0.1" : "84d228c6e1b976ac6d3a052c1be1c264",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "362.0.0",
+      "sem_ver" : "363.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -66147,102 +66147,129 @@
                               "selectedTerminologies" : [ "SNOMED-CT" ],
                               "includedExternalTerminologyCodes" : [ {
                                 "terminologyId" : "SNOMED-CT",
-                                "code" : "1162814007",
-                                "value" : "DCIS - intraduktalt carcinoma in situ"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
                                 "code" : "408643008",
-                                "value" : "Infiltrerende karsinom NST"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "77284006",
-                                "value" : "LCIS - lobulær carcinoma in situ"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "444739008",
-                                "value" : "Classic lobular carcinoma in situ"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "89740008",
-                                "value" : "ILC - infiltrerende lobulært karsinom"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "32968003",
-                                "value" : "IBC - inflammatorisk karsinom"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "32913002",
-                                "value" : "Medullært karsinom"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "72495009",
-                                "value" : "Mucinøst (kolloid) adenokarsinom"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "703596001",
-                                "value" : "Tubulær karsinom"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "25910003",
-                                "value" : "Papilært karsinom"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "128674003",
-                                "value" : "Mikropapillært karsinom"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "87913009",
-                                "value" : "Malign phylloidestumor"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "2985005",
-                                "value" : "Pagets sykdom i mamma"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "444591006",
-                                "value" : "PLCIC - pleomorft lobulært carcinoma in situ",
+                                "value" : "Infiltrerende karsinom NST",
                                 "translations" : {
-                                  "nb" : "pleomorft lobulært carcinoma in situ"
+                                  "nb" : "Infiltrerende karsinom NST (No Special Type; tidligere IDC)"
                                 }
                               }, {
                                 "terminologyId" : "SNOMED-CT",
-                                "code" : "372269006",
-                                "value" : "Histologic type cannot be determined"
+                                "code" : "1162814007",
+                                "value" : "DCIS - intraduktalt carcinoma in situ",
+                                "translations" : {
+                                  "nb" : "Intraduktalt carcinoma in situ (DCIS)"
+                                }
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "89740008",
+                                "value" : "ILC - infiltrerende lobulært karsinom",
+                                "translations" : {
+                                  "nb" : "Lobulært karsinom (ILC)"
+                                }
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "77284006",
+                                "value" : "LCIS - lobulær carcinoma in situ",
+                                "translations" : {
+                                  "nb" : "Lobulært carcinoma in situ (LCIS)"
+                                }
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "427785007",
+                                "value" : "atypisk duktal mammahyperplasi (ADH)",
+                                "translations" : {
+                                  "nb" : "Atypisk duktal mammahyperplasi (ADH)"
+                                }
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "860895001",
                                 "value" : "Flat epitelial atypi i mamma (FEA)"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
-                                "code" : "55465005",
-                                "value" : "Columnar cell change (CCC) (atypiske sylindereptelceller)"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "2",
-                                "value" : "columnar cell hyperplasia (CCH)"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "427785007",
-                                "value" : "atypisk duktal mammahyperplasi (ADH)"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
                                 "code" : "450697004",
-                                "value" : "atypisk lobulær mammahyperplasi (ALH)"
+                                "value" : "atypisk lobulær mammahyperplasi (ALH)",
+                                "translations" : {
+                                  "nb" : "Atypisk lobulær mammahyperplasi (ALH)"
+                                }
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "55465005",
+                                "value" : "Columnar cell change (CCC) (atypiske sylindereptelceller)",
+                                "translations" : {
+                                  "nb" : "Atypiske sylinderepitelceller"
+                                }
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "444739008",
+                                "value" : "Classic lobular carcinoma in situ",
+                                "translations" : {
+                                  "nb" : "Klassisk lobulært carcinoma in situ (CLCIS)"
+                                }
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "1290750006",
+                                "value" : "Florid lobular carcinoma in situ",
+                                "translations" : {
+                                  "nb" : "Florid lobulært carcinoma in situ (FLCIS )"
+                                }
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "444591006",
                                 "value" : "PLCIC - pleomorft lobulært carcinoma in situ",
                                 "translations" : {
-                                  "nb" : "pleomorft lobulært carcinoma in situ"
+                                  "nb" : "Pleomorft lobulært carcinoma in situ (PLCIS)"
                                 }
                               }, {
                                 "terminologyId" : "SNOMED-CT",
-                                "code" : "1290750006",
-                                "value" : "Florid lobular carcinoma in situ"
+                                "code" : "72495009",
+                                "value" : "Mucinøst (kolloid) adenokarsinom",
+                                "translations" : {
+                                  "nb" : "Mucinøst adenokarsinom"
+                                }
                               }, {
                                 "terminologyId" : "SNOMED-CT",
-                                "code" : "6",
-                                "value" : "Florid LCIS med comedonekrose"
+                                "code" : "703596001",
+                                "value" : "Tubulær karsinom",
+                                "translations" : {
+                                  "nb" : "Tubulært karsinom"
+                                }
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "25910003",
+                                "value" : "Papilært karsinom",
+                                "translations" : {
+                                  "nb" : "Papillært karsinom"
+                                }
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "32913002",
+                                "value" : "Medullært karsinom"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "128674003",
+                                "value" : "Mikropapillært karsinom"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "32968003",
+                                "value" : "IBC - inflammatorisk karsinom",
+                                "translations" : {
+                                  "nb" : "Inflammatorisk karsinom"
+                                }
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "2985005",
+                                "value" : "Pagets sykdom i mamma"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "87913009",
+                                "value" : "Malign phylloidestumor"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "372269006",
+                                "value" : "Histologic type cannot be determined",
+                                "translations" : {
+                                  "nb" : "Histologisk type kan ikke bestemmes"
+                                }
                               } ]
                             } ]
                           } ],
@@ -95719,102 +95746,129 @@
                               "selectedTerminologies" : [ "SNOMED-CT" ],
                               "includedExternalTerminologyCodes" : [ {
                                 "terminologyId" : "SNOMED-CT",
-                                "code" : "1162814007",
-                                "value" : "DCIS - intraduktalt carcinoma in situ"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
                                 "code" : "408643008",
-                                "value" : "Infiltrerende karsinom NST"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "77284006",
-                                "value" : "LCIS - lobulær carcinoma in situ"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "444739008",
-                                "value" : "Classic lobular carcinoma in situ"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "89740008",
-                                "value" : "ILC - infiltrerende lobulært karsinom"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "32968003",
-                                "value" : "IBC - inflammatorisk karsinom"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "32913002",
-                                "value" : "Medullært karsinom"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "72495009",
-                                "value" : "Mucinøst (kolloid) adenokarsinom"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "703596001",
-                                "value" : "Tubulær karsinom"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "25910003",
-                                "value" : "Papilært karsinom"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "128674003",
-                                "value" : "Mikropapillært karsinom"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "87913009",
-                                "value" : "Malign phylloidestumor"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "2985005",
-                                "value" : "Pagets sykdom i mamma"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "444591006",
-                                "value" : "PLCIC - pleomorft lobulært carcinoma in situ",
+                                "value" : "Infiltrerende karsinom NST",
                                 "translations" : {
-                                  "nb" : "pleomorft lobulært carcinoma in situ"
+                                  "nb" : "Infiltrerende karsinom NST (No Special Type; tidligere IDC)"
                                 }
                               }, {
                                 "terminologyId" : "SNOMED-CT",
-                                "code" : "372269006",
-                                "value" : "Histologic type cannot be determined"
+                                "code" : "1162814007",
+                                "value" : "DCIS - intraduktalt carcinoma in situ",
+                                "translations" : {
+                                  "nb" : "Intraduktalt carcinoma in situ (DCIS)"
+                                }
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "89740008",
+                                "value" : "ILC - infiltrerende lobulært karsinom",
+                                "translations" : {
+                                  "nb" : "Lobulært karsinom (ILC)"
+                                }
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "77284006",
+                                "value" : "LCIS - lobulær carcinoma in situ",
+                                "translations" : {
+                                  "nb" : "Lobulært carcinoma in situ (LCIS)"
+                                }
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "427785007",
+                                "value" : "atypisk duktal mammahyperplasi (ADH)",
+                                "translations" : {
+                                  "nb" : "Atypisk duktal mammahyperplasi (ADH)"
+                                }
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "860895001",
                                 "value" : "Flat epitelial atypi i mamma (FEA)"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
-                                "code" : "55465005",
-                                "value" : "Columnar cell change (CCC) (atypiske sylindereptelceller)"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "2",
-                                "value" : "columnar cell hyperplasia (CCH)"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "427785007",
-                                "value" : "atypisk duktal mammahyperplasi (ADH)"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
                                 "code" : "450697004",
-                                "value" : "atypisk lobulær mammahyperplasi (ALH)"
+                                "value" : "atypisk lobulær mammahyperplasi (ALH)",
+                                "translations" : {
+                                  "nb" : "Atypisk lobulær mammahyperplasi (ALH)"
+                                }
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "55465005",
+                                "value" : "Columnar cell change (CCC) (atypiske sylindereptelceller)",
+                                "translations" : {
+                                  "nb" : "Atypiske sylinderepitelceller"
+                                }
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "444739008",
+                                "value" : "Classic lobular carcinoma in situ",
+                                "translations" : {
+                                  "nb" : "Klassisk lobulært carcinoma in situ (CLCIS)"
+                                }
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "1290750006",
+                                "value" : "Florid lobular carcinoma in situ",
+                                "translations" : {
+                                  "nb" : "Florid lobulært carcinoma in situ (FLCIS )"
+                                }
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "444591006",
                                 "value" : "PLCIC - pleomorft lobulært carcinoma in situ",
                                 "translations" : {
-                                  "nb" : "pleomorft lobulært carcinoma in situ"
+                                  "nb" : "Pleomorft lobulært carcinoma in situ (PLCIS)"
                                 }
                               }, {
                                 "terminologyId" : "SNOMED-CT",
-                                "code" : "1290750006",
-                                "value" : "Florid lobular carcinoma in situ"
+                                "code" : "72495009",
+                                "value" : "Mucinøst (kolloid) adenokarsinom",
+                                "translations" : {
+                                  "nb" : "Mucinøst adenokarsinom"
+                                }
                               }, {
                                 "terminologyId" : "SNOMED-CT",
-                                "code" : "6",
-                                "value" : "Florid LCIS med comedonekrose"
+                                "code" : "703596001",
+                                "value" : "Tubulær karsinom",
+                                "translations" : {
+                                  "nb" : "Tubulært karsinom"
+                                }
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "25910003",
+                                "value" : "Papilært karsinom",
+                                "translations" : {
+                                  "nb" : "Papillært karsinom"
+                                }
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "32913002",
+                                "value" : "Medullært karsinom"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "128674003",
+                                "value" : "Mikropapillært karsinom"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "32968003",
+                                "value" : "IBC - inflammatorisk karsinom",
+                                "translations" : {
+                                  "nb" : "Inflammatorisk karsinom"
+                                }
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "2985005",
+                                "value" : "Pagets sykdom i mamma"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "87913009",
+                                "value" : "Malign phylloidestumor"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "372269006",
+                                "value" : "Histologic type cannot be determined",
+                                "translations" : {
+                                  "nb" : "Histologisk type kan ikke bestemmes"
+                                }
                               } ]
                             } ]
                           } ],
