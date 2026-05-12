@@ -28,7 +28,7 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "8c3b21f1d6824183b57e9fd25f907f88",
+      "MD5-CAM-1.0.1" : "a1680504c8439f7781ef5654e76d5a82",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
       "sem_ver" : "370.0.1",
@@ -112219,7 +112219,7 @@
           "at0026.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0026.1",
-            "text" : "Spesifikk undersøkelse annet",
+            "text" : "Spesifikkundersøkelseannet",
             "description" : "Detaljer om en spesifikk undersøkelse eller gruppe av undersøkelser som er innenfor kartleggingsformålet.",
             "comment" : "Bruk separate instanser av dette CLUSTER'et for å skille mellom spesifikke undersøkelser eller gruppering av undersøkelser."
           }
