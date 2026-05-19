@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "2950442deb4b280bbd82c09e50b2cfc4",
+      "MD5-CAM-1.0.1" : "21145e74dbaaa44a0469adc87bf0864f",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "377.0.0",
+      "sem_ver" : "378.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -9767,12 +9767,13 @@
                 "rmAttributeName" : "defining_code",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "CODE_PHRASE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "1..1",
                   "terminologyId" : {
                     "value" : "local"
                   },
-                  "constraint" : [ "at0017" ]
+                  "constraint" : [ "ac0.2" ],
+                  "selectedTerminologies" : [ ]
                 } ]
               } ],
               "attributeTuples" : [ ]
@@ -9789,17 +9790,19 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "0..1",
+              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "defining_code",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "SNOMED-CT"
                   },
                   "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "415684004",
@@ -9923,6 +9926,12 @@
             "code" : "at0007.1",
             "text" : "Merknad forkalkning/NME",
             "description" : "Additional narrative about the imaging findings of the anomaly, not captured in other fields."
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.2",
+            "description" : ""
           }
         },
         "nb" : {
@@ -9950,13 +9959,14 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0041.1",
             "text" : "Forkalkning tilstede",
-            "description" : "Tilstedeværelse av forkalkning i lesjonen."
+            "description" : "Tilstedeværelse av forkalkning i lesjonen (påvist ved mammografi/CT) og/eller NME (Non‑Mass Enhancement) ved MR‑undersøkelse.",
+            "comment" : "Designkommentar:\nSkal ikke vises i skjermbildet, men skal settes om kalk er tilstede - her skal denne settes automatisk hvis man velger suspekt i \"Forkalkning/NME\"."
           },
           "at0042.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0042.1",
             "text" : "Forkalkning/NME",
-            "description" : "Beskrivelse av mønsteret av forkalkning som er observert.",
+            "description" : "Beskrivelse av mønsteret av forkalkning/NME (Non‑mass enhancement)  som er observert.",
             "comment" : "Mønsteret kan kodes om ønskelig."
           },
           "at0007.1" : {
@@ -9971,6 +9981,12 @@
             "text" : "Anatomisk lokalisasjon",
             "description" : "Identifisering av hvor i brystet lesjonen/funnet befinner seg.",
             "comment" : "Designkommentar:\nIdentifisering av hvor i brystet lesjonen/funnet befinner seg vha. inndeling.\n\nVi har brukt direktekode for side + sted:\n -110493007, sentrale del av høyre mamma\n -110494001, øvre mediale kvadrant av høyre mamma\n -110496004, øvre laterale kvadrant av høyre mamma\n -110495000, nedre mediale kvadrant av høyre mamma\n -110497008, nedre laterale kvadrant av høyre mamma\n -735379000, høyre brystvorte\n -722158007, hud på høyre mamma"
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
           }
         },
         "de" : {
@@ -10012,12 +10028,29 @@
             "code" : "at0007.1",
             "text" : "Merknad forkalkning/NME",
             "description" : "*Additional narrative about the imaging findings of the anomaly, not captured in other fields. (en)"
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
           }
         }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
-      "valueSets" : { }
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0017" ]
+        },
+        "ac0.2" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.2",
+          "members" : [ "at0017" ]
+        }
+      }
     },
     "adlVersion" : "1.4",
     "buildUid" : "fee56c3f-54f5-4fb2-9f83-f1367d9d22a0",
@@ -11305,6 +11338,7 @@
                 "rmAttributeName" : "property",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "openehr"
                   },
@@ -11315,17 +11349,22 @@
                 "@type" : "C_ATTRIBUTE_TUPLE",
                 "members" : [ {
                   "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "magnitude",
+                  "rmAttributeName" : "units",
                   "children" : [ ]
                 }, {
                   "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "units",
+                  "rmAttributeName" : "magnitude",
                   "children" : [ ]
                 } ],
                 "tuples" : [ {
                   "@type" : "C_PRIMITIVE_TUPLE",
                   "members" : [ {
+                    "@type" : "C_STRING",
+                    "rmTypeName" : "STRING",
+                    "constraint" : [ "mm" ]
+                  }, {
                     "@type" : "C_REAL",
+                    "rmTypeName" : "REAL",
                     "constraint" : [ {
                       "lower" : 0.0,
                       "lowerIncluded" : true,
@@ -11333,9 +11372,6 @@
                       "lowerUnbounded" : false,
                       "upperUnbounded" : true
                     } ]
-                  }, {
-                    "@type" : "C_STRING",
-                    "constraint" : [ "mm" ]
                   } ]
                 } ]
               } ]
@@ -11358,6 +11394,7 @@
                 "rmAttributeName" : "property",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "openehr"
                   },
@@ -11368,17 +11405,22 @@
                 "@type" : "C_ATTRIBUTE_TUPLE",
                 "members" : [ {
                   "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "magnitude",
+                  "rmAttributeName" : "units",
                   "children" : [ ]
                 }, {
                   "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "units",
+                  "rmAttributeName" : "magnitude",
                   "children" : [ ]
                 } ],
                 "tuples" : [ {
                   "@type" : "C_PRIMITIVE_TUPLE",
                   "members" : [ {
+                    "@type" : "C_STRING",
+                    "rmTypeName" : "STRING",
+                    "constraint" : [ "mm" ]
+                  }, {
                     "@type" : "C_REAL",
+                    "rmTypeName" : "REAL",
                     "constraint" : [ {
                       "lower" : 0.0,
                       "lowerIncluded" : true,
@@ -11386,9 +11428,6 @@
                       "lowerUnbounded" : false,
                       "upperUnbounded" : true
                     } ]
-                  }, {
-                    "@type" : "C_STRING",
-                    "constraint" : [ "mm" ]
                   } ]
                 } ]
               } ]
@@ -11411,6 +11450,7 @@
                 "rmAttributeName" : "property",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "openehr"
                   },
@@ -11421,17 +11461,22 @@
                 "@type" : "C_ATTRIBUTE_TUPLE",
                 "members" : [ {
                   "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "magnitude",
+                  "rmAttributeName" : "units",
                   "children" : [ ]
                 }, {
                   "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "units",
+                  "rmAttributeName" : "magnitude",
                   "children" : [ ]
                 } ],
                 "tuples" : [ {
                   "@type" : "C_PRIMITIVE_TUPLE",
                   "members" : [ {
+                    "@type" : "C_STRING",
+                    "rmTypeName" : "STRING",
+                    "constraint" : [ "mm" ]
+                  }, {
                     "@type" : "C_REAL",
+                    "rmTypeName" : "REAL",
                     "constraint" : [ {
                       "lower" : 0.0,
                       "lowerIncluded" : true,
@@ -11439,9 +11484,6 @@
                       "lowerUnbounded" : false,
                       "upperUnbounded" : true
                     } ]
-                  }, {
-                    "@type" : "C_STRING",
-                    "constraint" : [ "mm" ]
                   } ]
                 } ]
               } ]
@@ -13012,22 +13054,22 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0049.1",
             "text" : "Lengste mål (bilde)",
-            "description" : "Den målte lengden på den lengste aspekten av strukturen/objektet (f.eks. lengste kant på et rektangulært prøve) eller den målte lengden på en strukturen/objektet langs dens longitudinale akse (f.eks. 2 cm tarm, målt langs tarmens akse, selv om den målte lengden er kortere enn diameteren på tarmen selv).",
-            "comment" : "Dette dataelementet har 0..* forekomster for å tillate registrering av flere målinger.\n\nHvis det ikke er en tydelig orientering, for eksempel lengde vs bredde vs høyde, bruk flere forekomster for å tillate registrering av lengden på to eller flere akser uten noen spesifikk orientering, for eksempel 3 x 4 x 5 mm."
+            "description" : "Målt lengde av lesjonens/funnets største utstrekning gjort ved hjelp av bildediagnostikk.",
+            "comment" : "Designkommentar:\nLengste tverrmål.\nDen målte lengden på den lengste aspekten av strukturen/objektet."
           },
           "at0049.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0049.2",
             "text" : "Lengde 2 (bilde)",
-            "description" : "Den målte lengden på den lengste aspekten av strukturen/objektet (f.eks. lengste kant på et rektangulært prøve) eller den målte lengden på en strukturen/objektet langs dens longitudinale akse (f.eks. 2 cm tarm, målt langs tarmens akse, selv om den målte lengden er kortere enn diameteren på tarmen selv).",
-            "comment" : "Dette dataelementet har 0..* forekomster for å tillate registrering av flere målinger.\n\nHvis det ikke er en tydelig orientering, for eksempel lengde vs bredde vs høyde, bruk flere forekomster for å tillate registrering av lengden på to eller flere akser uten noen spesifikk orientering, for eksempel 3 x 4 x 5 mm."
+            "description" : "Den målte lengden på akse 2, når det ikke er noen  spesifikk orientering. Målt ved hjelp av bildediagnostikk.",
+            "comment" : "Designkommentar;\nLenge 2\nDen målte lengden på akse 2, når det ikke er noen  spesifikk orientering."
           },
           "at0049.3" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0049.3",
             "text" : "Lengde 3 (bilde)",
-            "description" : "Den målte lengden på den lengste aspekten av strukturen/objektet (f.eks. lengste kant på et rektangulært prøve) eller den målte lengden på en strukturen/objektet langs dens longitudinale akse (f.eks. 2 cm tarm, målt langs tarmens akse, selv om den målte lengden er kortere enn diameteren på tarmen selv).",
-            "comment" : "Dette dataelementet har 0..* forekomster for å tillate registrering av flere målinger.\n\nHvis det ikke er en tydelig orientering, for eksempel lengde vs bredde vs høyde, bruk flere forekomster for å tillate registrering av lengden på to eller flere akser uten noen spesifikk orientering, for eksempel 3 x 4 x 5 mm."
+            "description" : "Den målte lengden på akse 3, når det ikke er noen  spesifikk orientering. Målt ved hjelp av bildediagnostikk.",
+            "comment" : "Designkommentar:\nLengde 3. \nDen målte lengden på akse 3, når det ikke er noen  spesifikk orientering."
           }
         }
       },
