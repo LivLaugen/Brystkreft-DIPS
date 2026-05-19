@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "dd987f769b53badcbe69301bc9c71944",
+      "MD5-CAM-1.0.1" : "f6ac8409ff95de41bd68bd6dca23abb1",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "378.0.0",
+      "sem_ver" : "379.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -9960,13 +9960,13 @@
             "code" : "at0042.1",
             "text" : "Forkalkning/NME",
             "description" : "Beskrivelse av mønsteret av forkalkning/NME (Non‑mass enhancement)  som er observert.",
-            "comment" : "Mønsteret kan kodes om ønskelig."
+            "comment" : "Designkommentar:\nDet er denne som skal vises i skjermbildet."
           },
           "at0007.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0007.1",
             "text" : "Merknad forkalkning/NME",
-            "description" : "Ytterligere fritekst om funn eller observasjoner på bilder av anomalien og som ikke er fanget i andre felt."
+            "description" : "Fritekstbeskrivelse av forkalkning/NME ved behov."
           },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -13306,17 +13306,19 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "0..1",
+              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "defining_code",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "SNOMED-CT"
                   },
                   "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "700616009",
@@ -13332,49 +13334,7 @@
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "nodeId" : "at0003.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "0..1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "defining_code",
-                "existence" : "0..1",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "terminologyId" : {
-                    "value" : "no.onk.breast.markers"
-                  },
-                  "constraint" : [ ],
-                  "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "no.onk.breast.markers",
-                    "code" : "SaviScout",
-                    "value" : "Savi Scout"
-                  }, {
-                    "terminologyId" : "no.onk.breast.markers",
-                    "code" : "Seed",
-                    "value" : "Seed (radioaktivt frø)"
-                  }, {
-                    "terminologyId" : "no.onk.breast.markers",
-                    "code" : "Hydromark",
-                    "value" : "Hydromark"
-                  }, {
-                    "terminologyId" : "no.onk.breast.markers",
-                    "code" : "Metall",
-                    "value" : "Metall markør"
-                  }, {
-                    "terminologyId" : "no.onk.breast.markers",
-                    "code" : "Annen",
-                    "value" : "Annen/ny (spesifiser)"
-                  } ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -13601,21 +13561,20 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
             "text" : "Markør",
-            "description" : "Et instrument, apparat, implantat, materiale, programvare eller lignende som er benyttet i utførelsen av helsetjenester. I denne konteksten er medisinsk utstyr et bredt spekter utstyr med fysiske, mekaniske, termiske, programvaremessige eller tilsvarende virkemåter. Utstyr som har en farmakologisk, metabolsk eller immunologisk virkning ekskluderes spesifikt. \r\n\r\nArketypen tar høyde for registrering av engangsutstyr samt varig utstyr som krever sporing, vedlikehold eller jevnlig kalibrering, og tar høyde for at hvert enkelt medisinsk utstyr har spesifikke behov for dataregistrering."
+            "description" : "Et instrument, apparat, implantat, materiale, programvare eller lignende som er benyttet i utførelsen av helsetjenester."
           },
           "at0001.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0001.1",
             "text" : "Markør",
-            "description" : "Identifisering av det medisinske utstyret, fortrinnsvis ved et vanlig navn, et formelt og fullstendig navn, eller om nødvendig ved utstyrets klasse eller kategori.",
-            "comment" : "Dette dataelementet vil fange termen, frasen eller kategorien i bruk i klinisk praksis. For eksempel: : [produsentnavn][maskin] (XYZ Audiometer); [størrelse][produsentnavn][intravenøst kateter] (14G Jelco IV-kateter), eller [produsentnavn/type][implantat].\r\n\r\nKoding med en terminologi er ønskelig om mulig, selv om denne kan være lokal og avhenger av hvilke produkter som er tilgjengelig."
+            "description" : "Kryss av dersom det er lagt inn en markør. ",
+            "comment" : "Designkommentar:\nDenne skal settes automatisk hvis man velger en verdi i \"Type markør\". Skal ikke vises i skjermbildet."
           },
           "at0003.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0003.1",
             "text" : "Type markør",
-            "description" : "Kategori eller type medisinsk utstyr.",
-            "comment" : "Brukes ikke om kategori som er dokumentert i \"Navn på medisinsk utstyr\".\r\n\r\nEksempel: Hvis utstyret er navngitt som \"urinkateter\", kan typen registreres som \"inneliggende kateter\" eller \"engangskateter\". Koding med en terminologi er ønskelig om mulig, og dette kan inkludere GTIN/EAN-nummer."
+            "description" : "Kategori eller type medisinsk utstyr."
           },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -55209,7 +55168,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "B485BD28DC90A4B5E7BF6AAFAAD49F9D"
+        "PARENT:MD5-CAM-1.0.1" : "292840701D3FA6B7194CE29922FF897D"
       },
       "details" : {
         "de" : {
@@ -58939,7 +58898,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "B485BD28DC90A4B5E7BF6AAFAAD49F9D"
+        "PARENT:MD5-CAM-1.0.1" : "292840701D3FA6B7194CE29922FF897D"
       },
       "details" : {
         "de" : {
@@ -62584,7 +62543,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "B485BD28DC90A4B5E7BF6AAFAAD49F9D"
+        "PARENT:MD5-CAM-1.0.1" : "292840701D3FA6B7194CE29922FF897D"
       },
       "details" : {
         "de" : {
