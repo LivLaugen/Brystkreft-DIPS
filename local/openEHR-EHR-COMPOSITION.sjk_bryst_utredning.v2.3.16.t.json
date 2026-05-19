@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "4f0305c8eab9f7d8a9445b5112f29aef",
+      "MD5-CAM-1.0.1" : "ff9615995e40eb057a21da4ace2300f6",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "390.0.0",
+      "sem_ver" : "391.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -37047,24 +37047,20 @@
                   "selectedTerminologies" : [ "no.onk.breast.markers" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "no.onk.breast.markers",
-                    "code" : "SaviScout",
-                    "value" : "Savi Scout"
+                    "code" : "1",
+                    "value" : "Reflektor"
                   }, {
                     "terminologyId" : "no.onk.breast.markers",
-                    "code" : "Seed",
-                    "value" : "Seed (radioaktivt frø)"
+                    "code" : "2",
+                    "value" : "Seed"
                   }, {
                     "terminologyId" : "no.onk.breast.markers",
-                    "code" : "Hydromark",
-                    "value" : "Hydromark"
+                    "code" : "3",
+                    "value" : "Metall"
                   }, {
                     "terminologyId" : "no.onk.breast.markers",
-                    "code" : "Metall",
-                    "value" : "Metall markør"
-                  }, {
-                    "terminologyId" : "no.onk.breast.markers",
-                    "code" : "Annen",
-                    "value" : "Annen/ny (spesifiser)"
+                    "code" : "4",
+                    "value" : "Annen type markør"
                   } ]
                 } ]
               } ],
