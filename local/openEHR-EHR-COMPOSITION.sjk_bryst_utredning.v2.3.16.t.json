@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "a4f1936da579507c57d5b646f080d350",
+      "MD5-CAM-1.0.1" : "3984b9dd4422ba15cf53e296f698727a",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "388.0.0",
+      "sem_ver" : "389.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -5786,8 +5786,7 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0004.1",
             "text" : "Beskrivelse",
-            "description" : "Fritekstbeskrivelse av funn ved en klinisk undersøkelse av et individ.",
-            "comment" : "K"
+            "description" : "Fritekstbeskrivelse av funn ved en klinisk undersøkelse."
           }
         },
         "es" : { },
@@ -6110,35 +6109,7 @@
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "nodeId" : "at0001.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "defining_code",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "TERMINOLOGY_CODE",
-                  "occurrences" : "0..1",
-                  "terminologyId" : {
-                    "value" : "SNOMED-CT"
-                  },
-                  "constraint" : [ ],
-                  "selectedTerminologies" : [ "SNOMED-CT" ],
-                  "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "73056007",
-                    "value" : "Right breast structure"
-                  } ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -56030,16 +56001,7 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "nodeId" : "at0003.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_DATE_TIME",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
@@ -56327,13 +56289,6 @@
             "text" : "Beliggenhet",
             "description" : "Registrering av det anatomisk stedet der diagnosen er lokalisert.",
             "comment" : "Designkommentar:\nSkal ikke vises i skjermbildet \n\nRegistrering av det anatomisk stedet der diagnosen er lokalisert.\n\nFor brystkreft, når det er snakk om en overordnet diagnosekode (den verste) må denne stå som mamma. \n76752008 -  mamma (Breast structure (body structure))"
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Dato/tid for klinisk bekreftelse",
-            "description" : "Anslått eller faktisk dato/tid da diagnosen ble bekreftet:\n1. prøvetakningsdato for første positiv histologi/cytologi \n2. Mottaksdato så svardato for patologiprøve. \n3. Andre undersøkelser som bildediagnostikk, blodprøve etc. hvor man bestemmer seg for at pasienten har\nkreft.",
-            "comment" : "Designkommentar: \nReglene er;\nAnslått eller faktisk dato/tid da diagnosen ble bekreftet:\n1. prøvetakningsdato for første positiv histologi/cytologi \n2. Mottaksdato så svardato for patologiprøve. \n3. Andre undersøkelser som bildediagnostikk, blodprøve etc. hvor man bestemmer seg for at pasienten har\nkreft."
           },
           "at0003.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -57110,13 +57065,6 @@
           }
         },
         "nb" : {
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Kroppsside",
-            "description" : "Den identifiserte kroppssiden.",
-            "comment" : "Designkommentar:\nDette elementet skal kun brukes for side på kroppen for parorgan (bryst på venstre side) eller f.eks. hud så er det venstre side for kroppen som helhet.  \n\nDette vil vises i skjermbildet for å vise hvilke side av kroppen lesjonen/funnet sitter som man stiller diagnose for. \nDenne styrer også logikken for hva som vises av diagnose per side. \n\nVed valg av kroppsside vises TNM og multifokalitet for høyre, venstre eller begge sider.\nLogikk:\n--- Hvis lesjon er valgt på venstre side → kun venstre TNM/multifokalitet vises.\n--- Hvis lesjon er valgt på høyre side → kun høyre TNM/multifokalitet vises.\n--- Hvis lesjoner er valgt på begge sider → begge settene av TNM/multifokalitet vises.\n"
-          },
           "at0001.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0001",
@@ -61911,13 +61859,6 @@
             "description" : "Den underordnede anatomiske lokaliseringer til tumoren.",
             "comment" : "Bruk verdien fra TNM for den enkelte typen tumor, for eksempel: cardia, fundus, corpus, antrum og pylorus (mage), eller duodenum, jejunum eller ileum (tynntarm)."
           },
-          "at0030" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0030",
-            "text" : "TNM-vurdering",
-            "description" : "Sammentrekning av vurdering av \"T\", \"N\" og \"M\", pluss eventuelle tilleggsvurderinger av \"G\", \"R\", \"L\", \"V\", prefiks og/eller tillegg der det er passende.",
-            "comment" : "Designkommentar:\nsammenslåing av T+n+m verdien. Den må komme med c-som prefix."
-          },
           "at0003.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0003",
@@ -65746,13 +65687,6 @@
             "text" : "cTNM-klassifikasjon klinisk",
             "description" : "Et rammeverk for klinisk klassifikasjon og gradering av maligne tumorer før behandling, i henhold til TNM-systemet.",
             "comment" : "Betegnes som TNM eller cTNM."
-          },
-          "at0030" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0030",
-            "text" : "TNM-vurdering",
-            "description" : "Sammentrekning av vurdering av \"T\", \"N\" og \"M\", pluss eventuelle tilleggsvurderinger av \"G\", \"R\", \"L\", \"V\", prefiks og/eller tillegg der det er passende.",
-            "comment" : "Designkommentar:\nsammenslåing av T+n+m verdien. Den må komme med c-som prefix."
           },
           "at0003.1" : {
             "@type" : "ARCHETYPE_TERM",
