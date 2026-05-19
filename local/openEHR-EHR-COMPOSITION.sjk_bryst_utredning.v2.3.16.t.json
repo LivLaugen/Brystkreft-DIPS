@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "2939118a55ea2366f24547143fada8fa",
+      "MD5-CAM-1.0.1" : "72b3d547d2c400b8abfff65336848a21",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "374.0.0",
+      "sem_ver" : "375.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -74118,7 +74118,7 @@
             "code" : "at0001.1",
             "text" : "Navn på kroppssted",
             "description" : "Navngiving av et enkelt fysisk sted enten på eller i menneskekroppen.",
-            "comment" : "Designkommentar:\nDenne skal være skjult i skjermbildet. \n\nVi legger inn cluster anatomisk lokalisering og sette kroppsdel på øverste 38866009 | kroppsdel | Body part structure (body structure) i feltet “navn på kroppssted” som er 0..1, og sette inn liste for spesifikke kroppssteder i elementet “Spesifikt sted” som er 0..*. \nDette er for å få en tabell for bildeundersøkelse med elementene  modalitet, dato, flere kroppsdeler i samme modalitet (spesifik sted), og et resyme for modaliteten. "
+            "comment" : "Designkommentar:\nDenne skal være skjult i skjermbildet. \n\nVi legger inn cluster anatomisk lokalisering og sette kroppsdel på øverste 38866009,  kroppsdel, Body part structure (body structure) i feltet “navn på kroppssted” som er 0..1, og sette inn liste for spesifikke kroppssteder i elementet “Spesifikt sted” som er 0..*. \nDette er for å få en tabell for bildeundersøkelse med elementene  modalitet, dato, flere kroppsdeler i samme modalitet (spesifik sted), og et resyme for modaliteten. "
           },
           "ac0.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -74843,7 +74843,7 @@
             "code" : "at0001.1",
             "text" : "Navn på kroppssted",
             "description" : "Navngiving av et enkelt fysisk sted enten på eller i menneskekroppen.",
-            "comment" : "Designkommentar:\nDenne skal være skjult i skjermbildet. \n\nVi legger inn cluster anatomisk lokalisering og sette kroppsdel på øverste 38866009 | kroppsdel | Body part structure (body structure) i feltet “navn på kroppssted” som er 0..1, og sette inn liste for spesifikke kroppssteder i elementet “Spesifikt sted” som er 0..*. \nDette er for å få en tabell for bildeundersøkelse med elementene  modalitet, dato, flere kroppsdeler i samme modalitet (spesifik sted), og et resyme for modaliteten. "
+            "comment" : "Designkommentar:\nDenne skal være skjult i skjermbildet. \n\nVi legger inn cluster anatomisk lokalisering og sette kroppsdel på øverste 38866009, kroppsdel, Body part structure (body structure) i feltet “navn på kroppssted” som er 0..1, og sette inn liste for spesifikke kroppssteder i elementet “Spesifikt sted” som er 0..*. \nDette er for å få en tabell for bildeundersøkelse med elementene  modalitet, dato, flere kroppsdeler i samme modalitet (spesifik sted), og et resyme for modaliteten. "
           },
           "ac0.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -75604,7 +75604,7 @@
             "code" : "at0001.1",
             "text" : "Navn på kroppssted",
             "description" : "Navngiving av et enkelt fysisk sted enten på eller i menneskekroppen.",
-            "comment" : "Designkommentar:\nDenne skal være skjult i skjermbildet. \n\nVi legger inn cluster anatomisk lokalisering og sette kroppsdel på øverste 38866009 | kroppsdel | Body part structure (body structure) i feltet “navn på kroppssted” som er 0..1, og sette inn liste for spesifikke kroppssteder i elementet “Spesifikt sted” som er 0..*. \nDette er for å få en tabell for bildeundersøkelse med elementene  modalitet, dato, flere kroppsdeler i samme modalitet (spesifik sted), og et resyme for modaliteten. "
+            "comment" : "Designkommentar:\nDenne skal være skjult i skjermbildet. \n\nVi legger inn cluster anatomisk lokalisering og sette kroppsdel på øverste 38866009,  kroppsdel, Body part structure (body structure) i feltet “navn på kroppssted” som er 0..1, og sette inn liste for spesifikke kroppssteder i elementet “Spesifikt sted” som er 0..*. \nDette er for å få en tabell for bildeundersøkelse med elementene  modalitet, dato, flere kroppsdeler i samme modalitet (spesifik sted), og et resyme for modaliteten. "
           },
           "ac0.1" : {
             "@type" : "ARCHETYPE_TERM",
