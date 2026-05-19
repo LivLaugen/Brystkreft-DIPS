@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "72b3d547d2c400b8abfff65336848a21",
+      "MD5-CAM-1.0.1" : "29c9dc7977a82fd965b6c7947af2233c",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "375.0.0",
+      "sem_ver" : "376.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -4602,7 +4602,7 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
             "text" : "Sykdomstegn",
-            "description" : "En generisk seksjonsoverskrift som skal gis nytt navn i en templat for å passe i en gitt klinisk kontekst."
+            "description" : "Sykdomstegn ved undersøkelse."
           }
         },
         "pt-br" : {
@@ -5108,17 +5108,19 @@
                         "children" : [ {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "DV_CODED_TEXT",
-                          "occurrences" : "0..1",
+                          "occurrences" : "1..1",
                           "attributes" : [ {
                             "@type" : "C_ATTRIBUTE",
                             "rmAttributeName" : "defining_code",
-                            "existence" : "0..1",
                             "children" : [ {
                               "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "0..1",
                               "terminologyId" : {
                                 "value" : "no.onk.kartlegging"
                               },
                               "constraint" : [ ],
+                              "selectedTerminologies" : [ "no.onk.kartlegging" ],
                               "includedExternalTerminologyCodes" : [ {
                                 "terminologyId" : "no.onk.kartlegging",
                                 "code" : "05",
@@ -5146,12 +5148,13 @@
                             "rmAttributeName" : "defining_code",
                             "children" : [ {
                               "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "CODE_PHRASE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
                               "occurrences" : "1..1",
                               "terminologyId" : {
                                 "value" : "no.onk.kroppside"
                               },
                               "constraint" : [ ],
+                              "selectedTerminologies" : [ "no.onk.kroppside" ],
                               "includedExternalTerminologyCodes" : [ {
                                 "terminologyId" : "no.onk.kroppside",
                                 "code" : "1",
@@ -5256,7 +5259,14 @@
             "code" : "at0028.1",
             "text" : "Sykdomstegn ved undersøkelse",
             "description" : "Finnes det noen tidligere symptomer eller sykdomstegn som er innenfor kartleggingsformålet?",
-            "comment" : "Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN."
+            "comment" : "Designkommentar:\nSykdomstegn ved undersøkelse, her kan man velge ingen, høyre side, venstre side, høyre og venstre side. \n\nHvis man trykker høyre/venstre eller begge så kommer det opp en liste med flere sykdomstegn man kan krysse av, det er mulig å krysse av flere. "
+          },
+          "at0034.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0034",
+            "text" : "Kartleggingsformål",
+            "description" : "Konteksten eller årsaken for kartleggingen.",
+            "comment" : "Designkommentar:\nher bruker vi lokalt kodeverk for verdisettet."
           }
         },
         "de" : {
@@ -5680,6 +5690,12 @@
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0004.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
                       "occurrences" : "0..0",
                       "nodeId" : "at0006.1",
                       "attributes" : [ ],
@@ -5758,7 +5774,29 @@
         "sl" : { },
         "es-ar" : { },
         "en" : { },
-        "nb" : { },
+        "nb" : {
+          "at0004" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Beskrivelse",
+            "description" : "Fritekstbeskrivelse av funn ved en klinisk undersøkelse ved behov.",
+            "comment" : "Designkommentar:\nen fritekst hvis man ønsker å si noe mer om sykdomstegn/symptom."
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Funn ved fysisk undersøkelse",
+            "description" : "Funn ved fysisk undersøkelse av en helsetjenestemottaker.\n*Feltet er etterspurt av registere*",
+            "comment" : "Designkommentar:\nHer legges det inn symptomer ved fysisk undersøkelse. Dette kan gjøres av enten radiologen som har funnet dette ved mammografi eller ved en annen fysisk undersøkelse gjort av kliniker."
+          },
+          "at0004.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004.1",
+            "text" : "Beskrivelse",
+            "description" : "Fritekstbeskrivelse av funn ved en klinisk undersøkelse av et individ.",
+            "comment" : "K"
+          }
+        },
         "es" : { },
         "pt-br" : { },
         "zh-cn" : { },
@@ -6085,17 +6123,19 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "0..1",
+              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "defining_code",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "SNOMED-CT"
                   },
                   "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "73056007",
@@ -6131,17 +6171,19 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "0..1",
+              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "defining_code",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "SNOMED-CT"
                   },
                   "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "157551000202106",
@@ -6234,13 +6276,27 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
             "text" : "Funn undersøkelse høyre side",
-            "description" : "Undersøkelsesfunn gjort ved fysisk undersøkelse av et organsystem eller anatomisk struktur."
+            "description" : "Symptomer/sykdomstegn funnet på høyre side."
           },
           "at0007.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0007.1",
             "text" : "Kommentar/annet",
-            "description" : "Ytterligere fritekst om funn ved undersøkelsen, som ikke dekkes av andre elementer."
+            "description" : "Fritekstbeskrivelse av annet funn."
+          },
+          "at0006.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "Fortolkning",
+            "description" : "Funn i den fysiske undersøkelsen gjort.",
+            "comment" : "For eksempel \"Uten anmerkning\" eller \"Moderat inflammasjon\". Det anbefales å kode \"Fortolkning\" med en terminologi dersom mulig.\n\nDesignkommentar:\nHer har SJK prosjektet valgt å legge inn en liste over funn som er gjort ved en undersøkelse av en kliniker enten ved ultralyd undersøkelsen eller av fastlegen (hva de er henvist for). "
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Undersøkt organsystem eller struktur",
+            "description" : "Identifisering av det undersøkte organsystemet eller den anatomiske strukturen.",
+            "comment" : "Designkommentar:\nI SJK prosjektet er denne satt til 73056007 - Right breast structure (body structure)), da utvalgslisten både inneholder bryst og aksille. Akslille er en av undergruppene i hirarkiet under denne koden. "
           }
         },
         "pt-br" : {
@@ -6651,17 +6707,19 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "0..1",
+              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "defining_code",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "SNOMED-CT"
                   },
                   "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "157551000202106",
@@ -6754,13 +6812,20 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
             "text" : "Funn ved undersøkelse venstre side",
-            "description" : "Undersøkelsesfunn gjort ved fysisk undersøkelse av et organsystem eller anatomisk struktur."
+            "description" : "Symptomer/sykdomstegn funnet på venstre side."
           },
           "at0007.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0007.1",
             "text" : "Kommentar/annet",
-            "description" : "Ytterligere fritekst om funn ved undersøkelsen, som ikke dekkes av andre elementer."
+            "description" : "Fritekstbeskrivelse av annet funn."
+          },
+          "at0006.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "Fortolkning",
+            "description" : "Funn i den fysiske undersøkelsen gjort.",
+            "comment" : "For eksempel \"Uten anmerkning\" eller \"Moderat inflammasjon\". Det anbefales å kode \"Fortolkning\" med en terminologi dersom mulig.\n\nDesignkommentar:\nHer har SJK prosjektet valgt å legge inn en liste over funn som er gjort ved en undersøkelse av en kliniker enten ved ultralyd undersøkelsen eller av fastlegen (hva de er henvist for). "
           }
         },
         "pt-br" : {
