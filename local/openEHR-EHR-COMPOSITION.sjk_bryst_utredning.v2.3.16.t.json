@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "3984b9dd4422ba15cf53e296f698727a",
+      "MD5-CAM-1.0.1" : "4f0305c8eab9f7d8a9445b5112f29aef",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "389.0.0",
+      "sem_ver" : "390.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -6109,7 +6109,35 @@
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "nodeId" : "at0001.1",
-          "attributes" : [ ],
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "SNOMED-CT"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "73056007",
+                    "value" : "Høyre mamma"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -6260,7 +6288,7 @@
             "code" : "at0001",
             "text" : "Undersøkt organsystem eller struktur",
             "description" : "Identifisering av det undersøkte organsystemet eller den anatomiske strukturen.",
-            "comment" : "Designkommentar:\nI SJK prosjektet er denne satt til 73056007 - Right breast structure (body structure)), da utvalgslisten både inneholder bryst og aksille. Akslille er en av undergruppene i hirarkiet under denne koden. "
+            "comment" : "Designkommentar:\nI SJK prosjektet er denne satt til 73056007 - Right breast structure (body structure)), da utvalgslisten både inneholder bryst og aksille. Akslille er en av undergruppene i hirarkiet under denne koden."
           }
         },
         "pt-br" : {
@@ -6625,17 +6653,19 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "0..1",
+              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "defining_code",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "SNOMED-CT"
                   },
                   "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "80248007",
@@ -6790,6 +6820,13 @@
             "text" : "Fortolkning",
             "description" : "Funn i den fysiske undersøkelsen gjort.",
             "comment" : "For eksempel \"Uten anmerkning\" eller \"Moderat inflammasjon\". Det anbefales å kode \"Fortolkning\" med en terminologi dersom mulig.\n\nDesignkommentar:\nHer har SJK prosjektet valgt å legge inn en liste over funn som er gjort ved en undersøkelse av en kliniker enten ved ultralyd undersøkelsen eller av fastlegen (hva de er henvist for). "
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Undersøkt organsystem eller struktur",
+            "description" : "Identifisering av det undersøkte organsystemet eller den anatomiske strukturen.",
+            "comment" : "Designkommentar:\nI SJK prosjektet er denne satt til 80248007, Left breast structure (body structure), da utvalgslisten både inneholder bryst og aksille. Akslille er en av undergruppene i hirarkiet under denne koden."
           }
         },
         "pt-br" : {
