@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "ff9615995e40eb057a21da4ace2300f6",
+      "MD5-CAM-1.0.1" : "67fba48daee03c17b896714f72f86f14",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "391.0.0",
+      "sem_ver" : "392.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -16015,7 +16015,10 @@
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "122548005",
-                    "value" : "Biopsi av mamma (sylinder, grovnål, pistol, tru-cut, stanse)"
+                    "value" : "Biopsi av mamma (sylinder, grovnål, pistol, tru-cut, stanse)",
+                    "translations" : {
+                      "nb" : "Biopsi mamma (sylinder, grovnål, pistol, tru-cut, stanse)"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "771625002",
@@ -16379,7 +16382,7 @@
           },
           "at0007.1" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
+            "code" : "at0007.1",
             "text" : "Prøvetakingsmetode",
             "description" : "Prøvetakingsmetoden som er brukt for å ta ut prøve til patologiundersøkelsen.",
             "comment" : "Designkommentar_\nPrøvetakingsmetoden som er brukt for å ta ut prøve til patologiundersøkelsen.\n\nLogikk:\nHvis det er valgt alt annet enn FNAC skal følgende vises:\n-- Imprint + kommentar\n-- ER\n-- PR\n-- HER2 (IHC)\n-- HER2 (ISH)\n-- Ki67\n-- Tumor morfologi (evt. «Diagnose/Tumor morfologi» hvis ønsket)\n-- Kommentar morfologi\n-- NGS‑gradering\n\nVed valg av prøvetakningsmetode FNAC (finnålsaspirasjon) av mamma + FNAC aksille: \n- Imprint + kommentar\n- Cytologi + kommentar"
@@ -39693,7 +39696,10 @@
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "122548005",
-                    "value" : "Biopsi av mamma (sylinder, grovnål, pistol, tru-cut, stanse)"
+                    "value" : "Biopsi av mamma (sylinder, grovnål, pistol, tru-cut, stanse)",
+                    "translations" : {
+                      "nb" : "Biopsi mamma (sylinder, grovnål, pistol, tru-cut, stanse)"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "771625002",
