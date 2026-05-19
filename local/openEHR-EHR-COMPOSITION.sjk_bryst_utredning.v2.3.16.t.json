@@ -28,7 +28,7 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "21145e74dbaaa44a0469adc87bf0864f",
+      "MD5-CAM-1.0.1" : "dd987f769b53badcbe69301bc9c71944",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
       "sem_ver" : "378.0.0",
@@ -5775,13 +5775,6 @@
         "es-ar" : { },
         "en" : { },
         "nb" : {
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Beskrivelse",
-            "description" : "Fritekstbeskrivelse av funn ved en klinisk undersøkelse ved behov.",
-            "comment" : "Designkommentar:\nen fritekst hvis man ønsker å si noe mer om sykdomstegn/symptom."
-          },
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000",
@@ -9581,7 +9574,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "6ef10f8d075c34f3e3bea07097f531c6"
+        "PARENT:MD5-CAM-1.0.1" : "e96fac263cfc385b31e89ee31858d8a8"
       },
       "details" : {
         "de" : {
@@ -31929,7 +31922,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "6ef10f8d075c34f3e3bea07097f531c6"
+        "PARENT:MD5-CAM-1.0.1" : "e96fac263cfc385b31e89ee31858d8a8"
       },
       "details" : {
         "de" : {
