@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "d0af373244ff0f99651c1a345b8bfc78",
+      "MD5-CAM-1.0.1" : "9e9b476735c43204fe98f70309325dce",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "381.0.0",
+      "sem_ver" : "382.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -9341,7 +9341,7 @@
             "code" : "at0001",
             "text" : "Navn på kroppssted",
             "description" : "Angi om lesjonen er funnet i brystet eller i aksilleregionen, eller annet sted. ",
-            "comment" : "Designkommentar:\nAngi om lesjonen er funnet i brystet eller i aksilleregionen, eller annet sted. \nVed valg av annet sted kan klinikere skrive nærmere hvor i funn/lesjonsID og utvidet beskrivelse funn.\n\nDet skal lages logikk i skjema ut i fra hva man velger her, det er flere felter som skal vises hvis man velger bryst enn aksille og annet. \n\nHvis det er valgt bryst på en side, skal følgende felt vises:  \n-- Lesjon/funn/navnID\n-- Lengdemål\n-- Kommentar til dimensjon/plassering\n-- Anatomisk lokalisasjon\n-- Sirkulær retning\n-- Avstand fra brystvorte\n-- Avstand fra m. pectoralis\n-- Forkalkning (tilstede/fraværende)\n-- Palpabel tumor (kun avkrysning ved bekreftende)\n-- Innlagt markør (kun avkrysning ved bekreftende)\n-- Kommentar markør\n-- Prøvetakingsmetode\n-------Hvis valgt metode ≠ FNAC:  imprint + ER, PR, HER2, Ki67 + NGS-resultat + Diagnose / tumor-morfologi\n------ Hvis valgt metode = FNAC: impring +cytologi\n\nHvis det er er valgt aksille:\n-- Lesjon/funn navn/ID\n-- Kommentar dimensjon/plassering\n-- Palpabel tumor\n-- Innlagt markør\n-- Kommentar markør\n-- Prøvetakningsmetode\n-------Hvis valgt prøvetakningsmetode = FNAC (finnålsaspirasjon) av lymfeknute i aksille:\n------- Vis imprint\n------- Vis cytologi\n\nHvis det er valgt annet \n- Lesjon/funn navnID\n- Kommentar dimensjon/plassering (fra bildediagnostikk)\n- Beskrivelse patologi (eget overordnet kommentarfelt – fra laboratorieprøve)\nDersom navn på kroppssted er oppgitt i arketypen som denne arketypen er nøstet inn i, kan dette dataelementet være redundant. Imidlertid kan det være fornuftig å dobbeltregistrere navnet på kroppstedet for å støtte semantiske spørringer basert på denne arketypen i stedet for i arketypen den er nøstet inn i."
+            "comment" : "Designkommentar:\nAngi om lesjonen er funnet i brystet eller i aksilleregionen, eller annet sted. \nVed valg av annet sted kan klinikere skrive nærmere hvor i funn/lesjonsID og utvidet beskrivelse funn.\n\nDet skal lages logikk i skjema ut i fra hva man velger her, det er flere felter som skal vises hvis man velger bryst enn aksille og annet. \n\nHvis det er valgt bryst på en side, skal følgende felt vises:  \n-- Lesjon/funn/navnID\n-- Lengdemål\n-- Kommentar til dimensjon/plassering\n-- Anatomisk lokalisasjon\n-- Sirkulær retning\n-- Avstand fra brystvorte\n-- Avstand fra m. pectoralis\n-- Forkalkning (tilstede/fraværende)\n-- Palpabel tumor (kun avkrysning ved bekreftende)\n-- Innlagt markør (kun avkrysning ved bekreftende)\n-- Kommentar markør\n-- Prøvetakingsmetode\n-------Hvis valgt metode ≠ FNAC:  imprint + ER, PR, HER2, Ki67 + NGS-resultat + Diagnose / tumor-morfologi\n------ Hvis valgt metode = FNAC: impring +cytologi\n\nHvis det er er valgt aksille:\n-- Lesjon/funn navn/ID\n-- Kommentar dimensjon/plassering\n-- Palpabel tumor\n-- Innlagt markør\n-- Kommentar markør\n-- Prøvetakningsmetode\n-------Hvis valgt prøvetakningsmetode = FNAC (finnålsaspirasjon) av lymfeknute i aksille:\n------- Vis imprint\n------- Vis cytologi\n\nHvis det er valgt annet \n- Lesjon/funn navnID\n- Kommentar dimensjon/plassering (fra bildediagnostikk)\n- Beskrivelse patologi (eget overordnet kommentarfelt – fra laboratorieprøve)"
           },
           "ac0.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -9969,7 +9969,7 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0042.1",
             "text" : "Forkalkning/NME",
-            "description" : "Beskrivelse av mønsteret av forkalkning/NME (Non‑mass enhancement)  som er observert.",
+            "description" : "Kryss av på denne om funnet for forkalkningen/NME er suspekt.",
             "comment" : "Designkommentar:\nDet er denne som skal vises i skjermbildet."
           },
           "at0007.1" : {
@@ -10438,7 +10438,7 @@
             "code" : "at0079.1",
             "text" : "Brystvorte",
             "description" : "Stedet på kroppen som brukes som referansepunkt for midtpunktet i den tenkte sirkelen.",
-            "comment" : "For eksempel: brystvorten når man undersøker et bryst eller anus når man undersøker hemoroider."
+            "comment" : "Designkommentar:\nBrystvorte er satt som midtpunkt."
           },
           "at0080.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -14223,8 +14223,8 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0006",
             "text" : "Fortolkning",
-            "description" : "Om funnet er palpabelt.",
-            "comment" : "Designkommentar:\nLegge inn en sjekkboks for om funnet er palpabelt.\nBrukt koden 443607001 Palpabelt funn, palpabel oppfylling (finding)\n\nDenne hører egentlig ikke til radiologi, men den er en del av mammografiundersøkelsen gjort av radiologer/radiografer."
+            "description" : "Kryss av om funnet er palpabelt.",
+            "comment" : "Designkommentar:\nLegge inn en sjekkboks for om funnet er palpabelt.\nBrukt koden 443607001 Palpabelt funn, palpabel oppfylling (finding)\n\nOm det er et palpabelt funn er ofte en del av mammografiundersøkelsen gjort av radiologer/radiografer og beskrives i bildediagnostisk svar."
           },
           "at0001.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -32271,6 +32271,9 @@
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "DV_IDENTIFIER",
+                      "defaultValue" : {
+                        "@type" : "DV_IDENTIFIER"
+                      },
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
                     } ]
@@ -32303,7 +32306,15 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0004",
             "text" : "Undersøkelsesnavn",
-            "description" : "Detaljer om lesjonen/funnet gjort ved en bildediagnostisk undersøkelse."
+            "description" : "Detaljer om lesjonen/funnet gjort ved en bildediagnostisk undersøkelse.",
+            "comment" : "Designkommentar:\nHer er det satt inn SNOMED-CT koden for bildediagnostikk - 363679005 - Imaging (procedure).\nDenne skal ikke vises i skjermbildet, men lagres ned ved utfylling av noen av elementene i denne arketypen (OBSERVATION.imaging_exam_result.v1)"
+          },
+          "at0028.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028",
+            "text" : "Rekvirentens rekvisisjonsID",
+            "description" : "Rekvirentens/bestillers lokale ID for rekvisisjonen/henvisningen.",
+            "comment" : "Tilsvarende HL7 \"Placer Order Identifier\".\n\nDesignkommentar:\nDenne brukes for et autogenerert nummer gjort av DIPS for det enkelte lesjonen/funnet til bruk for identifisering og koblin av bilde og lab.\nDette vises ikke i skjermbildet."
           },
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -32617,17 +32628,19 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "0..1",
+              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "defining_code",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "SNOMED-CT"
                   },
                   "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "80248007",
@@ -32686,12 +32699,13 @@
                 "rmAttributeName" : "defining_code",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "CODE_PHRASE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "1..1",
                   "terminologyId" : {
                     "value" : "local"
                   },
-                  "constraint" : [ "at0003" ]
+                  "constraint" : [ "ac0.2" ],
+                  "selectedTerminologies" : [ ]
                 } ]
               } ],
               "attributeTuples" : [ ]
@@ -32779,17 +32793,108 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "ar-sy" : { },
-        "sl" : { },
-        "en" : { },
-        "nb" : { },
-        "pt-br" : { },
-        "de" : { },
-        "nl" : { },
-        "sv" : { },
-        "fr" : { },
-        "ca" : { },
-        "es" : { }
+        "ar-sy" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        },
+        "sl" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        },
+        "en" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        },
+        "nb" : {
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Kroppsside",
+            "description" : "Den identifiserte kroppssiden.",
+            "comment" : "Designkommentar:\nDenne trengs ikke vises fordi man allerede har sagt at dette er lesjon/funn på høyre siden."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Navn på kroppssted",
+            "description" : "Navngiving av et enkelt fysisk sted enten på eller i menneskekroppen.",
+            "comment" : "Designkommentar:\nAngi om lesjonen er funnet i brystet eller i aksilleregionen, eller annet sted. \nVed valg av annet sted kan klinikere skrive nærmere hvor i funn/lesjonsID og utvidet beskrivelse funn.\n\nDet skal lages logikk i skjema ut i fra hva man velger her, det er flere felter som skal vises hvis man velger bryst enn aksille og annet. \n\nHvis det er valgt bryst på en side, skal følgende felt vises:  \n-- Lesjon/funn/navnID\n-- Lengdemål\n-- Kommentar til dimensjon/plassering\n-- Anatomisk lokalisasjon\n-- Sirkulær retning\n-- Avstand fra brystvorte\n-- Avstand fra m. pectoralis\n-- Forkalkning (tilstede/fraværende)\n-- Palpabel tumor (kun avkrysning ved bekreftende)\n-- Innlagt markør (kun avkrysning ved bekreftende)\n-- Kommentar markør\n-- Prøvetakingsmetode\n-------Hvis valgt metode ≠ FNAC:  imprint + ER, PR, HER2, Ki67 + NGS-resultat + Diagnose / tumor-morfologi\n------ Hvis valgt metode = FNAC: impring +cytologi\n\nHvis det er er valgt aksille:\n-- Lesjon/funn navn/ID\n-- Kommentar dimensjon/plassering\n-- Palpabel tumor\n-- Innlagt markør\n-- Kommentar markør\n-- Prøvetakningsmetode\n-------Hvis valgt prøvetakningsmetode = FNAC (finnålsaspirasjon) av lymfeknute i aksille:\n------- Vis imprint\n------- Vis cytologi\n\nHvis det er valgt annet \n- Lesjon/funn navnID\n- Kommentar dimensjon/plassering (fra bildediagnostikk)\n- Beskrivelse patologi (eget overordnet kommentarfelt – fra laboratorieprøve)\n"
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        },
+        "pt-br" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        },
+        "de" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        },
+        "nl" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        },
+        "sv" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        },
+        "fr" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        },
+        "ca" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        },
+        "es" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        }
       },
       "termBindings" : {
         "SNOMED-CT" : {
@@ -32797,7 +32902,18 @@
         }
       },
       "terminologyExtracts" : { },
-      "valueSets" : { }
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0003" ]
+        },
+        "ac0.2" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.2",
+          "members" : [ "at0003" ]
+        }
+      }
     },
     "adlVersion" : "1.4",
     "buildUid" : "55df31f4-72ab-49d6-a014-3693d1a57acd",
@@ -33038,17 +33154,19 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "0..1",
+              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "defining_code",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "SNOMED-CT"
                   },
                   "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "110498003",
@@ -33180,12 +33298,13 @@
                 "rmAttributeName" : "defining_code",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "CODE_PHRASE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "1..1",
                   "terminologyId" : {
                     "value" : "local"
                   },
-                  "constraint" : [ "at0017" ]
+                  "constraint" : [ "ac0.2" ],
+                  "selectedTerminologies" : [ ]
                 } ]
               } ],
               "attributeTuples" : [ ]
@@ -33202,17 +33321,19 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "0..1",
+              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "defining_code",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "SNOMED-CT"
                   },
                   "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "415684004",
@@ -33336,6 +33457,12 @@
             "code" : "at0007.1",
             "text" : "Merknad forkalkning/NME",
             "description" : "Additional narrative about the imaging findings of the anomaly, not captured in other fields."
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.2",
+            "description" : ""
           }
         },
         "nb" : {
@@ -33344,39 +33471,53 @@
             "code" : "at0000.1",
             "text" : "Lesjon/funn i bryst og aksille",
             "description" : "Et tilfeldig eller tvetydig funn eller observasjon av en anomali som fraviker fra det som er forventet eller normalt i en identifisert kroppsstruktur eller region, gjort ved bildediagnostisk undersøkelse.",
-            "comment" : "For eksempel en cyste eller oppfylning, en trombe, en polypp, en nyrestein eller et fremmedlegeme."
+            "comment" : "Designkommentar:\nHer brukes arketypen CLUSTER.imaging_exam_anomaly_SJK_no - som er en lokal arketype da CLUSTER.imaging_exam_anomaly ikke er godkjent enda. \nI denne arketypen kan man sette inn hvor lesjonen befinner seg vha. anatomisk lokalsisering, beskrivelse av funn, størrelse på funn, ID og konklusjon kalk og markør som evt. er lagt inn."
           },
           "at0004.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0004.1",
             "text" : "Kommentar dimensjon/plassering",
-            "description" : "Fritekstlig beskrivelse av funn eller observasjoner på bilder tatt under denne undersøkelsen."
+            "description" : "Fritekstlig beskrivelse av dimensjonen av funnet eller plasseringen av funnet ved behov."
           },
           "at0035.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0035.1",
             "text" : "Lesjon/funn navn/ID",
-            "description" : "Identifisering eller betegnelse for anomalien.",
-            "comment" : "Brukes for å skille mellom en anomali fra en annen dersom det er flere anomaliser til stede innenfor samme kroppsstruktur eller region."
+            "description" : "Brukes for å skille mellom et funn fra en annet dersom det er flere funn/lesjoner til stede innenfor samme kroppsstruktur eller region.\nHer kan man enten bruke et løpenummer eller en annen passende beskrivelse.",
+            "comment" : "Designkommentar:\nBrukes for å skille mellom en anomali fra en annen dersom det er flere anomaliser til stede innenfor samme kroppsstruktur eller region.\nBrukes også for å koble sammen bildediagnostikken og patologisvaret for dette funnet. Denne ID arves ned til laboratoriedelen, derfor er denne satt obligatorisk."
           },
           "at0041.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0041.1",
             "text" : "Forkalkning tilstede",
-            "description" : "Tilstedeværelse av forkalkning i lesjonen."
+            "description" : "Tilstedeværelse av forkalkning i lesjonen (påvist ved mammografi/CT) og/eller NME (Non‑Mass Enhancement) ved MR‑undersøkelse.",
+            "comment" : "Designkommentar:\nSkal ikke vises i skjermbildet, men skal settes om kalk er tilstede - her skal denne settes automatisk hvis man velger suspekt i \"Forkalkning/NME\"."
           },
           "at0042.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0042.1",
             "text" : "Forkalkning/NME",
-            "description" : "Beskrivelse av mønsteret av forkalkning som er observert.",
+            "description" : "Kryss av på denne om funnet for forkalkningen/NME er suspekt.",
             "comment" : "Mønsteret kan kodes om ønskelig."
           },
           "at0007.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0007.1",
             "text" : "Merknad forkalkning/NME",
-            "description" : "Ytterligere fritekst om funn eller observasjoner på bilder av anomalien og som ikke er fanget i andre felt."
+            "description" : "Fritekstbeskrivelse av forkalkning/NME ved behov."
+          },
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Anatomisk lokalisasjon",
+            "description" : "Identifisering av hvor i brystet lesjonen/funnet befinner seg.",
+            "comment" : "Designkommentar:\nIdentifisering av hvor i brystet lesjonen/funnet befinner seg vha. inndeling.\n\nVi har brukt direktekode for side + sted:\n -110498003, sentrale del av venstre mamma\n -110499006, øvre mediale kvadrant av venstre mamma\n -110501003, øvre laterale kvadrant av venstre mamma\n -110500002, nedre mediale kvadrant av venstre mamma\n -110502005, nedre laterale kvadrant av venstre mamma\n -735376007, venstre brystvorte\n -722157002, hud på venstre mamma"
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
           }
         },
         "de" : {
@@ -33418,12 +33559,29 @@
             "code" : "at0007.1",
             "text" : "Merknad forkalkning/NME",
             "description" : "*Additional narrative about the imaging findings of the anomaly, not captured in other fields. (en)"
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
           }
         }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
-      "valueSets" : { }
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0017" ]
+        },
+        "ac0.2" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.2",
+          "members" : [ "at0017" ]
+        }
+      }
     },
     "adlVersion" : "1.4",
     "buildUid" : "fee56c3f-54f5-4fb2-9f83-f1367d9d22a0",
@@ -33619,17 +33777,19 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "0..1",
+              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "defining_code",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "SNOMED-CT"
                   },
                   "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "735376007",
@@ -33656,12 +33816,13 @@
                 "rmAttributeName" : "defining_code",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "CODE_PHRASE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "1..1",
                   "terminologyId" : {
                     "value" : "local"
                   },
-                  "constraint" : [ "at0067", "at0068", "at0069", "at0070", "at0071", "at0072", "at0073", "at0074", "at0075", "at0076", "at0077", "at0078" ]
+                  "constraint" : [ "ac0.3" ],
+                  "selectedTerminologies" : [ ]
                 } ]
               } ],
               "attributeTuples" : [ ]
@@ -33683,6 +33844,7 @@
                 "rmAttributeName" : "property",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "openehr"
                   },
@@ -33693,17 +33855,22 @@
                 "@type" : "C_ATTRIBUTE_TUPLE",
                 "members" : [ {
                   "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "magnitude",
+                  "rmAttributeName" : "units",
                   "children" : [ ]
                 }, {
                   "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "units",
+                  "rmAttributeName" : "magnitude",
                   "children" : [ ]
                 } ],
                 "tuples" : [ {
                   "@type" : "C_PRIMITIVE_TUPLE",
                   "members" : [ {
+                    "@type" : "C_STRING",
+                    "rmTypeName" : "STRING",
+                    "constraint" : [ "mm" ]
+                  }, {
                     "@type" : "C_REAL",
+                    "rmTypeName" : "REAL",
                     "constraint" : [ {
                       "lower" : 0.0,
                       "lowerIncluded" : true,
@@ -33711,9 +33878,6 @@
                       "lowerUnbounded" : false,
                       "upperUnbounded" : true
                     } ]
-                  }, {
-                    "@type" : "C_STRING",
-                    "constraint" : [ "mm" ]
                   } ]
                 } ]
               } ]
@@ -33747,6 +33911,12 @@
             "code" : "at0080.1",
             "text" : "Avstand fra brystvorte",
             "description" : "*Distance of location from the identified central landmark. (en)"
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
           }
         },
         "sl" : {
@@ -33761,6 +33931,12 @@
             "code" : "at0080.1",
             "text" : "Avstand fra brystvorte",
             "description" : "*Distance of location from the identified central landmark. (en)"
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
           }
         },
         "en" : {
@@ -33776,6 +33952,12 @@
             "code" : "at0080.1",
             "text" : "Avstand fra brystvorte",
             "description" : "Distance of location from the identified central landmark."
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.3",
+            "description" : ""
           }
         },
         "nb" : {
@@ -33784,13 +33966,34 @@
             "code" : "at0079.1",
             "text" : "Brystvorte",
             "description" : "Stedet på kroppen som brukes som referansepunkt for midtpunktet i den tenkte sirkelen.",
-            "comment" : "For eksempel: brystvorten når man undersøker et bryst eller anus når man undersøker hemoroider."
+            "comment" : "Designkommentar:\nBrystvorte er satt som midtpunkt."
           },
           "at0080.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0080.1",
             "text" : "Avstand fra brystvorte",
-            "description" : "Avstanden av lokaliseringen fra det beskrevne midtpunktet."
+            "description" : "Avstanden fra brystvorten.",
+            "comment" : "Designkommentar:\nAvstanden fra brystvorten."
+          },
+          "at0061.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0061",
+            "text" : "Sirkulær retning",
+            "description" : "Posisjonen ved hjelp av klokkeretining hvor lesjonen/funnet befinner seg på bildediagnostisk undersøkele.",
+            "comment" : "Designkommentar:\nPosisjonen ved hjelp av klokkeretining hvor lesjonen/funnet befinner seg på bildediagnostisk undersøkele."
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Sirkulær anatomisk lokalisering",
+            "description" : "Lokaliseringen av lesjon/funn beskrevet med angivelse av retning (klokkeposisjon) og eventuelt avstand fra brystvorten, basert på bildediagnostiske undersøkelser.",
+            "comment" : "Designkommentar:\nLokaliseringen av lesjon/funn beskrevet med angivelse av retning (klokkeposisjon) og eventuelt avstand fra brystvorten, basert på bildediagnostiske undersøkelser."
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
           }
         },
         "sv" : {
@@ -33806,6 +34009,12 @@
             "code" : "at0080.1",
             "text" : "Avstand fra brystvorte",
             "description" : "Avstånd till platsen från den identifierade mittpunkten."
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
           }
         },
         "ca" : {
@@ -33821,6 +34030,12 @@
             "code" : "at0080.1",
             "text" : "Avstand fra brystvorte",
             "description" : "Distància d'ubicació des de la posició central identificada."
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
           }
         },
         "es" : {
@@ -33836,12 +34051,34 @@
             "code" : "at0080.1",
             "text" : "Avstand fra brystvorte",
             "description" : "Distancia de la ubicación desde el punto de referencia central identificado."
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
           }
         }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
-      "valueSets" : { }
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0067", "at0068", "at0069", "at0070", "at0071", "at0072", "at0073", "at0074", "at0075", "at0076", "at0077", "at0078" ]
+        },
+        "ac0.2" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.2",
+          "members" : [ "at0067", "at0068", "at0069", "at0070", "at0071", "at0072", "at0073", "at0074", "at0075", "at0076", "at0077", "at0078" ]
+        },
+        "ac0.3" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.3",
+          "members" : [ "at0067", "at0068", "at0069", "at0070", "at0071", "at0072", "at0073", "at0074", "at0075", "at0076", "at0077", "at0078" ]
+        }
+      }
     },
     "adlVersion" : "1.4",
     "buildUid" : "edd7cbdb-bc37-46a9-8e0a-ab559dcc63c5",
@@ -34089,17 +34326,19 @@
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "DV_CODED_TEXT",
-                  "occurrences" : "0..1",
+                  "occurrences" : "1..1",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
                     "rmAttributeName" : "defining_code",
-                    "existence" : "0..1",
                     "children" : [ {
                       "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
                       "terminologyId" : {
                         "value" : "SNOMED-CT"
                       },
                       "constraint" : [ ],
+                      "selectedTerminologies" : [ "SNOMED-CT" ],
                       "includedExternalTerminologyCodes" : [ {
                         "terminologyId" : "SNOMED-CT",
                         "code" : "60005003",
@@ -34126,12 +34365,13 @@
                     "rmAttributeName" : "defining_code",
                     "children" : [ {
                       "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "CODE_PHRASE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
                       "occurrences" : "1..1",
                       "terminologyId" : {
                         "value" : "local"
                       },
-                      "constraint" : [ "at0068" ]
+                      "constraint" : [ "ac0.47" ],
+                      "selectedTerminologies" : [ ]
                     } ]
                   } ],
                   "attributeTuples" : [ ]
@@ -34153,6 +34393,7 @@
                     "rmAttributeName" : "property",
                     "children" : [ {
                       "@type" : "C_TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
                       "terminologyId" : {
                         "value" : "openehr"
                       },
@@ -34163,17 +34404,22 @@
                     "@type" : "C_ATTRIBUTE_TUPLE",
                     "members" : [ {
                       "@type" : "C_ATTRIBUTE",
-                      "rmAttributeName" : "magnitude",
+                      "rmAttributeName" : "units",
                       "children" : [ ]
                     }, {
                       "@type" : "C_ATTRIBUTE",
-                      "rmAttributeName" : "units",
+                      "rmAttributeName" : "magnitude",
                       "children" : [ ]
                     } ],
                     "tuples" : [ {
                       "@type" : "C_PRIMITIVE_TUPLE",
                       "members" : [ {
+                        "@type" : "C_STRING",
+                        "rmTypeName" : "STRING",
+                        "constraint" : [ "mm" ]
+                      }, {
                         "@type" : "C_REAL",
+                        "rmTypeName" : "REAL",
                         "constraint" : [ {
                           "lower" : 0.0,
                           "lowerIncluded" : true,
@@ -34181,9 +34427,6 @@
                           "lowerUnbounded" : false,
                           "upperUnbounded" : true
                         } ]
-                      }, {
-                        "@type" : "C_STRING",
-                        "constraint" : [ "mm" ]
                       } ]
                     } ]
                   } ]
@@ -34247,6 +34490,12 @@
             "code" : "at0022.1",
             "text" : "Avstand fra m. pectoralis major",
             "description" : "المسافة بين المكان و المَعْلَم المعروف"
+          },
+          "ac0.47" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.47",
+            "description" : ""
           }
         },
         "sl" : {
@@ -34255,6 +34504,12 @@
             "code" : "at0022.1",
             "text" : "Avstand fra m. pectoralis major",
             "description" : "*Distance of location from the identified landmark.(en)"
+          },
+          "ac0.47" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.47",
+            "description" : ""
           }
         },
         "en" : {
@@ -34263,6 +34518,12 @@
             "code" : "at0022.1",
             "text" : "Avstand fra m. pectoralis major",
             "description" : "Distance of location from the identified landmark."
+          },
+          "ac0.47" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.47",
+            "description" : ""
           }
         },
         "nb" : {
@@ -34270,7 +34531,28 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.1",
             "text" : "Avstand fra m. pectoralis major",
-            "description" : "Avstanden til lokaliseringen fra det identifiserte landemerket."
+            "description" : "Avstanden til lokaliseringen fra Musculus pectoralis major.",
+            "comment" : "Designkommentar:\nAvstanden til lokaliseringen fra Musculus pectoralis major."
+          },
+          "at0062.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0062",
+            "text" : "Kroppsside",
+            "description" : "Siden av kroppen hvor det identifiserte landemerket er lokalisert.",
+            "comment" : "Designkommentar:\nSettes skjult i skjermbildet."
+          },
+          "at0021.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0021",
+            "text" : "Navn på landemerke",
+            "description" : "Identifisert kroppssted som benyttes som referansepunkt for det aktuelle kroppsstedet.",
+            "comment" : "Designkommentar\nmusculus pectoralis major, 60005003 - Pectoralis major muscle structure (body structure)"
+          },
+          "ac0.47" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.47",
+            "description" : ""
           }
         },
         "pt-br" : {
@@ -34279,6 +34561,12 @@
             "code" : "at0022.1",
             "text" : "Avstand fra m. pectoralis major",
             "description" : "Distância da localização ao ponto de referência identificado."
+          },
+          "ac0.47" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.47",
+            "description" : ""
           }
         },
         "sv" : {
@@ -34287,6 +34575,12 @@
             "code" : "at0022.1",
             "text" : "Avstand fra m. pectoralis major",
             "description" : "Avstånd till kroppsstället från det identifierade landmärket."
+          },
+          "ac0.47" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.47",
+            "description" : ""
           }
         },
         "de" : {
@@ -34295,6 +34589,12 @@
             "code" : "at0022.1",
             "text" : "Avstand fra m. pectoralis major",
             "description" : "Entfernung des Standorts vom ermittelten Orientierungspunkts."
+          },
+          "ac0.47" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.47",
+            "description" : ""
           }
         }
       },
@@ -34304,7 +34604,243 @@
         }
       },
       "terminologyExtracts" : { },
-      "valueSets" : { }
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0068" ]
+        },
+        "ac0.2" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.2",
+          "members" : [ "at0068" ]
+        },
+        "ac0.3" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.3",
+          "members" : [ "at0068" ]
+        },
+        "ac0.4" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.4",
+          "members" : [ "at0068" ]
+        },
+        "ac0.5" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.5",
+          "members" : [ "at0068" ]
+        },
+        "ac0.6" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.6",
+          "members" : [ "at0068" ]
+        },
+        "ac0.7" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.7",
+          "members" : [ "at0068" ]
+        },
+        "ac0.8" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.8",
+          "members" : [ "at0068" ]
+        },
+        "ac0.9" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.9",
+          "members" : [ "at0068" ]
+        },
+        "ac0.10" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.10",
+          "members" : [ "at0068" ]
+        },
+        "ac0.11" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.11",
+          "members" : [ "at0068" ]
+        },
+        "ac0.12" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.12",
+          "members" : [ "at0068" ]
+        },
+        "ac0.13" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.13",
+          "members" : [ "at0068" ]
+        },
+        "ac0.14" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.14",
+          "members" : [ "at0068" ]
+        },
+        "ac0.15" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.15",
+          "members" : [ "at0068" ]
+        },
+        "ac0.16" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.16",
+          "members" : [ "at0068" ]
+        },
+        "ac0.17" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.17",
+          "members" : [ "at0068" ]
+        },
+        "ac0.18" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.18",
+          "members" : [ "at0068" ]
+        },
+        "ac0.19" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.19",
+          "members" : [ "at0068" ]
+        },
+        "ac0.20" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.20",
+          "members" : [ "at0068" ]
+        },
+        "ac0.21" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.21",
+          "members" : [ "at0068" ]
+        },
+        "ac0.22" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.22",
+          "members" : [ "at0068" ]
+        },
+        "ac0.23" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.23",
+          "members" : [ "at0068" ]
+        },
+        "ac0.24" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.24",
+          "members" : [ "at0068" ]
+        },
+        "ac0.25" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.25",
+          "members" : [ "at0068" ]
+        },
+        "ac0.26" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.26",
+          "members" : [ "at0068" ]
+        },
+        "ac0.27" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.27",
+          "members" : [ "at0068" ]
+        },
+        "ac0.28" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.28",
+          "members" : [ "at0068" ]
+        },
+        "ac0.29" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.29",
+          "members" : [ "at0068" ]
+        },
+        "ac0.30" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.30",
+          "members" : [ "at0068" ]
+        },
+        "ac0.31" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.31",
+          "members" : [ "at0068" ]
+        },
+        "ac0.32" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.32",
+          "members" : [ "at0068" ]
+        },
+        "ac0.33" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.33",
+          "members" : [ "at0068" ]
+        },
+        "ac0.34" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.34",
+          "members" : [ "at0068" ]
+        },
+        "ac0.35" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.35",
+          "members" : [ "at0068" ]
+        },
+        "ac0.36" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.36",
+          "members" : [ "at0068" ]
+        },
+        "ac0.37" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.37",
+          "members" : [ "at0068" ]
+        },
+        "ac0.38" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.38",
+          "members" : [ "at0068" ]
+        },
+        "ac0.39" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.39",
+          "members" : [ "at0068" ]
+        },
+        "ac0.40" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.40",
+          "members" : [ "at0068" ]
+        },
+        "ac0.41" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.41",
+          "members" : [ "at0068" ]
+        },
+        "ac0.42" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.42",
+          "members" : [ "at0068" ]
+        },
+        "ac0.43" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.43",
+          "members" : [ "at0068" ]
+        },
+        "ac0.44" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.44",
+          "members" : [ "at0068" ]
+        },
+        "ac0.45" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.45",
+          "members" : [ "at0068" ]
+        },
+        "ac0.46" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.46",
+          "members" : [ "at0068" ]
+        },
+        "ac0.47" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.47",
+          "members" : [ "at0068" ]
+        }
+      }
     },
     "adlVersion" : "1.4",
     "buildUid" : "3ead758e-ab77-4b0a-8979-23821aa53050",
@@ -34478,6 +35014,7 @@
                 "rmAttributeName" : "property",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "openehr"
                   },
@@ -34488,17 +35025,22 @@
                 "@type" : "C_ATTRIBUTE_TUPLE",
                 "members" : [ {
                   "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "magnitude",
+                  "rmAttributeName" : "units",
                   "children" : [ ]
                 }, {
                   "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "units",
+                  "rmAttributeName" : "magnitude",
                   "children" : [ ]
                 } ],
                 "tuples" : [ {
                   "@type" : "C_PRIMITIVE_TUPLE",
                   "members" : [ {
+                    "@type" : "C_STRING",
+                    "rmTypeName" : "STRING",
+                    "constraint" : [ "mm" ]
+                  }, {
                     "@type" : "C_REAL",
+                    "rmTypeName" : "REAL",
                     "constraint" : [ {
                       "lower" : 0.0,
                       "lowerIncluded" : true,
@@ -34506,9 +35048,6 @@
                       "lowerUnbounded" : false,
                       "upperUnbounded" : true
                     } ]
-                  }, {
-                    "@type" : "C_STRING",
-                    "constraint" : [ "mm" ]
                   } ]
                 } ]
               } ]
@@ -34531,6 +35070,7 @@
                 "rmAttributeName" : "property",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "openehr"
                   },
@@ -34541,17 +35081,22 @@
                 "@type" : "C_ATTRIBUTE_TUPLE",
                 "members" : [ {
                   "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "magnitude",
+                  "rmAttributeName" : "units",
                   "children" : [ ]
                 }, {
                   "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "units",
+                  "rmAttributeName" : "magnitude",
                   "children" : [ ]
                 } ],
                 "tuples" : [ {
                   "@type" : "C_PRIMITIVE_TUPLE",
                   "members" : [ {
+                    "@type" : "C_STRING",
+                    "rmTypeName" : "STRING",
+                    "constraint" : [ "mm" ]
+                  }, {
                     "@type" : "C_REAL",
+                    "rmTypeName" : "REAL",
                     "constraint" : [ {
                       "lower" : 0.0,
                       "lowerIncluded" : true,
@@ -34559,9 +35104,6 @@
                       "lowerUnbounded" : false,
                       "upperUnbounded" : true
                     } ]
-                  }, {
-                    "@type" : "C_STRING",
-                    "constraint" : [ "mm" ]
                   } ]
                 } ]
               } ]
@@ -34584,6 +35126,7 @@
                 "rmAttributeName" : "property",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "openehr"
                   },
@@ -34594,17 +35137,22 @@
                 "@type" : "C_ATTRIBUTE_TUPLE",
                 "members" : [ {
                   "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "magnitude",
+                  "rmAttributeName" : "units",
                   "children" : [ ]
                 }, {
                   "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "units",
+                  "rmAttributeName" : "magnitude",
                   "children" : [ ]
                 } ],
                 "tuples" : [ {
                   "@type" : "C_PRIMITIVE_TUPLE",
                   "members" : [ {
+                    "@type" : "C_STRING",
+                    "rmTypeName" : "STRING",
+                    "constraint" : [ "mm" ]
+                  }, {
                     "@type" : "C_REAL",
+                    "rmTypeName" : "REAL",
                     "constraint" : [ {
                       "lower" : 0.0,
                       "lowerIncluded" : true,
@@ -34612,9 +35160,6 @@
                       "lowerUnbounded" : false,
                       "upperUnbounded" : true
                     } ]
-                  }, {
-                    "@type" : "C_STRING",
-                    "constraint" : [ "mm" ]
                   } ]
                 } ]
               } ]
@@ -36185,22 +36730,22 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0049.1",
             "text" : "Lengste mål (bilde)",
-            "description" : "Den målte lengden på den lengste aspekten av strukturen/objektet (f.eks. lengste kant på et rektangulært prøve) eller den målte lengden på en strukturen/objektet langs dens longitudinale akse (f.eks. 2 cm tarm, målt langs tarmens akse, selv om den målte lengden er kortere enn diameteren på tarmen selv).",
-            "comment" : "Dette dataelementet har 0..* forekomster for å tillate registrering av flere målinger.\n\nHvis det ikke er en tydelig orientering, for eksempel lengde vs bredde vs høyde, bruk flere forekomster for å tillate registrering av lengden på to eller flere akser uten noen spesifikk orientering, for eksempel 3 x 4 x 5 mm."
+            "description" : "Målt lengde av lesjonens/funnets største utstrekning gjort ved hjelp av bildediagnostikk.",
+            "comment" : "Designkommentar:\nLengste tverrmål.\nDen målte lengden på den lengste aspekten av strukturen/objektet."
           },
           "at0049.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0049.2",
             "text" : "Lengde 2 (bilde)",
-            "description" : "Den målte lengden på den lengste aspekten av strukturen/objektet (f.eks. lengste kant på et rektangulært prøve) eller den målte lengden på en strukturen/objektet langs dens longitudinale akse (f.eks. 2 cm tarm, målt langs tarmens akse, selv om den målte lengden er kortere enn diameteren på tarmen selv).",
-            "comment" : "Dette dataelementet har 0..* forekomster for å tillate registrering av flere målinger.\n\nHvis det ikke er en tydelig orientering, for eksempel lengde vs bredde vs høyde, bruk flere forekomster for å tillate registrering av lengden på to eller flere akser uten noen spesifikk orientering, for eksempel 3 x 4 x 5 mm."
+            "description" : "Den målte lengden på akse 2, når det ikke er noen  spesifikk orientering. Målt ved hjelp av bildediagnostikk.",
+            "comment" : "Designkommentar;\nLenge 2\nDen målte lengden på akse 2, når det ikke er noen  spesifikk orientering."
           },
           "at0049.3" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0049.3",
             "text" : "Lengde 3 (bilde)",
-            "description" : "Den målte lengden på den lengste aspekten av strukturen/objektet (f.eks. lengste kant på et rektangulært prøve) eller den målte lengden på en strukturen/objektet langs dens longitudinale akse (f.eks. 2 cm tarm, målt langs tarmens akse, selv om den målte lengden er kortere enn diameteren på tarmen selv).",
-            "comment" : "Dette dataelementet har 0..* forekomster for å tillate registrering av flere målinger.\n\nHvis det ikke er en tydelig orientering, for eksempel lengde vs bredde vs høyde, bruk flere forekomster for å tillate registrering av lengden på to eller flere akser uten noen spesifikk orientering, for eksempel 3 x 4 x 5 mm."
+            "description" : "Den målte lengden på akse 3, når det ikke er noen  spesifikk orientering. Målt ved hjelp av bildediagnostikk.",
+            "comment" : "Designkommentar:\nLengde 3. \nDen målte lengden på akse 3, når det ikke er noen  spesifikk orientering."
           }
         }
       },
@@ -36444,17 +36989,19 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "0..1",
+              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "defining_code",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "SNOMED-CT"
                   },
                   "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "700616009",
@@ -36476,17 +37023,19 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "0..1",
+              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "defining_code",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "no.onk.breast.markers"
                   },
                   "constraint" : [ ],
+                  "selectedTerminologies" : [ "no.onk.breast.markers" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "no.onk.breast.markers",
                     "code" : "SaviScout",
@@ -36739,27 +37288,27 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
             "text" : "Markør",
-            "description" : "Et instrument, apparat, implantat, materiale, programvare eller lignende som er benyttet i utførelsen av helsetjenester. I denne konteksten er medisinsk utstyr et bredt spekter utstyr med fysiske, mekaniske, termiske, programvaremessige eller tilsvarende virkemåter. Utstyr som har en farmakologisk, metabolsk eller immunologisk virkning ekskluderes spesifikt. \r\n\r\nArketypen tar høyde for registrering av engangsutstyr samt varig utstyr som krever sporing, vedlikehold eller jevnlig kalibrering, og tar høyde for at hvert enkelt medisinsk utstyr har spesifikke behov for dataregistrering."
+            "description" : "Et instrument, apparat, implantat, materiale, programvare eller lignende som er benyttet i utførelsen av helsetjenester."
           },
           "at0001.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0001.1",
             "text" : "Markør",
-            "description" : "Identifisering av det medisinske utstyret, fortrinnsvis ved et vanlig navn, et formelt og fullstendig navn, eller om nødvendig ved utstyrets klasse eller kategori.",
-            "comment" : "Dette dataelementet vil fange termen, frasen eller kategorien i bruk i klinisk praksis. For eksempel: : [produsentnavn][maskin] (XYZ Audiometer); [størrelse][produsentnavn][intravenøst kateter] (14G Jelco IV-kateter), eller [produsentnavn/type][implantat].\r\n\r\nKoding med en terminologi er ønskelig om mulig, selv om denne kan være lokal og avhenger av hvilke produkter som er tilgjengelig."
+            "description" : "Kryss av denne hvis det er lagt inn markør.",
+            "comment" : "Designkommentar:\nDenne skal settes automatisk hvis man velger en verdi i \"Type markør\". Skal ikke vises i skjermbildet."
           },
           "at0003.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0003.1",
             "text" : "Type markør",
-            "description" : "Kategori eller type medisinsk utstyr.",
-            "comment" : "Brukes ikke om kategori som er dokumentert i \"Navn på medisinsk utstyr\".\r\n\r\nEksempel: Hvis utstyret er navngitt som \"urinkateter\", kan typen registreres som \"inneliggende kateter\" eller \"engangskateter\". Koding med en terminologi er ønskelig om mulig, og dette kan inkludere GTIN/EAN-nummer."
+            "description" : "Type markør som er brukt. \n- Reflektor (radarreflektor, infrarød reflektor, SAVI SCOUT)\n- Seed (radioaktive (f.eks I-125 seed), ikke-radioaktiv seed)\n- Metall (metallklips, titaniumklips, coil, Tumark, MammoMARK, HydroMARK)\n- Annen type markør - bruk beskrivelsesfeltet.",
+            "comment" : "Designkommentar:\nHer bruker vi et lokalt kodeverk for typen av markør."
           },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.1",
             "text" : "Beskrivelse markør",
-            "description" : "Fritekstbeskrivelse av det medisinske utstyret."
+            "description" : "Fritekstbeskrivelse av markøren ved behov."
           }
         },
         "de" : {
@@ -37249,17 +37798,19 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "0..1",
+              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "defining_code",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "SNOMED-CT"
                   },
                   "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "80248007",
@@ -37304,17 +37855,19 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "0..1",
+              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "defining_code",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "SNOMED-CT"
                   },
                   "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "443607001",
@@ -37342,7 +37895,22 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : { },
-        "nb" : { },
+        "nb" : {
+          "at0006.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "Fortolkning",
+            "description" : "Kryss av om funnet er palpabelt.",
+            "comment" : "Designkommentar:\nLegge inn en sjekkboks for om funnet er palpabelt.\nBrukt koden 443607001 Palpabelt funn, palpabel oppfylling (finding)\n\nOm det er et palpabelt funn er ofte en del av mammografiundersøkelsen gjort av radiologer/radiografer og beskrives i bildediagnostisk svar."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Undersøkt organsystem eller struktur",
+            "description" : "Identifisering av det undersøkte organsystemet eller den anatomiske strukturen.",
+            "comment" : "Designkommentar \nDenne skal arve det som settes Anatomisk lokalisasjon som er valg øverst nivå. \nVises ikke i skjermbildet."
+          }
+        },
         "pt-br" : { },
         "de" : { },
         "sv" : { },
