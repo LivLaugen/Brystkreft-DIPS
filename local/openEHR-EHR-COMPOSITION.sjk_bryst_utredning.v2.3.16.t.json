@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "7b38c41bf7919f1c8e14499e2ec22204",
+      "MD5-CAM-1.0.1" : "4a7dd09bc74c83758cabd934f059632c",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "384.0.0",
+      "sem_ver" : "384.0.1",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -8831,7 +8831,7 @@
             "code" : "at0028",
             "text" : "Rekvirentens rekvisisjonsID",
             "description" : "Rekvirentens/bestillers lokale ID for rekvisisjonen/henvisningen.",
-            "comment" : "Tilsvarende HL7 \"Placer Order Identifier\".\n\nDesignkommentar:\nDenne brukes for et autogenerert nummer gjort av DIPS for det enkelte lesjonen/funnet til bruk for identifisering og koblin av bilde og lab.\nDette vises ikke i skjermbildet."
+            "comment" : "Tilsvarende HL7 \"Placer Order Identifier\".\n\nDesignkommentar:\nDenne brukes for et autogenerert nummer gjort av DIPS for det enkelte lesjonen/funnet til bruk for identifisering og kobling av bilde og lab.\nDette vises ikke i skjermbildet."
           }
         },
         "de" : { },
@@ -15212,7 +15212,7 @@
             "code" : "at0062",
             "text" : "Rekvirentens rekvisisjonsID",
             "description" : "Rekvirentens/bestillers lokale ID for rekvisisjonen.",
-            "comment" : "Designkommentar:\nArves fra bildediagnostikken.\nDenne brukes for et autogenerert nummer gjort av DIPS for det enkelte lesjonen/funnet til bruk for identifisering og koblin av bilde og lab.\nDette vises ikke i skjermbildet. "
+            "comment" : "Designkommentar:\nArves fra bildediagnostikken.\nDenne brukes for et autogenerert nummer gjort av DIPS for det enkelte lesjonen/funnet til bruk for identifisering og kobling av bilde og lab.\nDette vises ikke i skjermbildet. "
           },
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -32315,7 +32315,7 @@
             "code" : "at0028",
             "text" : "Rekvirentens rekvisisjonsID",
             "description" : "Rekvirentens/bestillers lokale ID for rekvisisjonen/henvisningen.",
-            "comment" : "Tilsvarende HL7 \"Placer Order Identifier\".\n\nDesignkommentar:\nDenne brukes for et autogenerert nummer gjort av DIPS for det enkelte lesjonen/funnet til bruk for identifisering og koblin av bilde og lab.\nDette vises ikke i skjermbildet."
+            "comment" : "Tilsvarende HL7 \"Placer Order Identifier\".\n\nDesignkommentar:\nDenne brukes for et autogenerert nummer gjort av DIPS for det enkelte lesjonen/funnet til bruk for identifisering og kobling av bilde og lab.\nDette vises ikke i skjermbildet."
           },
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -38894,7 +38894,7 @@
             "code" : "at0062",
             "text" : "Rekvirentens rekvisisjonsID",
             "description" : "Rekvirentens/bestillers lokale ID for rekvisisjonen.",
-            "comment" : "Designkommentar:\nArves fra bildediagnostikken.\nDenne brukes for et autogenerert nummer gjort av DIPS for det enkelte lesjonen/funnet til bruk for identifisering og koblin av bilde og lab.\nDette vises ikke i skjermbildet. "
+            "comment" : "Designkommentar:\nArves fra bildediagnostikken.\nDenne brukes for et autogenerert nummer gjort av DIPS for det enkelte lesjonen/funnet til bruk for identifisering og kobling av bilde og lab.\nDette vises ikke i skjermbildet. "
           },
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
