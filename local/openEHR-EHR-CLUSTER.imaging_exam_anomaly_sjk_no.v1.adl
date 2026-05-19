@@ -109,7 +109,7 @@ Not to be used to record details related to the overall findings, context or tec
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"6ef10f8d075c34f3e3bea07097f531c6">
+		["MD5-CAM-1.0.1"] = <"e96fac263cfc385b31e89ee31858d8a8">
 		["build_uid"] = <"fee56c3f-54f5-4fb2-9f83-f1367d9d22a0">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["revision"] = <"0.0.1-alpha">
@@ -166,7 +166,7 @@ definition
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0041] occurrences matches {0..1} matches {    -- Calcification
+			ELEMENT[at0041] occurrences matches {0..1} matches {    -- Calcification/NME
 				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
@@ -178,7 +178,7 @@ definition
 					}
 				}
 			}
-			ELEMENT[at0042] occurrences matches {0..1} matches {    -- Calcification description
+			ELEMENT[at0042] occurrences matches {0..1} matches {    -- Calcification/NME description
 				value matches {
 					DV_TEXT matches {*}
 				}
@@ -219,16 +219,16 @@ ontology
 					comment = <"For example: 'Well-defined' or 'Diffuse'.">
 				>
 				["at0041"] = <
-					text = <"Calcification">
-					description = <"Presence of calcification in the anomaly.">
+					text = <"Calcification/NME">
+					description = <"Presence of calcification or Non-Mass Enhancement (NME) in the anomaly.">
 				>
 				["at0017"] = <
 					text = <"Present">
-					description = <"Calcification is present.">
+					description = <"Calcification or NME is present.">
 				>
 				["at0018"] = <
 					text = <"Absent">
-					description = <"Calcification is not present.">
+					description = <"Calcification or NME is not present.">
 				>
 				["at0000"] = <
 					text = <"Imaging examination of an anomaly">
@@ -268,7 +268,7 @@ ontology
 				>
 				["at0032"] = <
 					text = <"Indeterminate">
-					description = <"It is not possible to determine if calcification is present or absent.">
+					description = <"It is not possible to determine if calcification or NME is present or absent.">
 				>
 				["at0035"] = <
 					text = <"Label">
@@ -285,9 +285,9 @@ ontology
 					description = <"The contour or silhouette of the anomaly.">
 				>
 				["at0042"] = <
-					text = <"Calcification description">
-					description = <"Description about the pattern of calcification observed.">
-					comment = <"The pattern of calcification can be coded if desired.">
+					text = <"Calcification/NME description">
+					description = <"Description about the pattern of calcification or NME (Non-Mass Enhancement) observed.">
+					comment = <"The pattern of calcification or NME (Non-Mass Enhancement) the can be coded if desired.">
 				>
 				["at0043"] = <
 					text = <"Effect">
@@ -336,15 +336,15 @@ ontology
 				>
 				["at0017"] = <
 					text = <"Tilstede">
-					description = <"Forkalning er tilstede.">
+					description = <"Forkalning eller NME er tilstede.">
 				>
 				["at0018"] = <
 					text = <"Fraværende">
-					description = <"Forkalkning er ikke tilstede.">
+					description = <"Forkalkning eller NME er ikke tilstede.">
 				>
 				["at0032"] = <
 					text = <"Ubestemmelig">
-					description = <"Det er ikke mulig å avgjøre om forkalkning er tilstede eller fraværende.">
+					description = <"Det er ikke mulig å avgjøre om forkalkning eller NME er tilstede eller fraværende.">
 				>
 				["at0035"] = <
 					text = <"Merkelapp">
@@ -370,12 +370,12 @@ ontology
 					comment = <"For eksempel \"Veldefinert\" eller \"Diffus\".">
 				>
 				["at0041"] = <
-					text = <"Forkalkning">
-					description = <"Tilstedeværelse av forkalkning i lesjonen.">
+					text = <"Forkalkning/NME">
+					description = <"Tilstedeværelse av forkalkning eller Non-Mass Enhancement (NME) i lesjonen.">
 				>
 				["at0042"] = <
-					text = <"Beskrivelse av forkalkning">
-					description = <"Beskrivelse av mønsteret av forkalkning som er observert.">
+					text = <"Beskrivelse av forkalkning/NME">
+					description = <"Beskrivelse av mønsteret av forkalkning eller NME (Non-Mass Enhancement) som er observert.">
 					comment = <"Mønsteret kan kodes om ønskelig.">
 				>
 				["at0043"] = <
@@ -405,16 +405,16 @@ ontology
 					comment = <"Zum Beispiel: „Gut definiert“ oder „Diffus“.">
 				>
 				["at0041"] = <
-					text = <"Kalzifizierung">
-					description = <"Vorhandensein von Verkalkung in der Anomalie.">
+					text = <"*Calcification/NME (en)">
+					description = <"*Presence of calcification or Non-Mass Enhancement (NME) in the anomaly. (en)">
 				>
 				["at0017"] = <
 					text = <"Vorhanden">
-					description = <"*Calcification is present. (en)">
+					description = <"*Calcification or NME is present. (en)">
 				>
 				["at0018"] = <
 					text = <"Nicht vorhanden">
-					description = <"*Calcification is not present. (en)">
+					description = <"*Calcification or NME is not present. (en)">
 				>
 				["at0044"] = <
 					text = <"Beschreibung der Vaskularisierung.">
@@ -454,7 +454,7 @@ ontology
 				>
 				["at0032"] = <
 					text = <"*Indeterminate (en)">
-					description = <"*It is not possible to determine if calcification is present or absent (en)">
+					description = <"*It is not possible to determine if calcification or NME is present or absent. (en)">
 				>
 				["at0035"] = <
 					text = <"*Label(en)">
@@ -471,9 +471,9 @@ ontology
 					description = <"*The contour or silhouette of the anomaly.(en)">
 				>
 				["at0042"] = <
-					text = <"*Calcification description(en)">
-					description = <"*Description about the pattern of calcification observed.(en)">
-					comment = <"*The pattern of calcification can be coded if desired.(en)">
+					text = <"*Calcification/NME description (en)">
+					description = <"*Description about the pattern of calcification or NME (Non-Mass Enhancement) observed. (en)">
+					comment = <"*The pattern of calcification or NME (Non-Mass Enhancement) the can be coded if desired. (en)">
 				>
 				["at0043"] = <
 					text = <"*Effect">
