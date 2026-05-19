@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "d177a3dbb040aac5ae7015594fcc7211",
+      "MD5-CAM-1.0.1" : "d0af373244ff0f99651c1a345b8bfc78",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "380.0.0",
+      "sem_ver" : "381.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -30831,7 +30831,7 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
             "text" : "Lesjon/funn i bryst og aksille venstre",
-            "description" : "En generisk seksjonsoverskrift som skal gis nytt navn i en templat for å passe i en gitt klinisk kontekst."
+            "description" : "Overskrift for å skille mellom lesjonene per side."
           }
         },
         "pt-br" : {
@@ -31792,29 +31792,31 @@
                         "children" : [ {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "DV_CODED_TEXT",
-                          "occurrences" : "0..1",
+                          "occurrences" : "1..1",
                           "defaultValue" : {
-                            "@type" : "DV_CODED_TEXT",
-                            "value" : "Bildediagnostikk",
                             "defining_code" : {
-                              "@type" : "CODE_PHRASE",
                               "terminology_id" : {
-                                "@type" : "TERMINOLOGY_ID",
-                                "value" : "SNOMED-CT"
+                                "value" : "SNOMED-CT",
+                                "@type" : "TERMINOLOGY_ID"
                               },
-                              "code_string" : "363679005"
-                            }
+                              "code_string" : "363679005",
+                              "@type" : "CODE_PHRASE"
+                            },
+                            "value" : "Bildediagnostikk",
+                            "@type" : "DV_CODED_TEXT"
                           },
                           "attributes" : [ {
                             "@type" : "C_ATTRIBUTE",
                             "rmAttributeName" : "defining_code",
-                            "existence" : "0..1",
                             "children" : [ {
                               "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "0..1",
                               "terminologyId" : {
                                 "value" : "SNOMED-CT"
                               },
                               "constraint" : [ ],
+                              "selectedTerminologies" : [ "SNOMED-CT" ],
                               "includedExternalTerminologyCodes" : [ {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "363679005",
@@ -32296,7 +32298,20 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : { },
-        "nb" : { },
+        "nb" : {
+          "at0004.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Undersøkelsesnavn",
+            "description" : "Detaljer om lesjonen/funnet gjort ved en bildediagnostisk undersøkelse."
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Bildediagnostisk svar",
+            "description" : "Resultatene på lesjon/funn som er gjort ved hjelp av bildediagnostisk metode."
+          }
+        },
         "de" : { },
         "sv" : { },
         "ca" : { },
