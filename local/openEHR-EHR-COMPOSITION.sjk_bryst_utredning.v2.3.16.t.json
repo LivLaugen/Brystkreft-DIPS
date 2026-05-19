@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "559b2947cfe9de7807407eeb1e0b27aa",
+      "MD5-CAM-1.0.1" : "feabf7d9dbc982c299ccd24ea09fc4b7",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "370.0.1",
+      "sem_ver" : "371.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -3928,17 +3928,19 @@
                             "children" : [ {
                               "@type" : "C_COMPLEX_OBJECT",
                               "rmTypeName" : "DV_CODED_TEXT",
-                              "occurrences" : "0..1",
+                              "occurrences" : "1..1",
                               "attributes" : [ {
                                 "@type" : "C_ATTRIBUTE",
                                 "rmAttributeName" : "defining_code",
-                                "existence" : "0..1",
                                 "children" : [ {
                                   "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
                                   "terminologyId" : {
                                     "value" : "DICOM_modality"
                                   },
                                   "constraint" : [ ],
+                                  "selectedTerminologies" : [ "DICOM_modality" ],
                                   "includedExternalTerminologyCodes" : [ {
                                     "terminologyId" : "DICOM_modality",
                                     "code" : "MG",
@@ -3987,17 +3989,19 @@
                             "children" : [ {
                               "@type" : "C_COMPLEX_OBJECT",
                               "rmTypeName" : "DV_CODED_TEXT",
-                              "occurrences" : "0..1",
+                              "occurrences" : "1..1",
                               "attributes" : [ {
                                 "@type" : "C_ATTRIBUTE",
                                 "rmAttributeName" : "defining_code",
-                                "existence" : "0..1",
                                 "children" : [ {
                                   "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
                                   "terminologyId" : {
                                     "value" : "local_terms"
                                   },
                                   "constraint" : [ ],
+                                  "selectedTerminologies" : [ "local_terms" ],
                                   "includedExternalTerminologyCodes" : [ {
                                     "terminologyId" : "local_terms",
                                     "code" : "726551006",
@@ -4006,6 +4010,10 @@
                                     "terminologyId" : "local_terms",
                                     "code" : "450566007",
                                     "value" : "Tomosyntese (DBT)"
+                                  }, {
+                                    "terminologyId" : "local_terms",
+                                    "code" : "71651007",
+                                    "value" : "Mammografi (vanlig)"
                                   } ]
                                 } ]
                               } ],
@@ -5218,17 +5226,19 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "0..1",
+              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "defining_code",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "SNOMED-CT"
                   },
                   "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "38866009",
@@ -5250,17 +5260,19 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "0..1",
+              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "defining_code",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "SNOMED-CT"
                   },
                   "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "91470000",
@@ -5765,17 +5777,19 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "0..1",
+              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "defining_code",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "SNOMED-CT"
                   },
                   "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "38866009",
@@ -5797,17 +5811,19 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "0..1",
+              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "defining_code",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "SNOMED-CT"
                   },
                   "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "76752008",
