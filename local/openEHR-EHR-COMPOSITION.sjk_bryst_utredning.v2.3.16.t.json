@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "7f1392fe2f8812142339dbeb026391ed",
+      "MD5-CAM-1.0.1" : "333c5d77e586adaa236119823b1864ff",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "386.0.0",
+      "sem_ver" : "387.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -59294,17 +59294,19 @@
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "DV_CODED_TEXT",
-                  "occurrences" : "0..1",
+                  "occurrences" : "1..1",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
                     "rmAttributeName" : "defining_code",
-                    "existence" : "0..1",
                     "children" : [ {
                       "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
                       "terminologyId" : {
                         "value" : "SNOMED-CT"
                       },
                       "constraint" : [ ],
+                      "selectedTerminologies" : [ "SNOMED-CT" ],
                       "includedExternalTerminologyCodes" : [ {
                         "terminologyId" : "SNOMED-CT",
                         "code" : "126926005",
@@ -59367,17 +59369,19 @@
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "DV_CODED_TEXT",
-                  "occurrences" : "0..1",
+                  "occurrences" : "1..1",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
                     "rmAttributeName" : "defining_code",
-                    "existence" : "0..1",
                     "children" : [ {
                       "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
                       "terminologyId" : {
                         "value" : "SNOMED-CT"
                       },
                       "constraint" : [ ],
+                      "selectedTerminologies" : [ "SNOMED-CT" ],
                       "includedExternalTerminologyCodes" : [ {
                         "terminologyId" : "SNOMED-CT",
                         "code" : "73056007",
@@ -59767,14 +59771,14 @@
             "code" : "at0000.1",
             "text" : "Problem/diagnose (inkl TNM) Høyre",
             "description" : "Detaljer om én identifisert helsetilstand, skade, funksjonshemming eller annet forhold som påvirker et individs fysiske, mentale og/eller sosiale velvære.",
-            "comment" : "Det er i praksis ikke lett å oppnå et klart skille mellom et problem og en diagnose. I klinisk dokumentasjon med denne arketypen ses problem og diagnose som et kontinuum, med økende krav til detaljer og støttende evidens for å underbygge en diagnose."
+            "comment" : "Designkommentar:\nI skjermbildet skal det bare vises høyre side som overskrift. "
           },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.1",
             "text" : "Diagnose",
-            "description" : "Identifisering av problemet eller diagnosen ved hjelp av navn.",
-            "comment" : "Koding av navnet på problemet eller diagnosen med en terminologi er foretrukket hvis mulig."
+            "description" : "Diagnose er satt til neoplastisk sykdom.",
+            "comment" : "Designkommentar:\nDenne skal ikke vises i skjermbildet, men settes default skjult. Dermed trenger ikke diagnosen å være obligatorisk, noe som kan være vanskelig i utredningsøyeblikket. Selve diagnosen som de settes i utredningen settes inn i arketypen \"CLUSTER.problem_diagnosis_dips.v1\". "
           },
           "at0009.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -59787,8 +59791,8 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0012.1",
             "text" : "Beliggenhet",
-            "description" : "Registrering av et enkelt og usammensatt anatomisk sted der problemet eller diagnosen er lokalisert.",
-            "comment" : "Koding av navnet på den anatomiske lokaliseringen ved hjelp av en terminologi er foretrukket når dette er mulig. \r\nBruk dette dataelementet for å registrere prekoordinerte anatomiske lokaliseringer. Dersom behovene for å registrere anatomisk sted bestemmes i applikasjonen eller trenger større grad av kompleksitet som f.eks. relativ lokalisering, er det anbefalt å bruke CLUSTER.anatomical_location eller CLUSTER.relative_location innenfor SLOTet \"Strukturert anatomisk lokalisering\" i denne arketypen. Dette dataelementet kan ha ubegrenset antall forekomster, for å gjøre det mulig å registrere kliniske scenarier som f.eks. å beskrive et utslett som opptrer flere steder på kroppen, men der alle andre attributter er identiske. Dersom den anatomiske lokaliseringen inkluderes i feltet \"Problem/diagnosenavn\" via prekoordinerte koder blir dette dataelementet overflødig."
+            "description" : "Registrering av et enkelt og usammensatt anatomisk sted der diagnosen er lokalisert.",
+            "comment" : "Designkommentar:\nRegistrering av det anatomisk stedet der diagnosen er lokalisert.\n\nHer har vi lagt inn direktekode til høyre bryst. \n73056007 - Right breast structure (body structure)"
           }
         },
         "sv" : {
@@ -60454,17 +60458,19 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "0..1",
+              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "defining_code",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "SNOMED-CT"
                   },
                   "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "76752008",
@@ -60498,12 +60504,13 @@
                 "rmAttributeName" : "defining_code",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "CODE_PHRASE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "1..1",
                   "terminologyId" : {
                     "value" : "local"
                   },
-                  "constraint" : [ "at0004" ]
+                  "constraint" : [ "ac0.22" ],
+                  "selectedTerminologies" : [ ]
                 } ]
               } ],
               "attributeTuples" : [ ]
@@ -60586,17 +60593,115 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "ar-sy" : { },
-        "sl" : { },
-        "en" : { },
-        "nb" : { },
-        "pt-br" : { },
-        "de" : { },
-        "nl" : { },
-        "sv" : { },
-        "fr" : { },
-        "ca" : { },
-        "es" : { }
+        "ar-sy" : {
+          "ac0.22" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.22",
+            "description" : ""
+          }
+        },
+        "sl" : {
+          "ac0.22" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.22",
+            "description" : ""
+          }
+        },
+        "en" : {
+          "ac0.22" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.22",
+            "description" : ""
+          }
+        },
+        "nb" : {
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Kroppsside",
+            "description" : "Den identifiserte kroppssiden.",
+            "comment" : "Designkommentar:\nDette elementet skal kun brukes for side på kroppen for parorgan (bryst på venstre side) eller f.eks. hud så er det venstre side for kroppen som helhet. "
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Anatomisk lokalisering",
+            "description" : "Et fysisk sted på eller inne i menneskekroppen.",
+            "comment" : "Designkommentar:\nSkal ikke vises i skjermbildet."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Navn på kroppssted",
+            "description" : "Navngiving av et enkelt fysisk sted enten på eller i menneskekroppen.",
+            "comment" : "Designkommentar:\nDet speisfikke kroppsstedet. Hvis man f.eks. har satt venstre mamma i dataelementet beliggenhet ville dette feltet blitt mamma. \nAnatomi kodes med SNOMED-CT så langt det er mulig. \nVi har brukt 76752008 -Breast structure (body structure)"
+          },
+          "ac0.22" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.22",
+            "description" : ""
+          }
+        },
+        "pt-br" : {
+          "ac0.22" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.22",
+            "description" : ""
+          }
+        },
+        "de" : {
+          "ac0.22" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.22",
+            "description" : ""
+          }
+        },
+        "nl" : {
+          "ac0.22" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.22",
+            "description" : ""
+          }
+        },
+        "sv" : {
+          "ac0.22" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.22",
+            "description" : ""
+          }
+        },
+        "fr" : {
+          "ac0.22" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.22",
+            "description" : ""
+          }
+        },
+        "ca" : {
+          "ac0.22" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.22",
+            "description" : ""
+          }
+        },
+        "es" : {
+          "ac0.22" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.22",
+            "description" : ""
+          }
+        }
       },
       "termBindings" : {
         "SNOMED-CT" : {
@@ -60604,7 +60709,118 @@
         }
       },
       "terminologyExtracts" : { },
-      "valueSets" : { }
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0004" ]
+        },
+        "ac0.2" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.2",
+          "members" : [ "at0004" ]
+        },
+        "ac0.3" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.3",
+          "members" : [ "at0004" ]
+        },
+        "ac0.4" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.4",
+          "members" : [ "at0004" ]
+        },
+        "ac0.5" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.5",
+          "members" : [ "at0004" ]
+        },
+        "ac0.6" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.6",
+          "members" : [ "at0004" ]
+        },
+        "ac0.7" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.7",
+          "members" : [ "at0004" ]
+        },
+        "ac0.8" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.8",
+          "members" : [ "at0004" ]
+        },
+        "ac0.9" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.9",
+          "members" : [ "at0004" ]
+        },
+        "ac0.10" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.10",
+          "members" : [ "at0004" ]
+        },
+        "ac0.11" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.11",
+          "members" : [ "at0004" ]
+        },
+        "ac0.12" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.12",
+          "members" : [ "at0004" ]
+        },
+        "ac0.13" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.13",
+          "members" : [ "at0004" ]
+        },
+        "ac0.14" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.14",
+          "members" : [ "at0004" ]
+        },
+        "ac0.15" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.15",
+          "members" : [ "at0004" ]
+        },
+        "ac0.16" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.16",
+          "members" : [ "at0004" ]
+        },
+        "ac0.17" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.17",
+          "members" : [ "at0004" ]
+        },
+        "ac0.18" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.18",
+          "members" : [ "at0004" ]
+        },
+        "ac0.19" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.19",
+          "members" : [ "at0004" ]
+        },
+        "ac0.20" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.20",
+          "members" : [ "at0004" ]
+        },
+        "ac0.21" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.21",
+          "members" : [ "at0004" ]
+        },
+        "ac0.22" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.22",
+          "members" : [ "at0004" ]
+        }
+      }
     },
     "adlVersion" : "1.4",
     "buildUid" : "55df31f4-72ab-49d6-a014-3693d1a57acd",
@@ -60945,17 +61161,19 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "0..1",
+              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "defining_code",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "SNOMED-CT"
                   },
                   "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "399506006",
@@ -60987,7 +61205,15 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0003.1",
             "text" : "Tumorutbredelsesmønster",
-            "description" : "Angir at det forekommer flere primærtumor med samme morforlogi. "
+            "description" : "Multifokalitet - dvs. to eller flere svulster i samme bryst. ",
+            "comment" : "Designkommentar:\nSkal være avkryssing. \n\nBruker koden - 399506006  Multifocal tumor (finding), \nMultifokalitet er vanskelig for det er litt forskjellige definisjoner / bruk i de forskjellige kreftformene, men vi har besluttet å bruke denne koden for bryst. "
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Oncology problem details dips",
+            "description" : "En indikasjon på at det finnes flere primære maligniteter.",
+            "comment" : "Designkommentar:\nDenne brukes for å legge til om tumoren er multifokal eller ikke. For brys er dette definert som flere samtidige tumorer i samme bryst. "
           }
         }
       },
@@ -61108,17 +61334,19 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "0..1",
+              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "defining_code",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "no.onk.tnm"
                   },
                   "constraint" : [ ],
+                  "selectedTerminologies" : [ "no.onk.tnm" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "no.onk.tnm",
                     "code" : "TX",
@@ -61208,17 +61436,19 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "0..1",
+              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "defining_code",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "no.onk.tnm"
                   },
                   "constraint" : [ ],
+                  "selectedTerminologies" : [ "no.onk.tnm" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "no.onk.tnm",
                     "code" : "NX",
@@ -61276,17 +61506,19 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "0..1",
+              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "defining_code",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "no.onk.tnm"
                   },
                   "constraint" : [ ],
+                  "selectedTerminologies" : [ "no.onk.tnm" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "no.onk.tnm",
                     "code" : "M0",
@@ -61537,6 +61769,12 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0030.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0031.1",
           "attributes" : [ {
@@ -61657,7 +61895,7 @@
             "code" : "at0000.1",
             "text" : "cTNM-klassifikasjon klinisk",
             "description" : "Et rammeverk for klinisk klassifikasjon og gradering av maligne tumorer før behandling, i henhold til TNM-systemet.",
-            "comment" : "Betegnes som TNM eller cTNM."
+            "comment" : "Designkommentar:\nHer skal det komme en link til helsedirektoratets sider om TNM bryst. \nhttps://www.helsedirektoratet.no/retningslinjer/brystkreft--handlingsprogram/diagnostisering-og-utredning/tnm-klassifikasjon"
           },
           "at0001.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -61672,6 +61910,41 @@
             "text" : "??Underordnet anatomisk lokalisasjon (vurdere om være med)",
             "description" : "Den underordnede anatomiske lokaliseringer til tumoren.",
             "comment" : "Bruk verdien fra TNM for den enkelte typen tumor, for eksempel: cardia, fundus, corpus, antrum og pylorus (mage), eller duodenum, jejunum eller ileum (tynntarm)."
+          },
+          "at0030" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0030",
+            "text" : "TNM-vurdering",
+            "description" : "Sammentrekning av vurdering av \"T\", \"N\" og \"M\", pluss eventuelle tilleggsvurderinger av \"G\", \"R\", \"L\", \"V\", prefiks og/eller tillegg der det er passende.",
+            "comment" : "Designkommentar:\nsammenslåing av T+n+m verdien. Den må komme med c-som prefix."
+          },
+          "at0003.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Primærtumor (T)",
+            "description" : "Vurdering av primærtumor.",
+            "comment" : "Designkommentar:\nVi bruker lokalt kodeverk no.onk.tmn, og UICC versjon. Kodene er bokstavene/graderingen og tekst som bokstav/gradering med c-prefix."
+          },
+          "at0004.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Regionale lymfeknuter (N)",
+            "description" : "Vurdering av hvorvidt det er metastaser i regionale lymfeknuter eller ikke, og i så fall i hvilken grad.",
+            "comment" : "Designkommentar:\nVi bruker lokalt kodeverk no.onk.tmn, og UICC versjon. Kodene er bokstavene/graderingen og tekst som bokstav/gradering med c-prefix."
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Fjernmetastase (M)",
+            "description" : "Vurdering av hvorvidt det er fjernmetastaser eller ikke.",
+            "comment" : "Designkommentar:\nVi bruker lokalt kodeverk no.onk.tmn, og UICC versjon. Kodene er bokstavene/graderingen og tekst som bokstav/gradering med c-prefix."
+          },
+          "at0030.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0030.1",
+            "text" : "TNM-vurdering",
+            "description" : "Sammentrekning av vurdering av \"T\", \"N\" og \"M\", pluss eventuelle tilleggsvurderinger av \"G\", \"R\", \"L\", \"V\", prefiks og/eller tillegg der det er passende.",
+            "comment" : "Designkommentar:\nsammenslåing av T+n+m verdien. Den må komme med p-som prefix."
           }
         },
         "de" : {
@@ -61997,17 +62270,19 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "0..1",
+              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "defining_code",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "SNOMED-CT"
                   },
                   "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "55342001",
@@ -62422,6 +62697,13 @@
             "text" : "Residivert",
             "description" : "Fase av bedring eller tilheling for et akutt problem eller diagnose.",
             "comment" : "For eksempel for å spore tilhelingen av en mellomørebetennelse."
+          },
+          "at0111.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0111",
+            "text" : "Sykdomskategori",
+            "description" : "En overordnet gruppering av problemet eller diagnosen.",
+            "comment" : "Designkommentar_\nDenne skal ikke vises i skjermbildet, men settes skjult slik at man får et element for å kategorisere neoplastiske sykdommer."
           }
         },
         "ko" : {
@@ -65642,17 +65924,19 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "0..1",
+              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "defining_code",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "SNOMED-CT"
                   },
                   "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "55342001",
@@ -66067,6 +66351,13 @@
             "text" : "Residivert",
             "description" : "Fase av bedring eller tilheling for et akutt problem eller diagnose.",
             "comment" : "For eksempel for å spore tilhelingen av en mellomørebetennelse."
+          },
+          "at0111.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0111",
+            "text" : "Sykdomskategori",
+            "description" : "En overordnet gruppering av problemet eller diagnosen.",
+            "comment" : "Designkommentar_\nDenne skal ikke vises i skjermbildet, men settes skjult slik at man får et element for å kategorisere neoplastiske sykdommer."
           }
         },
         "ko" : {
