@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "2274aa928a9ac33b9bb5d181a5f3bd2b",
+      "MD5-CAM-1.0.1" : "ae56cee5c830efc772eca0f408a8c919",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "394.0.0",
+      "sem_ver" : "395.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -14762,7 +14762,115 @@
                       "rmTypeName" : "ELEMENT",
                       "occurrences" : "0..1",
                       "nodeId" : "at0098.1",
-                      "attributes" : [ ],
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "occurrences" : "1..1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "0..1",
+                              "terminologyId" : {
+                                "value" : "SNOMED-CT"
+                              },
+                              "constraint" : [ ],
+                              "selectedTerminologies" : [ "SNOMED-CT" ],
+                              "includedExternalTerminologyCodes" : [ {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "408643008",
+                                "value" : "Infiltrerende karsinom NST (No Special Type; tidligere IDC)"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "1162814007",
+                                "value" : "Intraduktalt carcinoma in situ (DCIS)"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "89740008",
+                                "value" : "Lobulært karsinom (ILC)"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "444739008",
+                                "value" : "Lobulært carcinoma in situ, klassisk (CLCIS)"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "1290750006",
+                                "value" : "Lobulært carcinoma in situ, florid (FLCIS)"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "444591006",
+                                "value" : "Lobulært carcinoma in situ, pleomorft (PLCIS)"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "77284006",
+                                "value" : "Lobulært carcinoma in situ, uspesifisert (LCIS)"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "450697004",
+                                "value" : "Atypisk lobulær mammahyperplasi (ALH)"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "427785007",
+                                "value" : "Atypisk duktal mammahyperplasi (ADH)"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "860895001",
+                                "value" : "Flat epitelial atypi i mamma (FEA)"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "55465005",
+                                "value" : "Atypiske sylinderepitelceller"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "72495009",
+                                "value" : "Mucinøst adenokarsinom"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "703596001",
+                                "value" : "Tubulært karsinom"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "25910003",
+                                "value" : "Papillært karsinom"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "32913002",
+                                "value" : "Medullært karsinom"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "128674003",
+                                "value" : "Mikropapillært karsinom"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "2985005",
+                                "value" : "Pagets sykdom i mamma"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "32968003",
+                                "value" : "Inflammatorisk karsinom"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "87913009",
+                                "value" : "Malign phylloidestumor"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "372269006",
+                                "value" : "Histologisk type kan ikke bestemmes"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "3898006",
+                                "value" : "Benign tumor"
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
@@ -38333,7 +38441,115 @@
                       "rmTypeName" : "ELEMENT",
                       "occurrences" : "0..1",
                       "nodeId" : "at0098.1",
-                      "attributes" : [ ],
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "occurrences" : "1..1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "0..1",
+                              "terminologyId" : {
+                                "value" : "SNOMED-CT"
+                              },
+                              "constraint" : [ ],
+                              "selectedTerminologies" : [ "SNOMED-CT" ],
+                              "includedExternalTerminologyCodes" : [ {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "408643008",
+                                "value" : "Infiltrerende karsinom NST (No Special Type; tidligere IDC)"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "1162814007",
+                                "value" : "Intraduktalt carcinoma in situ (DCIS)"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "89740008",
+                                "value" : "Lobulært karsinom (ILC)"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "444739008",
+                                "value" : "Lobulært carcinoma in situ, klassisk (CLCIS)"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "1290750006",
+                                "value" : "Lobulært carcinoma in situ, florid (FLCIS)"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "444591006",
+                                "value" : "Lobulært carcinoma in situ, pleomorft (PLCIS)"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "77284006",
+                                "value" : "Lobulært carcinoma in situ, uspesifisert (LCIS)"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "450697004",
+                                "value" : "Atypisk lobulær mammahyperplasi (ALH)"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "427785007",
+                                "value" : "Atypisk duktal mammahyperplasi (ADH)"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "860895001",
+                                "value" : "Flat epitelial atypi i mamma (FEA)"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "55465005",
+                                "value" : "Atypiske sylinderepitelceller"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "72495009",
+                                "value" : "Mucinøst adenokarsinom"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "703596001",
+                                "value" : "Tubulært karsinom"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "25910003",
+                                "value" : "Papillært karsinom"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "32913002",
+                                "value" : "Medullært karsinom"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "128674003",
+                                "value" : "Mikropapillært karsinom"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "2985005",
+                                "value" : "Pagets sykdom i mamma"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "32968003",
+                                "value" : "Inflammatorisk karsinom"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "87913009",
+                                "value" : "Malign phylloidestumor"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "372269006",
+                                "value" : "Histologisk type kan ikke bestemmes"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "3898006",
+                                "value" : "Benign tumor"
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
