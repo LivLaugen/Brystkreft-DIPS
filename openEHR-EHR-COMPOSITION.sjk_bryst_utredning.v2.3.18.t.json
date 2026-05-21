@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "2ff679c7c805103ab57d47193f82eb69",
+      "MD5-CAM-1.0.1" : "db59adbe98dc9a5aa53581d6e7c75c12",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "395.0.0",
+      "sem_ver" : "396.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -68760,7 +68760,10 @@
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "65801008",
-                    "value" : "Reseksjon"
+                    "value" : "Reseksjon",
+                    "translations" : {
+                      "nb" : "Eksisjon / reseksjon"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "74964007",
@@ -70334,7 +70337,10 @@
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "65801008",
-                    "value" : "Reseksjon"
+                    "value" : "Reseksjon",
+                    "translations" : {
+                      "nb" : "Eksisjon / reseksjon"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "74964007",
