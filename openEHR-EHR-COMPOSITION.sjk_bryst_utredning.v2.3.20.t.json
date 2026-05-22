@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "6b9a68702182a5f5b559b04673c312e9",
+      "MD5-CAM-1.0.1" : "7009e06861e0658b8bfdb1a58031dfdb",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "405.0.0",
+      "sem_ver" : "406.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -6290,7 +6290,7 @@
             "code" : "at0001",
             "text" : "Undersøkt organsystem eller struktur",
             "description" : "Identifisering av det undersøkte organsystemet eller den anatomiske strukturen.",
-            "comment" : "Designkommentar:\nI SJK prosjektet er denne satt til 73056007 - Right breast structure (body structure)), da utvalgslisten både inneholder bryst og aksille. Akslille er en av undergruppene i hirarkiet under denne koden."
+            "comment" : "Designkommentar:\nI SJK prosjektet er denne satt til 73056007 - Right breast structure/ høyre mamma (body structure))  , da utvalgslisten både inneholder bryst og aksille. Akslille er en av undergruppene i hirarkiet under denne koden."
           }
         },
         "pt-br" : {
@@ -6649,35 +6649,7 @@
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "nodeId" : "at0001.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "defining_code",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "TERMINOLOGY_CODE",
-                  "occurrences" : "0..1",
-                  "terminologyId" : {
-                    "value" : "SNOMED-CT"
-                  },
-                  "constraint" : [ ],
-                  "selectedTerminologies" : [ "SNOMED-CT" ],
-                  "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "80248007",
-                    "value" : "Venstre brystregion"
-                  } ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
