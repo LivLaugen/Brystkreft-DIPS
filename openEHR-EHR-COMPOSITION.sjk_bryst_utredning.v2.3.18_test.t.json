@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "683aee8046bb92a652289f4cd1e6f785",
+      "MD5-CAM-1.0.1" : "137d9c802fbcc4f16dbb97429f974fab",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "397.0.0",
+      "sem_ver" : "398.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -1624,19 +1624,31 @@
                                   "includedExternalTerminologyCodes" : [ {
                                     "terminologyId" : "SNOMED-CT",
                                     "code" : "372087000",
-                                    "value" : "Primærtumor (med eller uten metastase(r))"
+                                    "value" : "Primærtumor (med eller uten metastase(r))",
+                                    "translations" : {
+                                      "nb" : "Primærtumor .1"
+                                    }
                                   }, {
                                     "terminologyId" : "SNOMED-CT",
                                     "code" : "25173007",
-                                    "value" : "Lokalt residiv (med eller uten metastase(r))"
+                                    "value" : "Lokalt residiv (med eller uten metastase(r))",
+                                    "translations" : {
+                                      "nb" : "Lokalt residiv .1"
+                                    }
                                   }, {
                                     "terminologyId" : "SNOMED-CT",
                                     "code" : "128462008",
-                                    "value" : "Kun metastase(r)"
+                                    "value" : "Kun metastase(r)",
+                                    "translations" : {
+                                      "nb" : "Metatase .1"
+                                    }
                                   }, {
                                     "terminologyId" : "SNOMED-CT",
                                     "code" : "74964007",
-                                    "value" : "Annet"
+                                    "value" : "Annet",
+                                    "translations" : {
+                                      "nb" : "Annet .1"
+                                    }
                                   } ]
                                 } ]
                               } ],
