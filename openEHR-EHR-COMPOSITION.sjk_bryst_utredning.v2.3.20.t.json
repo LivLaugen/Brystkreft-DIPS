@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "9932a4c8f1f1905ba902ad9f09872ac7",
+      "MD5-CAM-1.0.1" : "cb3743df67692ec5ee6445f2fc39d5a6",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "407.0.0",
+      "sem_ver" : "408.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -6111,35 +6111,7 @@
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "nodeId" : "at0001.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "defining_code",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "TERMINOLOGY_CODE",
-                  "occurrences" : "0..1",
-                  "terminologyId" : {
-                    "value" : "SNOMED-CT"
-                  },
-                  "constraint" : [ ],
-                  "selectedTerminologies" : [ "SNOMED-CT" ],
-                  "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "73056007",
-                    "value" : "Høyre mamma"
-                  } ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -59792,7 +59764,7 @@
             "code" : "at0012.1",
             "text" : "Beliggenhet",
             "description" : "Registrering av et enkelt og usammensatt anatomisk sted der diagnosen er lokalisert.",
-            "comment" : "Designkommentar:\nRegistrering av det anatomisk stedet der diagnosen er lokalisert.\n\nHer har vi lagt inn direktekode til høyre bryst. \n73056007 - Right breast structure (body structure)"
+            "comment" : "Designkommentar:\nRegistrering av det anatomisk stedet der diagnosen er lokalisert.\n\nHer har vi lagt inn direktekode til høyre bryst. \n73056007 - Right breast structure (body structure) (høyre bryst/høyre mamma)"
           }
         },
         "sv" : {
