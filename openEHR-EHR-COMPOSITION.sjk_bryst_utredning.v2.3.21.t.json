@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "a0fa20420a8dcc85e9c6f1ce9a564e07",
+      "MD5-CAM-1.0.1" : "9e58d8a007dbbbd11f8f3e6a913a0493",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "410.0.0",
+      "sem_ver" : "411.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -8952,7 +8952,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "235D9CDE069C2AEF58B46A00190C05F8"
+        "PARENT:MD5-CAM-1.0.1" : "813be0d6d8981f2b4c5a8ba92568273e"
       },
       "details" : {
         "de" : {
@@ -16529,7 +16529,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "235D9CDE069C2AEF58B46A00190C05F8"
+        "PARENT:MD5-CAM-1.0.1" : "813be0d6d8981f2b4c5a8ba92568273e"
       },
       "details" : {
         "de" : {
@@ -32450,7 +32450,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "235D9CDE069C2AEF58B46A00190C05F8"
+        "PARENT:MD5-CAM-1.0.1" : "813be0d6d8981f2b4c5a8ba92568273e"
       },
       "details" : {
         "de" : {
@@ -40218,7 +40218,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "235D9CDE069C2AEF58B46A00190C05F8"
+        "PARENT:MD5-CAM-1.0.1" : "813be0d6d8981f2b4c5a8ba92568273e"
       },
       "details" : {
         "de" : {
@@ -56759,7 +56759,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "235D9CDE069C2AEF58B46A00190C05F8"
+        "PARENT:MD5-CAM-1.0.1" : "813be0d6d8981f2b4c5a8ba92568273e"
       },
       "details" : {
         "de" : {
@@ -60261,7 +60261,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "235D9CDE069C2AEF58B46A00190C05F8"
+        "PARENT:MD5-CAM-1.0.1" : "813be0d6d8981f2b4c5a8ba92568273e"
       },
       "details" : {
         "de" : {
@@ -64171,7 +64171,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "235D9CDE069C2AEF58B46A00190C05F8"
+        "PARENT:MD5-CAM-1.0.1" : "813be0d6d8981f2b4c5a8ba92568273e"
       },
       "details" : {
         "de" : {
@@ -67958,7 +67958,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "235D9CDE069C2AEF58B46A00190C05F8"
+        "PARENT:MD5-CAM-1.0.1" : "813be0d6d8981f2b4c5a8ba92568273e"
       },
       "details" : {
         "de" : {
@@ -70492,7 +70492,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "235D9CDE069C2AEF58B46A00190C05F8"
+        "PARENT:MD5-CAM-1.0.1" : "813be0d6d8981f2b4c5a8ba92568273e"
       },
       "details" : {
         "de" : {
@@ -71292,7 +71292,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "235D9CDE069C2AEF58B46A00190C05F8"
+        "PARENT:MD5-CAM-1.0.1" : "813be0d6d8981f2b4c5a8ba92568273e"
       },
       "details" : {
         "de" : {
@@ -71975,7 +71975,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "235D9CDE069C2AEF58B46A00190C05F8"
+        "PARENT:MD5-CAM-1.0.1" : "813be0d6d8981f2b4c5a8ba92568273e"
       },
       "details" : {
         "de" : {
@@ -72658,7 +72658,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "235D9CDE069C2AEF58B46A00190C05F8"
+        "PARENT:MD5-CAM-1.0.1" : "813be0d6d8981f2b4c5a8ba92568273e"
       },
       "details" : {
         "de" : {
@@ -73341,7 +73341,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "235D9CDE069C2AEF58B46A00190C05F8"
+        "PARENT:MD5-CAM-1.0.1" : "813be0d6d8981f2b4c5a8ba92568273e"
       },
       "details" : {
         "de" : {
@@ -74012,7 +74012,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "235D9CDE069C2AEF58B46A00190C05F8"
+        "PARENT:MD5-CAM-1.0.1" : "813be0d6d8981f2b4c5a8ba92568273e"
       },
       "details" : {
         "de" : {
@@ -74683,7 +74683,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "235D9CDE069C2AEF58B46A00190C05F8"
+        "PARENT:MD5-CAM-1.0.1" : "813be0d6d8981f2b4c5a8ba92568273e"
       },
       "details" : {
         "de" : {
@@ -75354,7 +75354,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "235D9CDE069C2AEF58B46A00190C05F8"
+        "PARENT:MD5-CAM-1.0.1" : "813be0d6d8981f2b4c5a8ba92568273e"
       },
       "details" : {
         "de" : {
@@ -76051,7 +76051,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "235D9CDE069C2AEF58B46A00190C05F8"
+        "PARENT:MD5-CAM-1.0.1" : "813be0d6d8981f2b4c5a8ba92568273e"
       },
       "details" : {
         "de" : {
@@ -77486,7 +77486,7 @@
         "original_publisher" : "openEHR Foundation",
         "custodian_namespace" : "org.openehr",
         "MD5-CAM-1.0.1" : "cef7df4c7b52b76d6b0e7741adc7cb69",
-        "PARENT:MD5-CAM-1.0.1" : "235D9CDE069C2AEF58B46A00190C05F8",
+        "PARENT:MD5-CAM-1.0.1" : "813be0d6d8981f2b4c5a8ba92568273e",
         "ip_acknowledgements" : "This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org."
       },
       "details" : {
@@ -78215,7 +78215,7 @@
         "original_publisher" : "openEHR Foundation",
         "custodian_namespace" : "org.openehr",
         "MD5-CAM-1.0.1" : "cef7df4c7b52b76d6b0e7741adc7cb69",
-        "PARENT:MD5-CAM-1.0.1" : "235D9CDE069C2AEF58B46A00190C05F8",
+        "PARENT:MD5-CAM-1.0.1" : "813be0d6d8981f2b4c5a8ba92568273e",
         "ip_acknowledgements" : "This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org."
       },
       "details" : {
@@ -78940,7 +78940,7 @@
         "original_publisher" : "openEHR Foundation",
         "custodian_namespace" : "org.openehr",
         "MD5-CAM-1.0.1" : "cef7df4c7b52b76d6b0e7741adc7cb69",
-        "PARENT:MD5-CAM-1.0.1" : "235D9CDE069C2AEF58B46A00190C05F8",
+        "PARENT:MD5-CAM-1.0.1" : "813be0d6d8981f2b4c5a8ba92568273e",
         "ip_acknowledgements" : "This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org."
       },
       "details" : {
@@ -79186,6 +79186,10 @@
                     "value" : "Skjelett"
                   }, {
                     "terminologyId" : "SNOMED-CT",
+                    "code" : "243928005",
+                    "value" : "Hele kroppen"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
                     "code" : "74964007",
                     "value" : "Annen (spesifiser)"
                   } ]
@@ -79398,7 +79402,7 @@
             "code" : "at0065",
             "text" : "Spesifikt sted",
             "description" : "Ytterligere detaljer gitt ved hjelp av en spesifikk region eller et punkt på eller i det spesifiserte kroppsstedet.",
-            "comment" : "Designkommentar:\nListe over spesifikk kroppssted for hvor man har tatt bildeundersøkelsen. \n\nI SJK har vi brukt denne i stedet for den overordnede da vi trenger å ha denne repiterende. "
+            "comment" : "Designkommentar:\nListe over spesifikk kroppssted for hvor man har tatt bildeundersøkelsen. \n\nI SJK har vi brukt denne i stedet for den overordnede da vi trenger å ha denne repiterende. \n\nBruker 243928005 - Entire body region (body structure) - Hele kroppen"
           }
         },
         "pt-br" : {
