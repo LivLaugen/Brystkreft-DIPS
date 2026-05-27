@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "087122f0463d4098a5ddf551efcf3eee",
+      "MD5-CAM-1.0.1" : "901dc4c213ce3f4a8922a923678dc45f",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "415.1.0",
+      "sem_ver" : "416.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -80293,7 +80293,10 @@
                                   "includedExternalTerminologyCodes" : [ {
                                     "terminologyId" : "SNOMED-CT",
                                     "code" : "241615005",
-                                    "value" : "MR mamma"
+                                    "value" : "MR mamma",
+                                    "translations" : {
+                                      "nb" : "MR mamma (bryst)"
+                                    }
                                   } ]
                                 } ]
                               } ],
