@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "bc82aa7afd458f5966ac660e1e3b2d63",
+      "MD5-CAM-1.0.1" : "cc8d1431bf36932f29818a6d97a3f111",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "413.1.0",
+      "sem_ver" : "414.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -79977,43 +79977,7 @@
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
                           "nodeId" : "at0047.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_CODED_TEXT",
-                              "occurrences" : "1..1",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "defining_code",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "rmTypeName" : "TERMINOLOGY_CODE",
-                                  "occurrences" : "0..1",
-                                  "terminologyId" : {
-                                    "value" : "SNOMED-CT"
-                                  },
-                                  "constraint" : [ ],
-                                  "selectedTerminologies" : [ "SNOMED-CT" ],
-                                  "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "71651007",
-                                    "value" : "Mammografi (konvensjonell)"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "726551006",
-                                    "value" : "Kontrastmammografi"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "450566007",
-                                    "value" : "Tomosyntese (DBT)"
-                                  } ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
+                          "attributes" : [ ],
                           "attributeTuples" : [ ]
                         }, {
                           "@type" : "C_COMPLEX_OBJECT",
