@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "0ab12a4d0844c699b3cd8c18919b3605",
+      "MD5-CAM-1.0.1" : "22693eea456ea72fa13b164a68d22c72",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "418.0.0",
+      "sem_ver" : "418.0.1",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -4604,7 +4604,8 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
             "text" : "Sykdomstegn",
-            "description" : "Sykdomstegn ved undersøkelse."
+            "description" : "Sykdomstegn ved undersøkelse.",
+            "comment" : "Designkommentar:\nNB! Denne overskriften vises i skjermbildet, men overskriften i skjermbildet er endret til \"Sykdomstegn ved undersøkelse\". \nVed oppdatering/ny innhenting av opt i FormDesigner må denne oppateres/sjekkes."
           }
         },
         "pt-br" : {
