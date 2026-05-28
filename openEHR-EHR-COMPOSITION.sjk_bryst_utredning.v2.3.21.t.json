@@ -28,10 +28,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "901dc4c213ce3f4a8922a923678dc45f",
+      "MD5-CAM-1.0.1" : "bd6729b31b4ed9fc1df72923455b037e",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "416.0.0",
+      "sem_ver" : "417.0.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -79977,43 +79977,7 @@
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
                           "nodeId" : "at0047.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_CODED_TEXT",
-                              "occurrences" : "1..1",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "defining_code",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "rmTypeName" : "TERMINOLOGY_CODE",
-                                  "occurrences" : "0..1",
-                                  "terminologyId" : {
-                                    "value" : "SNOMED-CT"
-                                  },
-                                  "constraint" : [ ],
-                                  "selectedTerminologies" : [ "SNOMED-CT" ],
-                                  "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "71651007",
-                                    "value" : "Mammografi, konvensjonell"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "726551006",
-                                    "value" : "Mammografi, kontrast"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "450566007",
-                                    "value" : "Mammografi, tomosyntese (DBT)"
-                                  } ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
+                          "attributes" : [ ],
                           "attributeTuples" : [ ]
                         }, {
                           "@type" : "C_COMPLEX_OBJECT",
@@ -80120,40 +80084,9 @@
                         }, {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
                           "nodeId" : "at0047.2",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_CODED_TEXT",
-                              "occurrences" : "1..1",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "defining_code",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "rmTypeName" : "TERMINOLOGY_CODE",
-                                  "occurrences" : "0..1",
-                                  "terminologyId" : {
-                                    "value" : "SNOMED-CT"
-                                  },
-                                  "constraint" : [ ],
-                                  "selectedTerminologies" : [ "SNOMED-CT" ],
-                                  "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "432635009",
-                                    "value" : "UL aksille"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "47079000",
-                                    "value" : "UL mamma (bryst)"
-                                  } ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
+                          "attributes" : [ ],
                           "attributeTuples" : [ ]
                         }, {
                           "@type" : "C_COMPLEX_OBJECT",
@@ -80269,7 +80202,7 @@
                         }, {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..1",
+                          "occurrences" : "0..0",
                           "nodeId" : "at0047.3",
                           "attributes" : [ {
                             "@type" : "C_ATTRIBUTE",
@@ -81085,15 +81018,13 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0047",
             "text" : "Type",
-            "description" : "Metoden, teknikken, modaliteten eller annen mer spesifikk identifikasjon av den diagnostiske undersøkelsen.",
-            "comment" : "Designkommentar:\nI bryst vil de ha valg for UL mamma og UL aksille som direktevalg. Vi har derfor valgt å legge direktekodene i dette elementet og hvis man trykker UL aksille så vil spesifikt sted i \"anatomisk lokalisering\" aksille også bli satt og lagret ned for å få forutsigbarhet ved datauthenting."
+            "description" : "Metoden, teknikken, modaliteten eller annen mer spesifikk identifikasjon av den diagnostiske undersøkelsen."
           },
           "at0047.3" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0047",
             "text" : "Type",
-            "description" : "Metoden, teknikken, modaliteten eller annen mer spesifikk identifikasjon av den diagnostiske undersøkelsen.",
-            "comment" : "Designkommentar:\nI bryst vil de ha valg for MR mamma som direktevalg. Vi har derfor valgt å legge direktekodene i dette elementet og hvis man trykker MR mamma så vil spesifikt sted i \"anatomisk lokalisering\" mamma også bli satt og lagret ned for å få forutsigbarhet ved datauthenting."
+            "description" : "Metoden, teknikken, modaliteten eller annen mer spesifikk identifikasjon av den diagnostiske undersøkelsen."
           }
         },
         "es" : {
