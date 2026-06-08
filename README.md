@@ -9,6 +9,7 @@
 ### Templatversjon under utvikling 
  Dato | Versjon          |Kommentar          |
 |--------|---------------------|---------------------|
+| 08.06.2026 | openEHR-EHR-COMPOSITION.sjk_bryst_utredning.v2.3.21| Denne versjonen som vil være v2 
 | 20.11.2025 | no.openehr__openEHR-EHR-EVALUATION.sjk_neoadj_kir_v1.0.0-alpha.x.x.x|Dette er et strukturert dokument for bryst etter neoadjuvant behandling og krirurgi
 
 
